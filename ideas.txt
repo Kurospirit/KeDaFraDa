@@ -1,0 +1,10 @@
+theme : langages informatiques (programmation + balisage)
+
+taches : besoin d'informations
+
+	 objets ou procéduraux	 
+	 langages web
+	 typés ou non typés
+	 interprétés ou compilés
+	 haut niveau et bas niveau
+	 
