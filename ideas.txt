@@ -1,10 +1,16 @@
 theme : langages informatiques (programmation + balisage)
 
-taches : besoin d'informations
+taches : besoins d'informations
 
-	 objets ou procéduraux	 
+	 objets ou procéduraux
+	 haut niveau ou bas niveau
+	 
 	 langages web
 	 typés ou non typés
 	 interprétés ou compilés
-	 haut niveau et bas niveau
+	 obsolètes ou encore utilisés
 	 
+-> Besoins d'informations
+
+ - Quels langages sont des langages objet ?
+ - Quels langages sont des langages de haut niveau ?
