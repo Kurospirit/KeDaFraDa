@@ -1,0 +1,107 @@
+C (langage)
+
+Le C est un langage de programmation impératif, généraliste, issu de la programmation système. Inventé au début des années 1970 pour réécrire UNIX, C est devenu un des langages les plus utilisés. De nombreux langages plus modernes comme C++, Java et PHP reprennent des aspects de C.
+Caractéristiques générales.
+C est un langage de programmation impératif et généraliste. C est qualifié de langage de bas niveau dans le sens où chaque instruction du langage est conçue pour être compilée en un nombre d'instructions machine assez prévisible en termes d'occupation mémoire et de charge de calcul. Il propose un éventail de types entiers et flottants conçus pour pouvoir correspondre directement aux types supportés par le processeur. Il fait en outre un usage intensif de la notion de pointeur. Il a une notion de type composé, mais ne propose aucune opération qui traite directement des objets de plus haut niveau (fichier informatique, chaîne de caractères, liste…). Ces types plus évolués doivent être traités en manipulant des pointeurs et des types composés. De même, le langage ne propose pas en standard la gestion de la programmation orientée objet, ni de système de gestion d'exceptions. Il existe des fonctions standards pour gérer les entrées-sorties et les chaînes de caractères, mais contrairement à d'autres langages, aucun opérateur spécifique pour améliorer l'ergonomie. Ceci rend aisé le remplacement des fonctions standards par des fonctions spécifiquement conçues pour un programme donné.
+Ces caractéristiques en font un langage privilégié quand on cherche à maîtriser les ressources utilisées, le langage machine généré par les compilateurs étant relativement prévisible et parfois même optimal sur les machines d'architecture RISC à grand nombre de registres. Ce langage est donc extrêmement utilisé dans des domaines comme la programmation embarquée sur microcontrôleurs, les calculs intensifs, l'écriture de systèmes d'exploitation et tous les modules où la rapidité de traitement est importante. Il constitue une bonne alternative au langage d'assemblage dans ces domaines, avec les avantages d'une syntaxe plus expressive et de la portabilité du code source. Le langage C a été inventé pour écrire le système d'exploitation UNIX, et reste utilisé pour la programmation système. Ainsi le noyau de grands systèmes d'exploitation comme Windows et Linux sont développés en grande partie en C.
+En contrepartie, la mise au point de programmes en C, surtout s'ils utilisent des structures de données complexes, est plus difficile qu'avec des langages de plus haut niveau. En effet, dans un souci de performance, le langage C impose à l'utilisateur de programmer certains traitements (libération de la mémoire, vérification de la validité des indices sur les tableaux…) qui sont pris en charge automatiquement dans les langages de haut niveau.
+Dépouillé des commodités apportées par sa bibliothèque standard, C est un langage simple, et son compilateur l'est également. Cela se ressent au niveau du temps de développement d'un compilateur C pour une nouvelle architecture de processeur : Kernighan et Ritchie estimaient qu'il pouvait être développé en deux mois car .
+Qualités et défauts.
+C'est un des langages les plus utilisés car :
+Ses principaux inconvénients sont :
+Histoire.
+Le langage C est apparu au cours de l'année 1972 dans les Laboratoires Bell. Il était développé en même temps que UNIX par Dennis Ritchie et Ken Thompson. Ken Thompson avait développé un prédécesseur de C, le langage B, qui est lui-même inspiré de BCPL. Dennis Ritchie a fait évoluer le langage B dans une nouvelle version suffisamment différente pour qu'elle soit appelée C. Par la suite, Brian Kernighan aida à populariser le langage. Il procéda aussi à quelques modifications de dernière minute. En 1978, il fut notamment le principal auteur du livre décrivant le langage enfin stabilisé ; Ritchie s'était occupé des appendices et des exemples avec Unix. On parle encore de C K et R, en anglais (pour ) lorsqu'on se réfère au langage tel qu'il existait à cette époque.
+Influences subies.
+Bien que C soit officiellement inspiré de B et de BCPL, on note une forte influence de PL/1 (ou de PL360) ; on a pu dire que C était à Unix et au PDP11 ce que PL1 fut pour la réécriture de Multics.
+Par ailleurs, l'expression conditionnelle semble directement inspirée de Lisp ou d'Algol 60.
+Normalisations.
+Inventé au début des années 1970, le langage a été complètement décrit pour la première fois en 1978 dans le livre "The C Programming Language" de Brian Kernighan et Dennis Ritchie. On appelle généralement C traditionnel ou K et R C ce premier langage.
+En 1983, l'Institut national américain de normalisation (ANSI) a formé un comité de normalisation du langage qui a abouti en 1989 à la norme dite ANSI C ou C89 (formellement ANSI X3.159-1989). En 1990, cette norme a également été adoptée par l'Organisation internationale de normalisation (C ISO, formellement ISO/CEI 9899:1990). ANSI C est une évolution du C K et R qui reste extrêmement compatible. Elle reprend quelques idées de C++.
+En 1995, le groupe de travail de l'ISO a publié deux correctif et un amendement à C89. Ces changements assez modestes sont parfois appelés C89 avec amendement 1, ou C94 / C95. Trois fichiers d'entêtes ont été ajoutés, dont deux concernant les caractères larges et un autre définissant un certain nombre de macros en rapport avec la norme ISO 646.
+En 1999, une nouvelle évolution du langage est normalisée par l'ISO : C99 (formellement ISO/CEI 9899:1999). Parmi les ajouts, on notera du côté syntaxe des fonctionnalités (types complexes, mot-clef « restrict », directives agissant sur la simplification des instructions arithmétiques) souhaitables pour les calculs numériques intensifs, domaine habituel de Fortran ; ou encore le mélange des déclarations avec le reste du code. Au niveau de la sémantique, la gestion des tableaux dynamiques, ou encore des pointeurs restreints a été ajoutée. La bibliothèque standard du C99 s'est vue enrichir de six fichiers d'entêtes depuis la précédente norme.
+En 2011, l'ISO ratifie une nouvelle version du standard : C11, formellement ISO/IEC 9899:2011.
+Éléments du langage.
+Sources.
+L'usage est de donner l'extension de nom de fichier codice_1 aux fichiers source C. En outre, des fichiers permettant de partager les interfaces, portent le même nom, avec l'extension (suffixe) codice_2 ("h" pour "header" en anglais, soit "en-tête" en français). Chaque fichier codice_1 est compilé séparément.
+Les rôles des fichiers codice_1 et codice_2 sont répartis ainsi :
+Syntaxe.
+La syntaxe de C a été conçue pour être brève. Historiquement, elle a souvent été comparée à celle de Pascal, langage impératif également créé dans les années 1970. Voici un exemple avec une fonction factorielle :
+Là où Pascal utilise des mots clés comme codice_15, codice_16, codice_17 et codice_18, C utilise des parenthèses et accolades.
+Programme proposé en exemple en 1978 dans de Brian W. Kernighan et Dennis M. Ritchie :
+Le même programme, conformément à la norme ISO :
+Créer un programme affichant est depuis devenu l'exemple de référence pour présenter les bases d'un nouveau langage.
+Mots clés.
+codice_35, codice_36, codice_37, codice_38, codice_39 (C89), codice_40, codice_41, codice_42, codice_43, codice_44, codice_45 (C89), codice_46, codice_47, codice_48, codice_49, codice_50, codice_51 (C99), codice_22, codice_53, codice_54, codice_55 (C99), codice_56, codice_57, codice_58 (C89), codice_59, codice_60, codice_61, codice_62, codice_63, codice_64, codice_65, codice_25 (C89), codice_67 (C89), codice_68, codice_69 (C99), codice_70 (C99),
+codice_71 (C99).
+Les termes ci-dessus sont réservés pour être exploités en tant que mots clés, et ne doivent pas être utilisés autrement.
+Instructions du préprocesseur.
+codice_72,
+codice_73,
+codice_74 (C89),
+codice_75,
+codice_76,
+codice_77,
+codice_78 (C89),
+codice_79,
+codice_80,
+codice_81,
+codice_82,
+codice_83.
+Types.
+Le langage C comprend de nombreux types de nombres entiers, occupant plus ou moins de bits. La taille des types n'est que partiellement standardisée : le standard fixe uniquement une taille minimale et une magnitude minimale. Les magnitudes minimales sont compatibles avec d'autres représentations binaires que le complément à deux, bien que cette représentation soit presque toujours utilisée en pratique. Cette souplesse permet au langage d'être efficacement adapté à des processeurs très variés, mais elle complique la portabilité des programmes écrits en C.
+Chaque type entier a une forme « signée » pouvant représenter des nombres négatifs et positifs, et une forme « non signée » ne pouvant représenter que des nombres naturels. Le type codice_38, généralement utilisé pour représenter un caractère, est un type entier comme les autres, si ce n'est que, selon l'implémentation, il équivaut à codice_85 ou à codice_86.
+Le type codice_45 est un type énuméré.
+Il existe des types de nombres à virgule flottante, de précision, donc de longueur en bits, variable ; en ordre croissant :
+C99 a ajouté codice_88, codice_89 et codice_90, représentant les nombres complexes associés.
+Types élaborés :
+Les versions du langage antérieures à C99 ne proposent pas de type booléen, mais il est possible d'en définir un :
+ou, en version condensée :
+C99 ajoute le type _Bool.
+Commentaire.
+Dans les versions de C antérieures à C99, les commentaires devaient commencer par une barre oblique et un astérisque (« /* ») et se terminer par un astérisque et une barre oblique. Tout ce qui est compris entre ces symboles est du commentaire, saut de ligne compris :
+La norme C99 a ajouté la possibilité de faire des commentaires sur une seule ligne, de la même manière qu’en C++ :
+Structures de contrôle.
+La syntaxe des différentes structures de contrôle existantes en C est largement reprise dans plusieurs autres langages, comme le C++ bien sûr, mais également Java, C#, PHP ou encore JavaScript.
+Les trois grands types de structures sont présents :
+Comportements ambigus.
+La norme du langage C laisse la définition exacte du comportement de plusieurs opérations au choix du concepteur du compilateur. Ces comportements sont donc définis par l'implémentation. Cette propriété de C permet au compilateur d'utiliser directement les instructions proposées par le processeur, donc de compiler des programmes exécutables courts et efficaces. En contrepartie, c'est parfois la cause de bugs de portabilité des codes source écrits en C. Prenons pour exemple la division entière d'un nombre négatif : -5 / 3. Alors que Fortran, Pascal et Ada spécifient un résultat de -1, et que Modula-3 spécifie un résultat de -2, C garantit simplement que la valeur absolue du reste est strictement inférieure à la valeur absolue du diviseur. La seule garantie dans cet exemple est donc que le résultat sera compris entre -2 et -1.
+Pour le programmeur et l'efficacité de C, le plus important est sans doute le fait que les tailles des types de données de base ne doivent respecter que des "garanties minimales". Ainsi, le type codice_22 correspondant au mot machine peut avoir une taille de sur un processeur et une taille de sur un processeur .
+Outre les comportements laissés au choix de l'implémentation, des constructions syntaxiquement valables ont un comportement lors de l'exécution complètement indéfini. En plus de la classique division par zéro, on peut signaler l'affectation multiple d'une variable dans la même expression, avec l'exemple :
+Les meilleurs compilateurs décèlent certaines constructions problématiques et peuvent les signaler, mais aucun ne prétend à l'exhaustivité.
+Bibliothèques logicielles.
+La bibliothèque standard.
+La bibliothèque standard normalisée, disponible avec toutes les implémentations, présente la simplicité liée à un langage bas-niveau. Voici une liste de quelques en-têtes déclarant des types et fonctions de la bibliothèque standard :
+La bibliothèque standard normalisée n'offre aucun support de l'interface graphique, du réseau, des entrées/sorties sur port série ou parallèle, des systèmes temps réel, des processus ou des , ou encore de la gestion avancée des erreurs (comme avec des exceptions structurées). Cela pourrait restreindre d'autant la portabilité pratique des programmes qui ont besoin de faire appel à certaines de ces fonctionnalités, sans l'existence de très nombreuses bibliothèques portables et palliant ce manque ; dans le monde UNIX, ce besoin a aussi fait émerger une autre norme, POSIX.1.
+Les bibliothèques externes.
+Le langage C étant un des langages les plus utilisés en programmation, de nombreuses bibliothèques ont été créées pour être utilisées avec le C. Fréquemment, lors de l'invention d'un format de données, une bibliothèque ou un logiciel de référence en C existe pour manipuler le format. C'est le cas pour libjpeg, libpng, Expat, les décodeur de référence MPEG, libsocket etc.
+Des sources à l'exécutable.
+La génération d'un exécutable, à partir des fichiers sources se fait en plusieurs étapes, qui sont souvent automatisées à l'aide d'outils comme make, SCons (écrit en Python), ou bien des outils spécifiques à l'environnement de développement intégré (IDE) utilisé.
+Les étapes menant des sources au fichier exécutable sont au nombre de quatre : précompilation, compilation, assemblage, édition de liens.
+Précompilation.
+Durant cette étape, le préprocesseur effectue plusieurs opérations sur les fichiers sources, en suivant des instructions incluses dans les fichiers eux-mêmes. Le préprocesseur produit alors des fichiers intermédiaires (qui ont généralement l'extension « .i ») pour chaque fichier source, qui seront utilisés dans l'étape suivante.
+Le préprocesseur effectue des remplacements de textes, des inclusions de fichiers (généralement les fichiers d'en-têtes contenant diverses déclarations) avec la possibilité d'effectuer certaines opérations uniquement si certaines conditions sont remplies. C'est également durant cette étape que les commentaires sont supprimés.
+Compilation.
+La phase de compilation consiste généralement en la génération du code assembleur (encore lisible par un être humain, mais dépendant du processeur). Pour chaque fichier source, on obtient un fichier en langage d'assemblage.
+Cette étape est divisée en trois sous-étapes, qui sont :
+Par abus de langage, on appelle compilation toute la phase de génération d'un fichier exécutable à partir des fichiers sources. Mais c'est seulement une des étapes menant à la création d'un exécutable.
+Certains compilateurs C fonctionnent à ce niveau en deux phases, la première générant un fichier compilé dans un langage intermédiaire destiné à une machine virtuelle idéale (voir P-Code) portable d'une plate-forme à l'autre, la seconde convertissant le langage intermédiaire en langage d'assemblage dépendant du processeur utilisé sur la plate-forme cible.
+D'autres compilateurs C permettent de ne pas générer de langage d'assemblage, mais seulement le fichier compilé en langage intermédiaire, qui sera interprété ou compilé automatiquement en code natif à l'exécution sur la machine cible (par une machine virtuelle qui sera liée au programme final).
+Assemblage.
+Cette étape consiste en la génération d'un fichier "objet" pour chaque fichier de code assembleur. Ces fichiers "objet" sont en langage machine. C'est un format binaire, dépendant du processeur. Les fichiers objets sont généralement d’extension « .o » sous Unix ou Linux, ou « .obj » avec les outils de développement pour plates-formes "Microsoft", "Intel", "Digital", "IBM" : DOS, Windows, VMS, CP/M… où les extensions se présentent usuellement sous la forme de trois caractères.
+Cette phase est parfois regroupée avec la précédente (par établissement d'un flux de données interne sans passer par des fichiers en langage intermédiaire ou langage d'assemblage), dans ce cas le compilateur génère directement un fichier objet binaire.
+Pour les compilateurs qui génèrent du code intermédiaire, cette phase d'assemblage peut aussi être totalement supprimée : c'est la machine virtuelle (liée au programme final, ou utilisée séparément comme chargeur du programme à exécuter sur une machine virtuelle partagée et optimisée spécialement sur la machine hôte) qui interprétera ou compilera ce langage en code machine natif directement sur la machine hôte. Dans ce cas, la machine virtuelle qui interprète le langage intermédiaire ou le compile en code natif optimisé pour la machine hôte, peut être un composant du système d'exploitation ou une bibliothèque partagée installée sur celui-ci, et cette machine virtuelle ne sera même pas incluse dans le programme final livrable.
+Édition de liens.
+L'édition de liens est la dernière étape et a pour but de réunir tous les éléments d'un programme. Les différents fichiers objets sont alors réunis, ainsi que les bibliothèques statiques, pour ne produire qu'un fichier exécutable.
+Le but de l'édition de liens est de sélectionner les éléments de code utiles présents dans un ensemble de codes compilés et de bibliothèques, et de résoudre les références mutuelles entre ces différents éléments afin de permettre à ceux-ci de se référencer directement à l'exécution du programme.
+Optimiseurs.
+Des essais de comparaison entre le C et l'assembleur effectués depuis 1990 sur des machines RISC montrent, de façon tout à fait contre-intuitive, un net avantage au C lorsque toutes les options d'optimisation du compilateur sont activées. Les optimiseurs construisent en effet un graphe chromatique qui leur permet d'allouer sans se tromper les usages de registres de façon quasi-optimale, là où un programmeur serait vite perdu. Ils regroupent de plus directement les instructions en réarrangeant les chargements et sauvegardes de registres pour bénéficier de l'effet . La même opération effectuée sur un programme source serait envisageable, mais le rendrait quasi impossible ensuite à maintenir.
+En revanche, les optimiseurs ont moins de latitude concernant la réorganisation d'instructions CISC, plus complexes, et dans ce cas précis les résultats sont moins tranchés.
+Exemples.
+Voici quelques exemples présentant très succinctement quelques propriétés du C. Pour plus d'information, voir le .
+Chaînes de caractères.
+Voici l'exemple de fonction de copie de chaîne de caractères donné dans "The C Programming Language, edition", .
+Le principe est de copier les octets-caractères jusqu'à ce que l'on copie le caractère nul, qui marque par convention la fin d'une chaîne en C. La bibliothèque standard de C offre une fonction codice_137 similaire, dont le prototype est codice_138.
+La boucle codice_68 utilise une notation classique mais très brève permise par C, qui a contribué à lui donner une réputation de langage peu lisible. L'expression codice_140 copie un caractère, retourne sa valeur, et incrémente les pointeurs codice_141 et codice_142. Cette boucle n'a pas de corps, car toutes les opérations sont effectuées dans l'expression de test du codice_68. On considère qu'il faut maîtriser ce genre de notation pour maîtriser C.
+Allocation mémoire.
+La structure codice_144 représente un élément d'une liste chaînée, contenant des données de type codice_22. Les deux fonctions qui suivent (codice_146 et codice_147) servent à ajouter et supprimer un élément de la liste.
+Dans cet exemple, les deux fonctions essentielles sont codice_129 et codice_149. La première sert à allouer de la mémoire, le paramètre qu'elle reçoit est le nombre de bytes que l'on désire allouer et elle retourne l'adresse du premier byte qui a été alloué, sinon elle retourne NULL. codice_149 sert à libérer la mémoire qui a été allouée par codice_129.

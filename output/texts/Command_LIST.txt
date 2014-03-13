@@ -1,0 +1,11 @@
+Command LIST
+
+Command LIST, le plus souvent appelé simplement CLIST, est un langage de programmation procédurale que l'on retrouve essentiellement sur le système d'exploitation MVS des grands systèmes IBM, en particulier sous TSO et TSO/ISPF.
+Bien qu'exécutable en ligne de commande ou en mode traitement par lots ("batch"), sa principale utilité est de permettre le développement d'applications interactives. 
+Sous sa forme basique, une CLIST est juste une simple liste de commandes devant être exécutées dans l'ordre précis (comme un traitement par lots).
+Une CLIST peut aussi lire/écrire des fichiers MVS, réaliser une lecture/écriture sur un terminal TSO et possède les instructions normales de bloc (IF/ELSE DO/END). Elle peut lire des variables passées en paramètre et a également une fonction pour garder des variables globales et les passer d'une CLIST à l'autre.
+CLIST est un langage interprété. C'est-à-dire que l'ordinateur doit traduire un programme en CLIST chaque fois que celui-ci est exécuté. Les CLIST tendent donc à être beaucoup plus lents que des programmes écrits en langages compilés tels que COBOL, Fortran ou PL/I (un programme écrit en langage compilé est traduit une seule fois pour créer un exécutable qui sera lancé par la suite).
+Langage très lourd à première vue, il comporte de grandes similitudes avec REXX. Il est donc recommandé de commenter abondamment les CLIST, notamment en cas d'utilisation de code REXX dans le script.
+Quelques mots sur la syntaxe :
+Cet exemple :
+peut être valable aussi bien en CLIST qu'en REXX

@@ -1,0 +1,22 @@
+MicroMondes (logiciel)
+
+"MicroMondes Pro, MicroWorlds JR et MicroWorlds EX" sont des micromondes, descendants directs de Logo (langage). Il s'agit de versions commerciales plus finies et avec un meilleur support pour les fonctions multimédia (particulièrement la version anglaise, plus récentes).
+Présentation générale.
+L'élément le plus connu de MicroMondes (et de Logo) est la tortue, qui peut être manipulée à l'aide d'instructions de manière à tracer des graphiques, exécuter des animations, des jeux interactifs ou d'autres types de simulations.
+Les développements technologiques ont ensuite permis à la tortue de migrer vers un écran graphique (distinct de l'écran de commande (texte)), puis vers un écran mixte (avec une zone texte et une zone graphique). Les versions modernes combinent sans problèmes le texte et les graphiques.
+MicroMondes est produit par LCSI et peut être utilisé sur un PC ou un Macintosh. Il existe dans plusieurs langues dont l'anglais, le français, l'espagnol, l'italien, le portugais, etc. 
+Syntaxe.
+Le vocabulaire original de MicroWorlds (ou Logo) est constitué de primitives. Celles-ci comportent quelques dizaines de commandes:
+codice_1, codice_2, codice_3, codice_4, codice_5, codice_6 (fixe position), codice_7 (fixe couleur), codice_8 (vide texte)...
+et quelques dizaines de rapporteurs:
+codice_9 (rapporte la couleur actuelle), codice_10 (rapporte la position), codice_11 (rapporte le contenu le la boîte de texte portant ce nom)...
+Certaines primitives requièrent une ou plusieurs données :
+codice_12 (baisse crayon, ne requiert aucune donnée)
+codice_13 (requiert un nombre qui indique la distance à parcourir)
+codice_14 (requiert un mot ou une liste dont le premier élément sera retiré)
+Ce vocabulaire peut être augmenté par l'utilisateur à l'aide de « procédures » dont voici un exemple :
+codice_15
+Les procédures sont créées dans un espace réservé à cet effet : la page ou l'onglet "procédures". Dans les versions les plus récentes de MicroMondes (spécifiquement MicroWorlds EX, MicroMundos EX, MicroMondi EX) les procédures peuvent aussi être intégrées à l'intérieur du "sac à dos" de l'objet tortue. 
+Une procédure comporte trois parties: la ligne titre (le mot codice_16 suivi du nom de la procédure, au choix de l'utilisateur), le corps (la liste des instructions) et la ligne de codice_17. Dans l'exemple précédent, l'exécution de la commande "cabriole" revient à exécuter les instructions contenues dans la procédure: tourner à droite à un angle déterminé au hasard entre 0 et 359, et avancer une distance choisie au hasard entre 0 et 999.
+Outre les procédures, les instructions peuvent être tapées dans le Centre de Commandes pour être exécutées "en mode direct".
+MicroMondes est un logiciel d'usage général qui constitue une excellente introduction dans le monde de la programmation. Une version "junior", qui permet aux enfants en pré-lecture ou lecteurs novices de programmer à l'aide d'icônes plutôt qu'avec des instructions textuelles, existe dans d'autres langues. Une autre version permet, à l'aide de quelques primitives supplémentaires, de contrôler des éléments robotiques.

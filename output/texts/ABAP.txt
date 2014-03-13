@@ -1,0 +1,19 @@
+ABAP
+
+ABAP est un langage de programmation propriétaire, faisant partie de l'ensemble logiciel SAP. Il s'agit actuellement du langage utilisé dans la programmation des Web Application Server faisant partie de la plateforme Netweaver pour la réalisation de progiciels.
+Sa version "ABAP/4" est objet, le chiffre "4" faisant de plus référence à son appartenance à la classe des langages de quatrième génération.
+Histoire.
+L'acronyme ABAP signifiant à l'origine "Allgemeiner Berichtsaufbereitungsprozessor " ("processeur générique pour la préparation de rapport") et a par la suite été anglicisé en Advanced Business Application Programming.
+ABAP est l'un des successeurs du COBOL et est apparu dans les années 1980 dans la vague des langages de quatrième génération (L4G). Il s'agit d'un dérivé du langage permettant de réaliser des sorties de données (appelées "rapports") de l'application SAP R/2, sur lequel de nombreuses multinationales avaient bâti leur architecture d'application professionnelle. ABAP a par la suite été maintenu comme langage de référence pour les applications SAP R/3 qui sont apparus en 1992.
+À l'origine, ce langage comprenait le concept de "Base de données logique" qui devait permettre à tout utilisateur de créer lui-même les rapports dont il avait besoin. Il s'est avéré en fait que développer des programmes avec ce langage ne pouvait être fait en pratique que par des professionnels disposant d'une solide expérience.
+Le langage a été par la suite étendu pour englober un modèle de données orienté objets (ABAP Objects) à partir de sa version 4.5, pour être finalement intégré comme langage d'un produit plus général appelé NetWeaver. Ce dernier utilise aussi bien ABAP que le java.
+C'est un langage interprété.
+Composants du langage.
+Un "outil de transport" . À chaque modification d'un programme, celui-ci doit être "transporté" de l'environnement dans lequel il est créé vers un environnement de test puis dans l'environnement de production (chacun de ces environnements dispose de jeux de données distincts, il peut exister plus de trois environnements dans un système d'information donné). Cette opération est réalisée par la mise en œuvre d'un "ordre de transport".
+ABAP pour quoi faire ?
+ABAP jusqu'à l'apparition de NetWeaver était la brique constituante des systèmes SAP R/3. Il permet de réaliser :
+ABAP a évolué pour intégrer la programmation objets. Tous les concepts de la programmation objets se retrouvent dans ABAP Objects. ABAP Objects constitue une extension du langage ABAP, avec lequel il est totalement compatible : ainsi il est possible qu'un programme comporte à la fois une partie procédurale et une partie orientée objets, car le déroulement procédural du programme peut à tout moment instancier une classe puis appeler les méthodes de l'objet qu'il vient de créer.
+Exemples de programmes ABAP.
+Le grand classique:
+Ce qui donne pour l'écran de selection :
+Et pour le résultat :

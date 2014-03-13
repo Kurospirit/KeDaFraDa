@@ -1,0 +1,4 @@
+Graph Modelling Language
+
+Graph Modelling Language (GML) est un format de fichier hiérarchique basé sur l'ASCII et décrivant les graphes.
+Il est convertible en format graphviz (.dot, .gv) sous Linux avec la commande "gml2gv".

@@ -1,0 +1,3 @@
+Gibiane
+
+Gibiane est un langage de programmation basé sur Fortran développé par le Commissariat à l’énergie atomique (CEA). Ce langage est la base des codes de calcul neutronique déterministes APOLLO2 et CRONOS2.

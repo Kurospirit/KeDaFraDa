@@ -1,0 +1,9 @@
+C-- (langage intermédiaire)
+
+C-- est un langage intermédiaire, conçu pour être émis par
+un compilateur au lieu du langage C ou d'un langage assembleur. La syntaxe du langage emprunte beaucoup à C, d'où le
+nom qui suggère que c'est essentiellement un sous-ensemble de C, de la
+même manière que C++ est un surensemble du C.
+Le langage est conçu comme un langage intermédiaire entre des outils de compilation de haut niveau et des outils de bas niveau comme des
+optimiseurs. Les fonctionnalités qui ont été changées ou omises comparé au C, comme les fonctions variadiques, les pointeurs et les parties « avancées » du système de types, auraient entravé les fonctionnalités essentielles de C--, telles que la récursion terminale ou la facilité avec laquelle les outils de génération de code peuvent produire du code.
+C-- est la cible du Glasgow Haskell Compiler (GHC) et sera finalement sa plate-forme principale. Certains des développeurs de C--, dont Simon Peyton Jones, travaillent aussi sur GHC. Le développement a lieu à Microsoft Research à Cambridge, bien que ce ne soit pas un projet Microsoft.

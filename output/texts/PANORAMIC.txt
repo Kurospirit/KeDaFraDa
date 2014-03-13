@@ -1,0 +1,29 @@
+PANORAMIC
+
+PANORAMIC est un langage BASIC sous Windows permettant de manipuler des objets Windows (Button, Edit, Combo, Picture, Scene3D, Movie, Track_bar, Scroll_bar, ...) des sprites (dans l'objet SCENE2D) et des objets 3D (dans l'objet SCENE3D), des fichiers textes, des fichiers binaires, des sons MIDI ...etc...
+Description.
+PANORAMIC est complètement gratuit et l'éditeur possède une documentation intégrée bilingue (anglais - français).
+Il n'a besoin d'aucune DLL ni d'aucune bibliothèque logicielle externe pour fonctionner, c'est un logiciel portable qui peut être emporté partout sur une clé USB et qui fonctionne sur la plupart des configurations. Il fonctionne sous Windows XP, Windows 7 et Windows 8.
+Il utilise les instructions BASIC classiques.
+Le but de l'auteur est de développer un langage pour l'utilisateur, un langage qui est utilisable de la façon la plus simple possible.
+La manipulation d'objets est simple : pour créer un objet, il suffit de taper son type suivi d'un numéro. Ce numéro est ensuite utilisé pour toute action sur cet objet, c'est l'identifiant de l'objet.
+Exemples.
+Gestion 3D.
+- Pour créer un monde 3d : codice_4
+- Pour y mettre une théière : codice_5
+- Pour la faire pivoter de 30 degrés sur son axe Z : codice_6
+Caractéristiques.
+Il gère des évènements : codice_7.
+Il possède actuellement (en 2011) environ 500 mots-clés, et est en constante et régulière évolution. Une nouvelle version sort environ tous les 2 mois.
+Il peut aussi piloter Excel, dessiner, gérer des fichiers, la souris, utiliser des objets 3D en format 3DS ou MD2, créer des mélodies musicales en MIDI ...
+Il peut créer des exécutables et des applications (une application est un exécutable qui contient tous les fichiers nécessaires à son exécution, comme les fichiers textes, les images, les sons, ...). 
+Les logiciels créés avec PANORAMIC sont portables (besoin d'aucune DLL ni d'aucune bibliothèque externe)
+Ce langage est présent dans 2 logiciels :
+- un environnement de développement intégré pour créer son application avec une interface utilisateur: avec la souris, on place des objets sur une feuille et on les redimensionne. Ensuite on tape le code correspondant aux événements sur ces objets.
+- un EDITOR pour créer son application à partir de rien (from scratch). 
+Il existe un forum français très actif (plus de 11000 messages) et un forum anglais.
+Versions.
+La dernière version officielle (0.9.24) date du 28 mars 2013.
+Les versions antérieures à la 0.9.13 étaient volontairement limitées dans le nombre d'objets qu'elles pouvaient gérer, mais à partir de la version 0.9.13 (du 15 août 2009) il n'y a plus aucune limite.
+Des versions instantanées sont mises périodiquement à disposition, afin de faire bénéficier tout de suite des améliorations et des corrections de bug, sans devoir attendre la sortie de la version officielle.
+Il faut noter que l'auteur de ce langage s'efforce de répondre aux demandes des utilisateurs en développant des fonctionnalités qui sont demandées sur le forum.

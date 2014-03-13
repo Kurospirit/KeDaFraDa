@@ -1,0 +1,4 @@
+CEI 61131-3
+
+La CEI 61131-3, intitulée Automates programmables - Partie 3 : Langages de programmation, est une norme industrielle de la Commission électrotechnique internationale (CEI) définissant cinq langages de programmation à utiliser pour les automates programmables :
+Elle a été publiée la première fois en 1993, et une seconde édition a vu le jour en 2003.

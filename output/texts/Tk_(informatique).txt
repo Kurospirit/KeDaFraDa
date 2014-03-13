@@ -1,0 +1,28 @@
+Tk (informatique)
+
+Tk est une bibliothèque d'interfaces graphiques multiplate-forme. Conçu à l'origine pour un langage de script inventé par John Ousterhout et connu sous le nom de Tcl, il s'interface aujourd'hui avec d'autres langages tels que Perl, Python, Ruby, Lua, Common Lisp, REXX, Ada, Prolog, OCaml, R ou APL.
+Tk existe aussi pour les navigateurs web sous la forme d'un "plugin", Tcl plugin, qui permet d'exécuter des tclets (applets écrits en Tcl-Tk).
+Les "widgets".
+Chaque "widget" possède des propriétés modifiables selon le type (taille, relief, couleur, contenu, état, événement).
+Gestion de la géométrie.
+Pour contrôler la dimension et agencer graphiquement les "widgets", il existe trois 
+gestionnaires de géométrie :
+Tant qu’un "widget" n’est pas associé à un gestionnaire de géométrie, il n’apparaît pas 
+à l'écran.
+Gestion des événements.
+À la différence d'un programme en ligne de commande où l'interaction avec l'utilisateur 
+est séquentielle, l'interface graphique fait intervenir la notion de "programmation événementielle" avec une autre logique. À tout moment, chaque "widget" est susceptible d'être affecté par l'action de l'utilisateur (l'événement).
+Il existe des événements simples (clic de souris sur un bouton, saisie au clavier dans un champ) et des événements plus complexes (navigation dans un menu ou une liste 
+déroulante).
+À chaque "widget" est attaché par défaut un certain nombre de réponses automatiques à des événements. Celles-ci correspondent à une gestion des événements de bas niveau où le programmeur n'a que très peu à intervenir. Une "boucle événementielle" les prend en charge et les répartit.
+Ensuite, par l'intermédiaire de l'option codice_1, on peut lier un "widget" 
+à un appel de procédure ou une commande extérieure ("callback").
+Si l'on souhaite associer à un "widget" une réponse particulière non définie par défaut, 
+Tcl-Tk dispose d'un mécanisme très flexible grâce à la commande codice_2.
+Bibliothèque standard.
+Tk dispose d'une bibliothèque standard appelée Tklib (le pendant pour Tcl étant la Tcllib) exclusivement écrite en Tcl. Elle contient divers modules pour la représentation graphique de données, la gestion et l'affichage de textes, les tables, les champs d'entrée spécifiques ainsi que les BWidget (une bibliothèque de "widgets" de haut niveau).
+Histoire de Tk.
+John Ousterhout a commencé à concevoir cette IHM à la fin de l'année 1988 parallèlement au développement de Tcl. Tk a subi l'influence du système HyperCard d'Apple. Il a été développé en C et était basé sur Xlib en fournissant une dizaine de composants IHM appelés "widgets" (contraction de "window gadget"). À cette époque, ils ne fonctionnaient que sous UNIX.
+La combinaison de Tcl et Tk (appelé Tcl-Tk ou Tcl/Tk) fut présentée la première fois en janvier 1991 à la "Conférence USENIX". Il permettait de s'affranchir de la complexité et du temps de développement accru d'une application écrite avec la bibliothèque Motif. Par la suite, le développement de Tk était suffisamment découplé de celui de Tcl pour être utilisé avec d'autres langages. Les versions pour Windows et Macintosh apparurent en 1994 sous l'impulsion des développeurs du laboratoire de Sun Microsystems. Par souci de clarté, en août 1997, la décision fut prise d'aligner les numéros de version de Tk sur ceux de Tcl.
+En décembre 2007 sort Tcl-Tk 8.5. Cette version a la particularité d'inclure un moteur de thèmes qui améliore grandement l'aspect visuel de l'interface graphique rompant ainsi définitivement avec l'héritage de la bibliothèque Motif. 
+En décembre 2012, sort Tcl-Tk 8.6. Un travail a été effectué sur les coordonnées des objets dans le widget codice_5 et sur le support du format PNG.

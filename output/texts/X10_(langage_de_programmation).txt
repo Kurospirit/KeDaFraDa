@@ -1,0 +1,4 @@
+X10 (langage de programmation)
+
+X10 est un langage de programmation en cours de développement chez IBM "Thomas J. Watson Research Center" financé par le projet "High Productivity Computing Systems" de DARPA. Les auteurs principaux sont Kemal Ebcioğlu, Vijay Saraswat, and Vivek Sarkar.
+X10 est conçu pour la programmation parallèle avec le modèle "espace d'adressage global partagé" (PGAS). Un programme s'exécuter sur un ensemble de "places" : chaque place possède des données et quelques "activities" qui font des calculs sur ces données. Il supporte un système de typage avec des contraintes pour la programmation orientée objet, les types primitifs "structs" définis par l'utilisateur, les "globally distributed arrays" et le parallélisme structuré et non structuré.

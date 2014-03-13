@@ -1,0 +1,7 @@
+ArmScript
+
+ArmScript est un langage de programmation interprété qui repose sur des commandes. Il a été créé en novembre 2005.
+Il reprend les bases des autres langages (variables, etc.) mais tout le langage repose sur des fonctions prédéfinies, qui prennent des arguments qui peuvent être des variables ou des "flags". Un nouveau système d'arguments, les "surplus", rendent le code source plus compréhensible en plusieurs points.
+Actuellement, le langage permet :
+L'intérpreteur normalisé s'appelle "arm"
+À long terme, ArmScript serait le langage principal du système d'exploitation hypnOS.

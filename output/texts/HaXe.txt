@@ -1,0 +1,9 @@
+Haxe
+
+Haxe est un langage de programmation développé par Nicolas Cannasse et la société Motion-Twin qui, dans le cadre d’une utilisation pour le Web, permet d’écrire la partie serveur et la partie client dans un même langage.
+À cette fin, Haxe permet de :
+Haxe permet donc d'assurer l’interopérabilité entre ces différentes plateformes en fournissant des bibliothèques communes.
+Il permet, par ailleurs, de créer du code C++, et des cibles Java et C# sont en préparation (courant 2012 - 2013) .
+Voir aussi.
+Liens internes.
+Neko (langage)

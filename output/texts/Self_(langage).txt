@@ -1,0 +1,3 @@
+Self (langage)
+
+Self est un langage de programmation orienté objet à prototype issu de recherches poursuivies par Craig Chambers et Ole Agesen dans les années 1990 par "Sun Research".

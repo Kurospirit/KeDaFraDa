@@ -1,0 +1,35 @@
+NULL
+
+En termes de bases de données, ce mot clef exprime le fait que la valeur d'une donnée n'est pas connue. Il ne s'agit donc pas d'une valeur mais de l'état dans lequel la donnée se trouve, et signifie l'absence de valeur.
+Variantes.
+Il existe des équivalents nommés différemment :
+C et C++.
+En C, codice_1 est défini dans le fichier d'en-tête codice_11 de la bibliothèque standard du C, a pour valeur zéro et pour type void*.
+En C++, codice_1 est remplacé par la constante codice_7, mais il est toujours possible d'utiliser une macro constante codice_1 qui — à la différence de celle utilisée en C — ne doit pas être de type void* (les pointeurs vers des types différents étant incompatibles).
+En C++11, le mot clef codice_9 est introduit pour remplacer la constante codice_7 et la macro-constante codice_1.
+Voici un exemple de code montrant l'initialisation d'un pointeur à codice_1, avant d'être utilisé pour stocker l'adresse d'une variable :
+La valeur réellement utilisée comme pointeur nul par le processeur peut, sur certains systèmes, être différente de l’adresse spéciale 0 ; cela relève de la mécanique interne aux compilateurs. Cependant au niveau du C, codice_1 représente toujours un zéro, et doit être utilisé uniquement dans le but de désigner un pointeur qui ne pointe sur rien ; en ce sens, parfois (et toujours en C++, où pointeurs et données sont clairement distincts), sa définition est agrémentée d'un type, codice_20 ou codice_21.
+Différence avec NUL.
+Bien que cela ne pose généralement pas de problème de compilation en C (car une conversion implicite a lieu), le pointeur NULL ne doit pas être confondu avec le caractère ASCII codice_22 (un seul L) qui est utilisé pour marquer la fin d'une chaîne de caractères et correspond sur la majorité des systèmes à un octet (8 bits) plutôt qu'à un mot (ex. 32 bits) :
+Java.
+Le langage Java ne permet pas l'emploi de pointeur mais de références.
+Le mot clé null définit une référence nulle, c'est-à-dire ne désignant aucun objet en mémoire.
+Il s'agit de la valeur par défaut des variables non initialisées de type référence d'objet.
+Voici un exemple de code montrant l'initialisation d'une référence à null, avant d'être utilisée pour référencer un objet alloué :
+PHP.
+En php, une variable de valeur NULL est considérée comme non-définie :
+Affiche :
+$a est indéfinie.
+$a est NULL
+$b est indéfini
+$b est NULL
+NULL, Typage et Méta-modélisation.
+Soient deux types A et B distincts (et sans rapport)
+La modélisation correcte d'un système de types rendant ces deux affections valables implique que null possède un type sous-type union de A et B : "None".
+"None" est un type singleton ayant comme seule valeur possible "null" défini comme l'union de tous les types du programme. Comme ce type n'est pas modélisable sans une forme spéciale du langage et que son utilité est limitée (il n'accepte qu'une seule valeur, "null" ), peu de langages à typage statique le proposent.
+Si on s'intéresse aux langages à objets, et qu'on pose comme première approximation du système de type :
+Alors la classe de null (étrangement tous ces langages utilisent plutôt la forme "nil") devient la classe singleton "None", sous-classe de toutes les classes ayant pour seule instance "null". Pour garantir un fonctionnement cohérent avec le comportement des envois de messages sur null, toutes ces méthodes doivent être redéfinies par l'envoi d'une exception "NullPointerException".
+Bien qu'en théorie la valeur "null" puisse être quelconque, en pratique tous les langages utilisent la valeur 0. Cette valeur est non adressable et toute tentative d'accès provoque une erreur de segmentation. Si l'on veut proprement lever une exception, on doit protéger tous les envois de messages par un test à "null". Un bon compilateur ne génèrera pas ces tests dans les cas où le receveur est trivialement non "null" (cas des "self", "this", "super" et autres) et dans certains autres cas.
+UNIX.
+Dans les systèmes UNIX, /dev/null est un fichier spécial qui détruit immédiatement toutes les données qui lui sont envoyées. Pour cette raison, ce fichier est appelé le « trou noir » ou encore la « poubelle ».
+Les systèmes d'exploitation Microsoft utilisent un fichier spécial appelé NUL.

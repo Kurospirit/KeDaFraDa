@@ -1,0 +1,5 @@
+Liste d'instructions
+
+La liste d'instruction, ou (IL) en anglais, est un des cinq langages de programmation pour automates programmables industriels (API) définis par la norme CEI 61131-3. C'est un langage de bas niveau, comparable à l'assembleur.
+Langages dérivés.
+Siemens propose, pour programmer ses API, un langage dérivé d'IL appelé ' (STL) en anglais, et ' (AWL) en allemand.

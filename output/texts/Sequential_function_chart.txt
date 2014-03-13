@@ -1,0 +1,4 @@
+Sequential function chart
+
+Le Sequential function chart (SFC) est un langage graphique de programmation des Automates Programmable Industriel défini dans la norme CEI 61131-3.
+Ce langage est une interprétation assez libre et plus permissive du grafcet dont il est inspiré : le grafcet est dédié à la spécification, alors que SFC est plus appliqué à la programmation.

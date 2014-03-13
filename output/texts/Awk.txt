@@ -1,0 +1,26 @@
+Awk
+
+awk — dont le nom vient des trois créateurs, Alfred Aho, Peter Weinberger et Brian Kernighan — est un langage de traitement de lignes, disponible sur la plupart des systèmes Unix et sous Windows avec Cygwin ou Gawk. Il est principalement utilisé pour la manipulation de fichiers textuels pour des opérations de recherches, de remplacement et de transformations complexes.
+Présentation.
+Awk est le plus souvent utilisé pour la production de fichiers plats aux spécifications particulières (échanges entre différents systèmes d'informations hétérogènes). Il est aussi utilisé comme "parser" de fichiers XML ou de fichiers textes pour générer des commandes SQL à partir des données extraites. Il peut être utilisé aussi pour des opérations de calculs complexes et mise en forme de données brutes pour faire des tableaux statistiques.
+On distingue awk, la commande originale, du "new awk" (nawk), arrivée un peu plus tard sur le marché. 
+Les implémentations GNU de awk, sont en fait des "new awk". On trouve en général la commande awk dans /usr/bin sous Unix. Certains systèmes GNU/Linux le mettent dans /bin. En général, elle est dans la variable d'environnement PATH. Cependant, on peut faire des scripts en awk et le shebang (#!/usr/bin/awk -f) devient faux. Le script est donc inutilisable si le binaire n’est pas là où on l’attend.
+Il agit comme un filtre programmable prenant une série de lignes en entrée (sous forme de fichiers ou directement via l'entrée standard) et écrivant sur la sortie standard, qui peut être redirigée vers un autre fichier ou programme. Un programme Awk est composé de trois blocs distincts utilisables ou non pour le traitement d'un fichier (prétraitement, traitement, posttraitement). Awk lit sur l'entrée ligne par ligne, puis sélectionne (ou non) les lignes à traiter par des expressions rationnelles (et éventuellement des numéros de lignes). Une fois la ligne sélectionnée, elle est découpée en champs selon un séparateur d'entrée indiqué dans le programme awk par le symbole FS (qui par défaut correspond au caractère espace ou tabulation). Puis les différents champs sont disponibles dans des variables : $1 (premier champ), $2 (deuxième champ), $3 (troisième champ), ..., $NF (dernier champ).
+« awk » est aussi l'extension de nom de fichier utilisée pour les scripts écrits dans ce langage (rarement utilisée).
+La syntaxe est inspirée du C :
+codice_1
+où la structure du programme est :
+codice_2
+Chaque ligne du fichier est comparée successivement aux différents motifs (le plus souvent des expressions rationnelles, et globalement une expression booléenne) et l'action du premier motif renvoyant la valeur vraie est exécutée. Dans ce cas, ou si aucun motif n'est accepté, le programme lit la ligne suivante du fichier et la compare aux motifs en partant du premier.
+Quelques options : 
+Description technique.
+Un fichier est divisé en lignes ("records" en anglais) elles-mêmes divisées en champs ("fields" en anglais)
+Les séparateurs d'entrée-sortie sont stockés dans des variables et peuvent être modifiés : 
+Pour retourner le n champ :
+Deux masques spéciaux : 
+Pour définir un intervalle, on utilise la virgule comme ceci : 
+Plusieurs fonctions sont déjà implémentées : 
+Structures de contrôles : la syntaxe provient directement du C : 
+Par rapport au C il y a quelques extensions :
+Implémentation.
+Il existe divers programmes qui utilisent la syntaxe du awk original, voici les plus connus :

@@ -1,0 +1,4 @@
+Quartz Composer
+
+Quartz Composer est un langage de programmation visuel, fourni depuis Mac OS X 10.4 avec le logiciel Xcode, spécialisé dans le traitement et le rendu de données graphiques.
+Réaliser un programme consiste à connecter entre eux des blocs de traitement. Quartz Composer utilise OpenGL, Core Image, Core Video, JavaScript pour créer des traitements qui peuvent être joués en tant que séquences Quicktime, être transformés en économiseurs d'écrans ou intégrés dans des applications Cocoa ou Carbon.

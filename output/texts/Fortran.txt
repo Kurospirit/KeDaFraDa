@@ -1,0 +1,22 @@
+Fortran
+
+Fortran (FORmula TRANslator) est un langage de programmation utilisé principalement en calcul scientifique.
+Historique.
+John Backus, pionnier de l'informatique, publie en 1954 un article titré "Preliminary Report, Specifications for the IBM Mathematical FORmula TRANslating System, FORTRAN." Il faut ensuite deux ans d'efforts à l'équipe qu'il dirige au sein d'IBM pour écrire le premier compilateur FORTRAN ( lignes, pour l'IBM 704).
+Le nom du langage a été écrit conventionnellement en majuscules (FORTRAN) jusqu'en 1992 et l'introduction du Fortran 90 à syntaxe libre. En FORTRAN 77, les lettres minuscules ne font pas partie du langage. Cette convention se retrouve dans cet article et est conforme aux différentes normes du Fortran, de 1966 à aujourd'hui.
+Aujourd'hui encore (années 2010), le langage Fortran reste très utilisé pour plusieurs raisons :
+Toutefois, beaucoup de programmes scientifiques sont à présent écrits en C et C++, dont les compilateurs sont disponibles sur la plupart des machines. D'autres langages compilés sont parfois utilisés pour le calcul scientifique, et surtout des logiciels tels que Scilab ou Matlab. Ces derniers incorporent d'ailleurs les bilbiothèques BLAS et LAPACK, développées en Fortran. Matlab était d'ailleurs à l'origine un programme en Fortran, distribué aux universités et aux centres de recherche.
+Le FORTRAN, créé à l'époque des cartes perforées (en particulier avec le système FMS), optimise la mise en page de ses sources dans cette optique, jusqu'au Fortran 90 qui introduit une syntaxe « libre ». Avant Fortran 90, le code commence à partir de la 7 colonne et ne doit pas dépasser la 72. Il se présente alors ainsi :
+Il faut également noter qu'avant Fortran 90, les espaces n'ont pas de signification entre la 7 et la 72 colonne. Ainsi, la boucle « DO I=1,5 » peut aussi s'écrire « DOI=1,5 ». En revanche, « DO I=1.5 » est équivalent à « DOI=1.5 », une affectation.
+De nombreux codes industriels ont été écrits en Fortran et la compatibilité des nouvelles versions avec les précédentes est indispensable, au prix de conserver des notions qui ne s'imposent plus. Pour cette raison, Fortran 90 est complètement compatible avec FORTRAN 77. Les versions suivantes du standard ont cependant introduit des incompatibilités.
+Le langage BASIC, dans sa version originale (1964), a été conçu comme un petit langage à caractère pédagogique permettant d'initier les étudiants à la programmation, avant de passer aux langages « sérieux » de l'époque : FORTRAN et Algol. On y retrouve donc quelques traits du langage Fortran.
+Compilateurs.
+Le compilateur libre GCC permet de compiler le Fortran 77 (compilateur g77, jusqu'à gcc 3.4.6). Le compilateur gfortran apparaît avec GCC 4.0.0, en 2005. Il est issu d'un fork réalisé en 2003 de , un autre compilateur libre, dont le développement a débuté en 2000. Le développent de G95 a par ailleurs été interrompu entre 2008 et 2012. En 2013, gfortran prend pleinement en charge le standard Fortran 95, et une partie de Fortran 2003 et Fortran 2008. Il n'a d'ailleurs pas à rougir devant les compilateurs commerciaux, pour le support de ces deux « nouveaux » standards, les fabricants étant parfois plus intéressés par l'amélioration de la vitesse du code produit que par les dernières fonctionnalités offertes par le standard.
+On trouve de nombreux compilateurs commerciaux, parmi lesquels : Lahey, Absoft, , (filiale de NVidia), NAG, etc. La plupart des fabricants de stations de travail ou d'ordinateurs destinés aux calcul intensif, proposent également un compilateur de Fortran : Intel, IBM, HP, SGI, Oracle (suite au rachat de "Sun Microsystems"), Unisys, Cray, etc. Cela comprend aussi les fabricants aujourd'hui disparus, tels que CDC ou DEC (ce dernier a été racheté par Compaq, qui a plus tard fusionné avec HP).
+Certains de ces compilateurs commerciaux ont des versions gratuites pour une utilisation non commerciale : c'est le cas d'Intel, Oracle, PathScale. IBM a également mis à disposition une version beta de son compilateur XL Fortran pour MacOS X (sur PowerPC), jusqu'à la sortie de la version commerciale.
+Exemple.
+Notes :
+Différentes versions de Fortran.
+Le langage Fortran a connu de nombreuses évolutions :
+Bibliothèques graphiques.
+Les normes Fortran n'incluent pas d'instructions graphiques. Pour pallier ce manque, il faut utiliser des bibliothèques :

@@ -1,0 +1,6 @@
+General algebraic modeling system
+
+General Algebraic Modeling System (GAMS) est un logiciel de modélisation mathématique.
+GAMS a été le premier langage de modélisation algébrique (Algebraic modeling language ou AML) et est formellement similaire aux langages de programmation utilisés communément.
+Les modèles sont décrits en formulations algébriques concises qui sont lisibles à la fois par les humains et par les machines.
+GAMS est largement utilisé en modélisation économique et en particulier pour implémenter des modèles d'équilibre général calculable, tel que GTAP.

@@ -1,0 +1,43 @@
+XL (langage)
+
+XL, dont les lettres proviennent de "eXtensible Language", est un langage de programmation, basé sur la programmation par concepts, développé depuis 2000 par Christophe de Dinechin.
+XL offre la possibilité de modifier et programmer la syntaxe et la sémantique du langage. Des plugins compilés peuvent être utilisés pour ajouter de nouvelles fonctionnalités au langage. On peut par exemple noter un ensemble de plugins permettant la mis en œuvre d'un langage impératif. Les utilisateurs peuvent écrire eux-mêmes leurs propres plugins pour permettre l'utilisation de syntaxe spécifiques, par exemple pour la dérivée, qui pourront être utilisés de la même manière que les fonctionnalités originales.
+Langage.
+XL est défini en quatre niveaux différents :
+XL n'a ni type primitif ni mot-clé. Tous les opérateurs et les types de données, tels que les entiers ou les additions, sont définis dans la bibliothèque standard "XL2". "XL1" est portable dans différents environnements d'exécution. Ce qui n'est pas garanti pour "XL2" qui n'offre pas de tels garanties : si un processeur particulier n'implémente pas la multiplication en virgule flottante, la définition de l'opérateur correspondant peut être manquante de la bibliothèque standard, et l'utilisation de cette fonctionnalité peut générer une erreur de compilation.
+En XL, le programme Hello World peut s'écrire ainsi :
+Une manière plus convenable pour des programmes plus importants serait :
+Une implémentation par récurrence de la fonction factorielle : 
+Syntaxe.
+La syntaxe est définie au niveau "XL0". La phase "XL0" du compilateur peut être configurée en utilisant un fichier de description de la syntaxe, où sont définies des propriétés telles que la représentation du texte et les priorités des opérateurs. Un fichier de syntaxe basique définit les notations mathématiques communes tel que + pour l'addition, ainsi que la priorité des opérations.
+L'"arbre syntaxique" est composé de 7 types de nœuds : 4 types de feuilles (entier, réel, texte et symbole) et 3 types de nœuds internes (infixe, préfixe et bloc).
+Avec le fichier de syntaxe par défaut, le code suivant est valide pour "XL0", indépendamment de la sémantique :
+Il est décomposé en :
+Sémantique de "XL1".
+Le niveau "XL1" est défini comme une séquence d'opérations sur l'arbre syntaxique du niveau "XL0". Ces opérations sont effectuées par divers plugins du compilateur qui sont appelés suivant la forme de l'arbre syntaxique.
+Des constructions particulières, codice_21 et codice_22, sont fournies par un plugin destiné à faciliter l'écriture d'autres plugins. La construction codice_23 génère un arbre syntaxique. Voici comment ces constructions peuvent être utilisées pour implémenter un plugin nommé codice_24, qui supprime les additions et multiplications par zéro : 
+Un plugin peut être invoqué sur un fichier complet à partir de la ligne de commande, ou plus localement dans le source du code en utilisant la notation "pragma", comme ici : 
+Le niveau "XL1" contient un grand ensemble de plugins, notamment codice_25 qui donne les abstractions communes telles que fonction, type de données et déclaration de variable et définition, et aussi les ordres de base de la programmation structurée que sont les boucles et les conditions.
+Système de typage.
+"XL1" contrôle le type statique, avec des possibilités de programmation générique qui vont au-delà de celles de C++ ou Ada. Les types comme les tableaux ou les pointeurs, qui sont des types primitifs en C++, sont déclarés dans une bibliothèque dans XL. Par exemple, le type d'un tableau d'une dimension peut être définit par : 
+Un "type générique validé" est un type générique où une condition indique comment le type peut être utilisé. De tels types ne doivent pas avoir de paramètres génériques. Par exemple, on peut déclarer un type comme codice_26 (ordonné) si un opérateur "inférieur" est présent :
+Ceci s'applique aussi aux types génériques qui ont des paramètres, comme codice_27. Une fonction calculant la somme des éléments dans un tableau peut s'écrire : 
+Type protégé de liste de variable d'arguments.
+Les fonctions peuvent être surchargées. Une fonction peut être déclarée avec un nombre variable d'arguments grâce au mot codice_28 dans la liste des paramètres. Dans une telle fonction, codice_28 permet de passer un nombre variable d'arguments à une autre fonction :
+Quand ce genre de fonction est appelée, le compilateur invoque les fonctions de manière récursive pour correspondre à la liste :
+Réduction d'expression (surcharge d'opérateur).
+Les opérateurs peuvent être définis en utilisant la forme codice_30 de déclaration de fonction. Voici un code qui déclare l'addition d'entiers :
+De telles "formes écrites" peuvent avoir plus de deux paramètres. Par exemple, une transformation de matrice linéaire peut s'écrire :
+Une forme écrite peut utiliser des constantes, et ce type de forme est plus spécialisée que sans constantes. Par exemple :
+Ce mécanisme est utilisé pour décrire tous les opérateurs de base. Une expression est progressivement réduite à des appels utilisant des formes écrites. Pour cette raison, ce mécanisme est appelé "réduction d'expression" plutôt que surcharge d'opérateur.
+Itérateurs.
+Les itérateurs de XL permettent de programmer à la fois des générateurs et des itérateurs.
+Sémantique de "XLR".
+"XLR" est un langage dynamique, conçu dès l'origine comme un exécutant "(back-end)" pour le compilateur "XL1" (d'où le nom, qui représente le runtime de XL). Il partage la syntaxe de base "XL0" avec "XL1", mais son comportement est plus proche de celui d'un langage fonctionnel, même si "XL1" est censé ressembler plus à un langage impératif. "XLR" n'a pratiquement qu'un seul opérateur de construction, "→", qui indique une réécriture. La notation à gauche de la notation de la réécriture est transformée en notation à droite de la réécriture.
+Ce mécanisme est utilisé pour implémenter les notations standards : 
+État du développement et historique.
+Le design de XL a commencé aux alentours de 1992, sous le nom LX (Langage eXpérimental). Le projet a été mis dans le domaine du logiciel libre en 2000, dans le cadre du projet "Mozart" qui visait à fournir des capacité de métaprogrammation multi-langage. Les premiers compilateurs étaient écrits en C++, mais cela rendait l'écriture d'extensions de compilateurs compliquée, car C++ ne permettait pas d'offrir le niveau d'abstraction voulu (par exemple un équivalent de codice_21). Les aspects multi-langage rendaient les arbres syntaxiques difficile à manipuler en respectant la sémantique de chaque langage.
+Une réécriture complète du compilateur a commencé en 2003, abandonnant l'idée de support multi-langage qui avait montré ses limites, et focalisant sur la facilité d'écriture des extensions. L'arbre syntaxique abstrait a été réduit à sept types de nœud seulement pour représenter tous les programmes. Ce nouveau compilateur s'est auto-compilé en 2004 (bien qu'avec des capacités réduites et une dépendance à C++ dans le code généré). Depuis, tout le développement se fait en XL.
+En 2007, le langage offre un grand nombre de fonctionnalités avancées, mais manque encore d'une bibliothèque fonctionnelle.
+Prédécesseurs.
+XL a été inspiré par un grand nombre d'autres langages. Dans l'ordre alphabétique :

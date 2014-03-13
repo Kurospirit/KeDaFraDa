@@ -1,0 +1,6 @@
+Pawn (langage de programmation)
+
+Le pawn est un langage de programmation "open source".
+"Info : Pawno est ce qu'on appelle un IDE : Integrated Development Environment. En Français, cela se traduit par Environnement de développement.
+Il contient l'éditeur de code, le compilateur, et le débuggeur qui vous retournera les erreurs. Il vous évite donc d'éditer le texte et d'avoir à utiliser un autre logiciel pour compiler."
+Le Pawno sert à scripter un 'serveur' de jeu sur la plate-forme de Grand Theft Auto San Andreas Multiplayer.

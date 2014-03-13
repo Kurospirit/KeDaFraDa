@@ -1,0 +1,8 @@
+Next Byte Codes
+
+__NOTOC__
+Le ou NBC est un langage assembleur pouvant être utilisé pour programmer le Lego Mindstorms NXT, la brique programmable de Lego, développé par John Hansen, un membre du "".
+Le compilateur NBC est disponible sous pour Windows, Mac OS et Linux. Son environnement de développement intégré est BricxCC.
+Un débogueur a été développé par SorosyDotCom et est disponible en téléchargement gratuit.
+Exemples de programmes.
+Voici deux exemples de programmes réalisables avec le NBC, suivis de l'explication de leur effet.

@@ -1,0 +1,22 @@
+IDL (langage)
+
+IDL, acronyme d'"Interactive Data Language", est un langage de programmation propriétaire apparu à la fin des années 1970,
+et qui est rapidement monté en puissance dans les domaines de la télédétection et de l'astronomie. IDL est un langage vectoriel de traitement de données et de visualisation très répandu dans l'industrie et dans la recherche.
+Un langage propriétaire innovant.
+IDL est un langage qui, au début des années 1990, présentait de nombreuses
+avancées par rapport à d'autres langages (Fortran, C et Pascal) utilisés dans
+certains laboratoires où la programmation était non pas un sujet de recherche
+en soi mais un outil pour traiter des observations. Il offre,
+à une époque où Fortran 90 n'était pas vraiment encore disponible, et C++
+pas vraiment défini, une gestion objet des quantités (nombre, vecteur, tableau)
+sans écrire de boucle, un affichage de traces (1D, 2D, 3D) à l'écran sans faire appel à des bibliothèques
+graphiques alors limitées (pgplot) ou complexes (X11 Motif).
+Quoiqu'interprété, un usage raisonnable (déjà en proscrivant les boucles explicites)
+dans un contexte adéquat (opération globale sur des vecteurs ou des matrices)
+ne donnait pas de différence notable en temps de calcul par rapport à du Fortran.
+Les arguments majeurs en faveur d'IDL sont :
+Les inconvénients :
+Comparaison avec des langages semblables.
+Des comparaisons sont aussi parfois faites avec matlab et octave.
+Une alternative libre.
+Depuis 2004, GNU Data Language, un clone libre d'IDL sous licence GNU/GPL, est en cours de développement.

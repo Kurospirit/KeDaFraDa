@@ -1,0 +1,5 @@
+SRFI (informatique)
+
+SRFI (en anglais « Scheme Requests for Implementation ») est un processus de standardisation des librairies et extensions du langage de programmation Scheme, dans le but de faciliter l'implémentation du langage.
+"SRFI" s'est imposé en raison du manque de normes précises pour développer des bibliothèques Scheme avant l'avènement du standard Scheme R6RS.
+Le "standard R6RS" couvre désormais ce champ d'application.

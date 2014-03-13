@@ -1,0 +1,18 @@
+Smalltalk
+
+Smalltalk est un langage de programmation orienté objet, réflexif et dynamiquement typé. Il fut l'un des premiers langages de programmation à disposer d'un environnement de développement intégré complètement graphique. Il a été créé en 1972. Il est inspiré par Lisp et Simula. Il a été conçu par Alan Kay, Dan Ingals, Ted Kaehler, Adele Goldberg au Palo Alto Research Center de Xerox. Le langage a été formalisé en tant que Smalltalk-80 et est depuis utilisé par un grand nombre de personnes. Smalltalk est toujours activement développé.
+Smalltalk a été d'une grande influence dans le développement de nombreux langages de programmation, dont : Objective-C, Actor, Java et Ruby.
+Un grand nombre des innovations de l'ingénierie logicielle des années 1990 viennent de la communauté des programmeurs Smalltalk, tels que les Patron de conception (appliquées au logiciel), l’ (XP) et le . Ward Cunningham, l'inventeur du concept du Wiki, est également un programmeur Smalltalk.
+Historique.
+Il existe un grand nombre de variantes de Smalltalk, comme c'est souvent le cas avec les langages de programmation. Sans autre qualificatif, le mot Smalltalk est souvent utilisé pour désigner Smalltalk-80, la première version à avoir été rendue publique en 1980.
+Smalltalk est le produit d'un groupe de chercheurs conduit par Alan Kay au Palo Alto Research Center (PARC) de Xerox ; Alan Kay a conçu les premières versions de Smalltalk qui ont été implémentées par Dan Ingalls. La première version, nommé Smalltalk-71, a été créée en quelques matinées sur le pari qu'un langage de programmation basé sur l'idée d'envoi de messages inspirée de Simula pouvait être réalisé en « une page de code ».
+Concepts.
+Les principaux concepts de Smalltalk sont :
+Description.
+Smalltalk implémente, en plus des principes objets de base (classe, objet, héritage, polymorphisme), des concepts originaux (métaclasse) et introduit la notion d'objet persistant, de traitement des exceptions et le principe Modèle-Vue-Contrôleur. 
+Une caractéristique surprenante de Smalltalk est l'absence totale d'instructions de contrôle intégrées au langage : if-then-else, for, while, etc. Toutes ces instructions sont implémentées en utilisant des objets. Par exemple, les décisions sont prises en envoyant un message ifTrue à un objet Booléen, et en passant un fragment de code à exécuter si le Booléen est vrai. Le seul aspect intégré par défaut est la syntaxe pour envoyer un message à un objet.
+L'exemple suivant illustre le style de programmation Smalltalk. L'exécution de ce code permet de trouver les voyelles dans une chaîne. Le déclare les variables, déclare les paramètres :
+À la dernière ligne, la chaîne aString reçoit un message select: avec un bloc de code en argument.
+Voici le code de la super-classe Collection qui fait le travail :
+Ce code répond au message en itérant au travers de ses membres (c'est la methode do:) en évaluant le code aBlock à chaque caractère ; aBlock (aCharacter isVowel) une fois évalué crée un booléen, qui est alors envoyé à ifTrue:. Si le booléen est vrai, alors le caractère est ajouté à la chaîne qui sera retourné.
+Comme select est défini dans la classe abstraite Collection, on pourrait également l'utiliser de cette façon :

@@ -1,0 +1,3 @@
+Query Management Facility
+
+, ou QMF, est un outil développé par IBM pour DB2.

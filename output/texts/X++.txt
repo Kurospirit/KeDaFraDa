@@ -1,0 +1,6 @@
+X++
+
+X++ est un langage de programmation orienté objet proche du C++ et du Java.
+MorphX est une plateforme pour construire les systèmes complexes de gestion de comptabilité et d'entreprise, la langue X++ inclut un certain nombre de commandes communes de SQL comme partie intégrée du langage.
+Les programmeurs employant X++ peuvent accéder aux classes existantes de Dynamics AX de Microsoft qui fournit la fonction qui s'étend de l'entrée-sortie de base et de la demande de transferts aux commandes de modification dans le temps d'exécution graphique de l'interface utilisateur. Ces classes peuvent être prolongées pour fournir le nouveau comportement.
+X++ fournit la vérification étendue, suivie d'un deuxième niveau de la vérification d'exécution. Si aucune référence ne se rapporte à un objet particulier, cet objet est supprimé.

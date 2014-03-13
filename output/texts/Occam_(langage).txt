@@ -1,0 +1,15 @@
+Occam (langage)
+
+Le langage de programmation Occam est un langage de programmation adapté à l'architecture parallèle, apparu en 1983. Il a été développé par Inmos pour la programmation de ses architectures en parallèle Transputer, mais a également été porté sur d'autres plates-formes.
+Le nom est un hommage à Guillaume d'Occam (parfois orthographié Ockham) et au principe méthodologique du rasoir d'Occam.
+Le langage Occam est un langage procédural classique qui offre, outre l'exécution d'instructions séquentiellement (avec SEQ), l'exécution des instructions en parallèle (avec PAR) et même la mise en « parallèle asynchrone » de processus (avec ALT) pour une exécution non-déterministe d'un parmi plusieurs.
+L'exécution en PAR des processus se fait avec des rendez-vous, comme en Ada.
+Occam contient aussi les « commandes gardées » de Edsger Dijkstra : un processus n'est lancé que si la valeur de sa garde, évaluée par le système, est vraie.
+Le "Transputer Development System" (TDS) d'Inmos était l'outil de développement classique, mais il était possible d'utiliser "Parallel C" ou d'autres outils. L'éditeur du TDS était , c'est-à-dire qu'il donnait la possibilité de plier et déplier des blocs de code, ce qui était très innovant ; à l'heure actuelle, il n'existe encore aucun remplaçant valable.
+Quelques notes sur les extraits de code ci-dessous :
+Quelques exemples de code réel
+codice_1
+Autre exemple :
+codice_1
+Exemple de multiplexeur de canaux :
+codice_1

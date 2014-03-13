@@ -1,0 +1,107 @@
+Communicating sequential processes
+
+En programmation concurrente, Communicating sequential processes (CSP) est une algèbre de processus permettant de modéliser l'interaction de systèmes.
+CSP intègre un mécanisme de synchronisation basé sur le principe du rendez-vous (détaillé plus loin au travers de la commande d'entrée/sortie). Combinant ce mécanisme à une syntaxe simple et concise, CSP permet alors l'implémentation rapide des paradigmes classiques de la concurrence, tels que producteurs/consommateurs ou lecteurs/écrivains. Ce n'est pas un langage de programmation complet.
+CSP fut décrit en premier par C. A. R. Hoare dans un article de 1978, mais a depuis évolué de façon substantielle. CSP a été mis en pratique industriellement comme un outil de spécification formelle de l'exécution concurrente de systèmes variés — tels que le T9000 Transputer ou un système informatique de transaction commerciale sécurisé 
+. C'est un champ de recherche toujours actif.
+Généralités.
+Structure d'un programme.
+Un programme CSP se présente sous la forme d'une suite de commandes et de déclarations de
+variable séparées par des points-virgule :
+Hoare distingue alors deux types de commandes :
+Les commandes d'entrée/sortie, parallèle, répétitive et alternative seront détaillées par la suite. La commande nulle, par définition, ne fait rien. Elle permet juste de combler les blocs d'instructions vides. La commande d'affectation a quant à elle une syntaxe classique "variable := valeur" :
+Échec de commande, terminaison de programme.
+L'échec d'une commande (par exemple, dans le cas d'une commande d'entrée/sortie, si le processus visé n'existe pas) entraîne l'échec du processus ou de la commande structurée qui la contient (l'échec d'une commande peut donc entraîner la fin du programme). Notons le cas particulier d'une répétitive dont l'échec d'une commande interne entraîne la terminaison et non la faillite (cf. partie La commande répétitive). 
+Un échec n'est donc pas une erreur en soi.
+Les signaux.
+Une notion de signal a aussi été introduite en CSP. Un signal est en quelque sorte une variable
+complexe (ou structurée) composé d'un constructeur (un identifiant libre) ainsi que d'un ensemble
+de valeurs. Les valeurs peuvent être soit de type élémentaire (entier, chaîne de caractères, etc.) soit
+d'autres signaux.
+Exemples :
+Notons aussi qu'un signal peut être affecté à une variable (exemple : x := p (4)), et peut aussi être la cible
+d'une affectation. Cela permet alors des affectations du type (x, y) := (y, x).
+Détails sur les commandes.
+La commande parallèle.
+Elle permet la mise en concurrence de processus par la syntaxe suivante :
+Une telle commande ne se termine que lorsque tous les processus qu'elle définit sont terminés,
+l'échec d'un seul entraînant l'échec de la commande parallèle.
+Précisons qu'une variable définie avant une commande parallèle est visible par les
+processus qu'elle contient. Ceci implique nécessairement que tous les processus définis devront 
+avoir accès aux variables déclarées avant la commande parallèle. On assiste donc ici à un partage de ressources, 
+dont les contraintes soulevées (accès exclusif, etc.) sont à la charge du programmeur.
+On note aussi la possibilité de déclarer plusieurs processus pour une même liste de commandes,
+comme le montre l'exemple suivant :
+Ici, dix processus ayant la même liste de commandes seront mis en concurrence.
+La commande d'entrée/sortie.
+Les communications entre processus reposent sur cette commande. Pour expliciter son fonctionnement,
+partons du cas simple de deux processus producteur et consommateur, le premier voulant
+transmettre une variable x au second. Une telle communication s'effectuera alors au travers des
+commandes suivantes :
+permettra au processus producteur d'envoyer x au processus consommateur
+permettra au processus consommateur de recevoir x depuis le processus producteur
+Du point de vue de la syntaxe, on remarque que le ! indique une commande de sortie, tandis
+que le ? indique une commande d'entrée. Plus formellement, une commande d'entrée se présentera
+sous la forme :
+et une commande de sortie sous la forme :
+De plus, pour que la communication soit possible entre deux commandes d'e/s, CSP impose que :
+Dans ces conditions, la transmission peut avoir lieu, et le contenu de l'expression source est copié
+vers la variable cible. Si l'une de ces conditions n'est pas respectée, les processus sont mis en attente,
+entraînant par conséquent un interblocage. Si l'un des processus est mort, alors toute commande
+d'entrée/sortie impliquant ce processus doit échouer. Enfin, le premier processus demandant la communication
+doit être mis en attente jusqu'à ce que le second le rejoigne. On retrouve ici le principe
+du rendez-vous.
+Notons aussi le cas particulier d'une synchronisation simple, c'est-à-dire sans transmission de
+valeur, possible grâce à l'utilisation d'un signal pur.
+Exemple :
+La commande alternative.
+Une commande alternative se présente sous la forme d'un ensemble de sélectives, chacune étant
+composée d'une garde ainsi que d'une liste de commandes. Une garde est quant à elle composée
+d'une partie expression booléenne et d'une partie commande d'entrée, l'une ou l'autre pouvant
+être omise.
+Syntaxiquement, une commande alternative se présente sous la forme suivante :
+Où "garde1" et "garde2" sont de la forme :
+Ce qui donne par exemple :
+Lors de l'exécution d'une commande alternative, chacune de ses gardes est testée, afin de déterminer sa 
+valeur selon une logique trivaluée (c'est-à-dire qu'une garde peut être vraie, fausse, ou
+neutre) :
+Ainsi, si une ou plusieurs commandes gardées sont vraies, un choix indéterministe (i.e. aléatoire)
+doit être effectué pour n'en sélectionner qu'une. Si aucune n'est vraie mais que certaines sont
+neutres, le processus se met en attente des commandes d'entrées correspondantes. Et si toutes les
+commandes gardées sont fausses, la commande alternative échoue.
+Si une garde est sélectionnée, la liste de commande correspondante doit alors être exécutée.
+Il est aussi important de noter que la contrainte d'ordre syntaxique limitant les commandes
+d'e/s dans les gardes aux simples commandes d'entrée, provient d'un choix fait par HOARE dans
+le but d'éviter les incohérences.
+Pour illustrer ce propos, partons de l'exemple suivant (qui suppose possible l'utilisation de
+commande de sortie dans les gardes) :
+Supposons que les deux processus soient chacun arrivés sur leur commande alternative. Les deux
+commandes vont donc être évaluées parallèlement :
+Si les deux choix sélectionnent la même communication, aucun problème n'est soulevé. Par contre, si chacun sélectionne une communication différente, on assiste à un cas d'incohérence entraînant nécessairement un interblocage.
+Ainsi, la communication entre commandes d'entrée/sortie gardées posant des problèmes, HOARE a décidé de l'empêcher en autorisant uniquement les commandes d'entrée dans les gardes.
+Précisons cependant que le compilateur proposé en fin de cet article autorise les commandes de sortie dans les gardes, mais ajoute en contrepartie la condition suivante :
+On évite alors bien le problème cité ci-dessus.
+La commande répétitive.
+La commande répétitive est composée d'une unique commande alternative, dont l'échec entraîne
+la fin de la répétition. On peut donc considérer qu'une répétitive ne peut se terminer qu'avec
+succès.
+Syntaxiquement, elle se présente sous la forme d'une étoile suivie d'une alternative :
+Par exemple :
+Ici, la commande répétitive se terminera lorsque i aura atteint la valeur 10.
+Conventions, pratiques usuelles.
+Définition de processus.
+On retrouve souvent la syntaxe "PROCESSUS == liste d'instructions" pour définir un processus à l'extérieur d'une commande
+parallèle, dans le seul but de clarifier le code. Exemple :
+La liste d'instructions "MAIN" est alors celle executée au lancement du programme.
+Commande d'affichage (print).
+Pour afficher un message à l'écran, on utilise usuellement la commande :
+Commande aléatoire (random).
+Permet de prendre un nombre au hasard compris dans l'intervalle fin
+Commande sleep.
+Stoppe le processus qui l'exécute pendant "tps" millisecondes. Permet de simuler des temps d'attente, etc.
+Définition de constantes.
+On utilise communément la syntaxe :
+Exemple :
+Exemple de programmes de type producteur/consommateur.
+Un producteur, deux consommateurs.
+Un producteur envoie une suite de nombre à un processus "délégueur" qui les transmet à deux consommateurs. L'utilisation d'une commande alternative dans le délégueur permet :

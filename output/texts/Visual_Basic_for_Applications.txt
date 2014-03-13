@@ -1,0 +1,42 @@
+Visual Basic for Applications
+
+Visual Basic for Applications (VBA) est une implémentation de Microsoft Visual Basic qui est intégrée dans toutes les applications de Microsoft Office, dans quelques autres applications Microsoft comme Visio et au moins partiellement dans quelques autres applications comme AutoCAD, WordPerfect, MicroStation, Solidworks ou encore ArcGIS. Il remplace et étend les capacités des langages macro spécifiques aux plus anciennes applications comme le langage WordBasic intégré à une ancienne version du logiciel Word, et peut être utilisé pour contrôler la quasi-totalité de l'IHM des "applications hôtes", ce qui inclut la possibilité de manipuler les fonctionnalités de l'interface utilisateur comme les menus, les barres d'outils et le fait de pouvoir personnaliser les boîtes de dialogue et les formulaires utilisateurs.
+Comme son nom l'indique, VBA est très lié à Visual Basic (les syntaxes et concepts des deux langages se ressemblent), mais ne peut normalement qu'exécuter du code dans une "application hôte" Microsoft Office (et non pas d'une application autonome, il requiert donc une licence de la suite bureautique Microsoft). Il peut cependant être utilisé pour contrôler une application à partir d'une autre (par exemple, créer automatiquement un document Word à partir de données Excel).
+Le code ainsi exécuté est stocké dans des instances de documents, on l'appelle également macros.
+VBA est fonctionnellement riche et extrêmement flexible, mais il possède d'importantes limitations, comme son support limité des fonctions de rappel ("callbacks"), ainsi qu'une gestion des erreurs archaïque, utilisation de handler d'erreurs en lieu et place d'un mécanisme d'exceptions.
+Même si ces limitations rendent ce langage très peu utilisé par les développeurs informaticiens soucieux d'utiliser des outils avant tout performants, sa simplicité et sa facilité d'accès ont séduit certaines professions, notamment dans la finance.
+Obsolescence.
+Depuis le 1er juillet 2007, Microsoft ne distribue plus de licences VBA à ses nouveaux clients car ils essayent de les remplacer par Visual Studio Tools for Applications (VSTA), un toolkit de customisation d'application basé sur la plateforme Framework .NET. De Dr Ex's article :
+"VSTA remplace maintenant VSA Studio for Applications comme technologie ISVs utilisée pour fournir des fonctionnalités de customisation dans leurs applications. […] VSA était un client léger, alternative gérée par serveur de VBA compilé sous Visual Studio. L'approche serveur a été vue par l'ISVs comme moins utile qu'un modèle de client riche, donc, en se basant sur leur retour, Microsoft a commencé le développement de VSTA. Des ISVs utilisent VSA aujourd'hui, mais nous trouvons que son applicabilité était limitée. Certaines des technologies développées pour VSA sont reprises dans VSTA. VSTA application customisation tire un meilleur profit des fonctionnalités du client riche que VSA, offrant un environnement hautement optimisé pour la customisation d'application à la fois sur le client et le serveur."
+"VSTA now replaces VSA Studio for Applications as the technology ISVs will use to provide customization capabilities in their applications. […] VSA was a thin-client, server-driven alternative to VBA built on Visual Studio. The server approach was viewed by ISVs as less useful than a rich-client model, so based on their feedback, Microsoft began development of VSTA. There are ISVs successfully using VSA today, but we found that its applicability was limited. Some of the technology developed for VSA is incorporated within VSTA. VSTA application customization takes better advantage of rich client functionality than VSA, offering a highly optimized environment for application customization on both the client and the server."
+Office 2007 continue à utiliser l'ancien moteur VBA; cependant, Visual Studio Tool pour Office (VSTO) est disponible. La prise en charge de VBA dans Microsoft Office pour Mac a été abandonnée avec la distribution de la version 12, en 2008 puis réintroduit dans la version 2011. Voir aussi VB.NET.
+La première version de VSTA a été fournie en avril 2006 et a été intégrée dans différents ISV, y compris InfoPath 2007 et ABB Robotics. La prochaine version de VSTA (basée sur Visual Studio 2008 connu sous le nom de "Orcas") sera distribuée vers février 2008. La seconde version de VSTA est très différente de la première, avec des fonctionnalités comme la programmation dynamique et la compatibilité WPF, WCF, WF, LINQ, et .NET 3.5.
+Toutefois, en raison de la dépendance de certaines entreprises à VBA, VBA sera encore disponible dans Office 2007 et 2010 (Office 14).
+Historique.
+La popularité incroyable de Visual Basic après son lancement amena Microsoft à inclure une version simplifiée dans ses applications de bureautique afin de remplacer les différents langages de macro. Cependant, comme le démontre la chronologie, ce changement s’est fait sur une longue période.
+Interopérabilité.
+Une prise en charge minimale de VBA est également disponible dans OpenOffice.org, à partir de la version 3.0.
+Applications.
+Dans Excel.
+L'enregistreur de macro sous Microsoft Excel (Onglet Développeur / Enregistrer une Macro) permet de générer facilement du code VBA dans une procédure.
+Toute la séquence d'action effectuée entre le début et la fin de l'enregistrement est enregistrée dans une procédure VBA, qui pourra être réexécutée à l'identique. Il est possible de modifier ce code ou de programmer directement dans la VBE (Onglet Développeur / Visual Basic).
+C'est la meilleure méthode pour apprendre à se servir de VBA pour les programmeurs néophytes.
+Tout d'abord on enregistre une séquence en appuyant sur le bouton d'enregistrement, et ensuite on peut l'exécuter pas à pas (touche F8) dans l'outil VBA afin de savoir les actions effectués par chaque ligne de code.
+Les principales collections d'objets du tableur Excel sont WorkBook (classeur), Sheets (feuille de calcul) et Range (cellules). Elles sont utilisables selon une hiérarchie descendante :
+Une fois un objet désigné :
+Les références aux cellules peuvent être :
+Microsoft Excel permet de créer des fonctions personnalisées programmées en code VBA et placées dans un module. Elles sont ensuite accessibles dans la bibliothèque de fonction (Insertion / Fonction / Personnalisée) :
+"Function NomFonction (Argument1, Argument2 As TypeDonnées, Optional Argument3=valeur_defaut)
+...(actions programmées)
+NomFonction = valeur renvoyée
+End Function"
+Ces fonctions peuvent recevoir des arguments en entrée, dont le type peut être spécifié (Argument2 ci-dessus) ou qui peuvent être optionnels, avec une valeur par défaut (Argument3 ci-dessus).
+Dans Word.
+Comme pour Excel, l'enregistreur de macro sous Microsoft Word (Onglet Développement / Nouvelle Macro) permet de générer facilement du code VBA dans une procédure.
+Toute la séquence d'action effectuée entre le début et la fin de l'enregistrement est enregistrée dans une procédure VBA, qui pourra être réexécutée à l'identique. Il est possible de modifier ce code ou de programmer directement dans la VBE (Onglet Développement / Visual Basic Editor).
+L'enregistreur de macro est la meilleure méthode pour d'apprentissage VBA pour les programmeurs néophytes.
+Tout d'abord on enregistre une séquence en appuyant sur le bouton d'enregistrement, et ensuite on peut l'exécuter pas à pas (touche F8) dans l'outil VBA afin de vérifier les actions effectués par chaque ligne de code.
+Les principales collections d'objets du traitement de texte Word sont Documents (les documents), BookMarks (les signets du document), Range (le contenu des signets). Elles sont utilisables selon une hiérarchie descendante :
+Une fois un objet désigné :
+Dans Access.
+Le VBA est grandement utilisé dans les macros et formulaires Microsoft Access.

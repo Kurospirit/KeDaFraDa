@@ -1,0 +1,28 @@
+Visual Basic .NET
+
+Visual Basic .NET est un langage de programmation à la syntaxe similaire à celle de Visual Basic 6. 
+Néanmoins, ces deux langages sont assez peu comparables dans la pratique tant l'évolution entre ceux-ci est énorme. Le principal changement étant sans conteste l'introduction de l'orientation objet dans le langage.
+VB.NET permet de développer en .NET via Visual Studio, c'est-à-dire seulement sur les systèmes d'exploitation Windows (98, 2000, XP, Vista, 7). Il existe cependant un projet visant à porter la plateforme DotNet (et donc VB.NET) sous Linux, MacOS et OpenBSD. Ce projet s'appelle Mono et il permet déjà de faire tourner nativement des applications .NET 2.0.
+Il est important de rappeler que tout programme VB.NET est compilé dans le même langage intermédiaire (IL) que C# ou tout autre langage de la plateforme DotNet.
+Les IDE (environnements de développements).
+L'IDE commun et incontournable de tous les langages DotNet est Visual Studio, mais celui-ci est payant.
+Un IDE gratuit basé sur Visual Studio existe : Visual Basic Express.
+D'autres IDE gratuits existent, comme SharpDevelop ou MonoDevelop, mais ceux-ci sont moins évolués que Visual Studio.
+Versions.
+Évolutions : de VB6 à VB7 (non-exhaustif).
+Qu'est-ce qui différencie VB6 (Visual Basic 6) par rapport à VB7 (Visual Studio 2003) ? :
+Évolutions : VB7 à VB8 (non-exhaustif).
+Quelques nouveautés ont fait leurs apparitions entre VB7 et VB8, mais c'est surtout le passage du DotNet FrameWork 1.1 au 2.0 qui marque cette évolution. 
+En voici tout de même un résumé :
+Évolutions : VB8 à VB9 (non-exhaustif).
+VB9 a évidemment implémenté toutes les nouvelles fonctionnalités de C#, ainsi que quelques autres :
+Évolutions : VB9 à VB10.
+VB10 (aussi appelé VBx) marque un tournant majeur dans l'évolution de VB. Outre le fait qu'il sera intégré dans le Framework 4, il devrait surtout combler totalement son "retard" par rapport à C# sur certains points (tout comme C# comblera son retard envers VB), vu que la "coévolution" des langages C# et VB.NET a été officiellement annoncée. Cela assure non seulement un futur stable à VB.NET, qui ne pourra pas être délaissé par Microsoft mais aussi une garantie que tout ce qui est faisable en C# le sera toujours aussi sous VB.NET (même si c'est d'une autre façon).
+Les fonctionnalités prévues pour VBx :
+Quelques différences entre C# et VB.NET (non-exhaustif).
+Voici les différences les plus flagrants entre VB.NET et C# (VB.NET et C# évoluant, les éléments de cette liste peuvent être obsolètes):
+Une liste des différences (en 2005) entre C# et VB.NET plus complète existe ici.
+Quelques exemples de code en VB.NET.
+Gestion des exceptions.
+VB.NET possède les instructions "try" et "catch" permettant de gérer les exceptions (comportement non attendu des instructions du programme).
+Exemples :

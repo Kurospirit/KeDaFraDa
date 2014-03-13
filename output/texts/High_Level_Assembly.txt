@@ -1,0 +1,4 @@
+High Level Assembly
+
+HLA est un programme assembleur pour l'architecture IA-32. Le nom signifie "High Level Assembly". HLA est écrit en langage assembleur et existe pour les systèmes Windows, Mac OSX, GNU/Linux, et FreeBSD.
+Il a été écrit par Randall Hyde dans le but d'enseigner l'assembleur dans les meilleures conditions possibles, aujourd'hui c'est un assembleur qui n'a pas à envier aux équivalents commerciaux.

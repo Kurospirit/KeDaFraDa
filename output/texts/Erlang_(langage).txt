@@ -1,0 +1,27 @@
+Erlang (langage)
+
+Erlang est un langage de programmation, supportant plusieurs paradigmes : concurrent, temps réel, distribué. Son cœur séquentiel est un langage fonctionnel à évaluation stricte, affectation unique, au typage dynamique fort. Sa couche concurrente est fondée sur le modèle d'acteur. Il possède des fonctionnalités de tolérance aux pannes et de mise à jour du code à chaud, permettant le développement d'applications à très haute disponibilité.
+Il a été créé par Ericsson, qui l'utilise dans plusieurs de ses produits, tel que le commutateur ATM AXD 301. Initialement propriétaire, il est publié sous licence Open Source en 1998. Il est également utilisé par d'autres entreprises développant des logiciels liés aux réseaux de télécommunications, comme T-Mobile et Nortel.
+Il est aussi utilisé pour écrire le serveur XMPP ejabberd, le serveur HTTP Yaws ainsi que le logiciel de modélisation 3D Wings 3D. Il possède de nombreuses bibliothèques incluses dans la distribution de base et regroupées sous le nom de "OTP (Open Telecom Platform)". OTP représente le framework standard de l'univers Erlang, la plupart des programmeurs l'utilisant comme base d'interopérabilité. Il peut s'interfacer avec d'autres langages comme Java ou C++.
+« Erlang » fait référence au mathématicien Agner Erlang, tout en étant la contraction d'"Ericsson Language".
+Exemples.
+Comme tous les langages fonctionnels, Erlang repose beaucoup sur la récursivité.
+En Erlang, la fonction factorielle peut s'écrire sous une forme récursive, comme suit : 
+où codice_1 est le cas de base, et codice_2 le cœur récursif.
+Une version utilisant la récursion terminale, avec un accumulateur :
+L'algorithme de tri Quicksort avec une implémentation également récursive peut s'écrire sous cette forme en Erlang (de nombreuses variantes existent) :
+Le code fait des appels récursifs à la fonction codice_3 jusqu'à ce que l'ensemble soit trié. L'expression codice_4 peut se traduire par « Choisir l'ensemble des codice_5 tels que codice_5 est un membre de codice_7 et codice_5 est inférieur à codice_9 ». L'opérateur codice_10 est celui de la concaténation entre les listes.
+Fonctionnalités notables.
+Le partage de données par passage de message.
+Contrairement aux processus légers (threads) dans des langages classiques tels Java ou C, les processus Erlang ne partagent pas de mémoire pour communiquer ce qui permet d'éviter les problèmes liés à la synchronisation. La transmission d'informations se fait uniquement par passage de messages. La primitive qui permet l'envoi d'un message est "send", exprimée par codice_11.
+La syntaxe est la suivante :
+dans lequel codice_12 est l'identité du processus destinataire et codice_13 une expression quelconque.
+À la différence d'autres langages concurrents comme Ada, l'envoi et la réception d'un message sont asynchrones en Erlang. Du point de vue de l'émetteur, l'envoi est instantané quel que soit l'état du destinataire. Le message est simplement remis dans la boîte aux lettres de ce dernier qui pourra le consommer au moment voulu. Cette propriété permet de découpler temporellement l'émetteur du receveur et ainsi de maximiser le niveau de concurrence dans le système tout en restant tolérant à la latence introduite par la communication dans un système distribué.
+Gestion explicite du temps.
+Du fait de ses origines comme outil logiciel de télécommunications, Erlang permet la définition de contraintes de temps réel souple "(soft real time)", c'est-à-dire l'exécution d'une action à l'intérieur d'un temps déterminé. Erlang incorpore la gestion du temps dans la primitive de réception de message "receive", dont la syntaxe est la suivante:
+Le processus qui exécute le code ci-dessus attendra au plus, la valeur de l'expression codice_14. Si aucun message correspondant à codice_15 ou codice_16 n'est reçu par le processus d'ici là, il exécute alors l'action codice_17.
+La programmation distribuée à base de nœud et de processus.
+Les processus Erlang s'exécutent dans une machine virtuelle. Plusieurs machines virtuelles possiblement situées sur différents ordinateurs peuvent être connectées entre elles et former les nœuds d'un système distribué. La communication entre processus localisés sur des nœuds différents utilise les mêmes primitives et possède la même sémantique que pour la communication entre processus du même nœud. Du point de vue du programmeur, la localisation d'un processus est transparente.
+Les connexions entre nœuds sont dynamiques. Un nœud peut joindre et quitter le système (ou en être isolé par une panne) à n'importe quel moment. Cette caractéristique autorise la tolérance aux pannes par redondance et la montée en charge d'une application par ajout de nouveaux nœuds.
+La richesse de l'environnement.
+Bâties sur le langage, les bibliothèques "Open Telecom Platform (OTP)" offrent des fonctionnalités de distribution des traitements et de supervision des nœuds avancées, ainsi qu'une base de données répartie. L'accent est mis sur la tolérance aux pannes puisque le couple Erlang/OTP permet entre autres de :

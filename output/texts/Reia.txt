@@ -1,0 +1,7 @@
+Reia
+
+Reia est un langage de programmation concurrent orienté objet pour la machine virtuelle Erlang.
+Reia supporte différents paradigmes dont : la programmation impérative la programmation orientée objet, la programmation fonctionnelle, la programmation déclarative et la programmation concurrente.
+Ce langage utilise le modèle d'acteur pour la concurrence, de manière à fonctionner avec son système d'objets.
+Son typage est dynamique, et gère la mémoire de manière automatique (via un ramasse-miettes).
+Ce langage est proche, par différents aspects, de l'Erlang, du Ruby et du Python.

@@ -1,0 +1,18 @@
+LSE (langage de programmation)
+
+LSE est un langage de programmation conçu au début des années 1970 par une équipe de Supélec sous la direction d'Yves Noyelle. À l'instar du BASIC, c'est un langage destiné aux débutants en programmation ; il possède une syntaxe francophone.
+Histoire.
+LSE est le résultat d'une évolution d'un langage plus ancien, le LSD, conçu lui aussi à Supélec.
+Son sigle avait initialement deux significations :
+auxquelles sont venues se joindre, parmi bien d'autres :
+LSE doit sa diffusion à sa mise à disposition par le ministère de l'Éducation nationale français sur les ordinateurs destinés aux lycées, jusqu'à l'arrivée des PC et compatibles, lesquels n'en ont pas été équipés. Le langage d'origine supportait les procédures (contrairement au BASIC). 
+Le langage a été révisé en 1983 par Jacques Arsac, pour enfin intégrer la notion de boucle explicite indispensable à toute bonne programmation structurée, et se débarrasser définitivement de son « ALLER EN » (goto). À noter, l'introduction des exceptions.
+Cela n'a pas empêché LSE de sombrer rapidement dans l'oubli à la suite de l'abandon de celui-ci par le gouvernement français. Il existe cependant une petite communauté d'utilisateurs et le langage a fait l'objet d'une révision proposée par Luc Goulet (LSE2000) qui reprend en bonne partie les propositions de 1983 et inclut des améliorations. Notamment elle ajoute au langage la prise en charge de la programmation orientée objet et aspect. Un wikilivre décrit la proposition LSE-2000.
+Aspects politiques ?
+En fait, les ambitions pédagogiques annoncées n'étaient pas sans arrières-pensées politiques sur la place de la France (et de son industrie informatique) dans le monde, comme le montre le texte suivant, remis au ministère en 1982 par l'EPI (association d'enseignants en informatique) :
+Exemples de programme.
+Anagramme récursive.
+Exemple extrait du papier de Jacques Arsac sur LSE83 :
+Voir aussi.
+Lien externe.
+Compilateur PhoenixLSE (LSE2000)

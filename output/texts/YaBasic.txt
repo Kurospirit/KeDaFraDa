@@ -1,0 +1,21 @@
+YaBasic
+
+YaBasic, qui signifie "Yet Another Basic", est un interprète du langage BASIC pour les plateformes Unix, Windows et PlayStation 2. Similaire au Commodore BASIC du Commodore 64, il supporte le mode graphique couleur et a des possibilités d'impression. Il est aussi relativement petit : environ 200 kilooctets.
+Variables.
+Types.
+Le langage yabasic utilise deux types de variables :
+On notera aussi les choses suivantes :
+Déclarations.
+En règle générale, les variable ne sont pas déclarées en yabasic mais il y a des exceptions :
+Un tableaux global se déclare avec dim ou redim (ces deux mots-clés sont synonymes).
+Qu'il s'agisse ou non d'un tableau, une variable locale se déclare avec local.
+Qu'il s'agisse ou non d'un tableau, une variable statique se déclare avec static.
+Exécutables.
+Yabasic permet la création d'exécutables mais, lors d'une telle action, le fichier n'est pas compilé mais combiné à l'interpréteur. Par conséquent, le code source ne peut pas être caché et peut toujours être visualisé à l'aide d'un éditeur de texte adapté (comme SciTE ou Notepad++).
+Exemple de programme.
+Un programme de type "Hello world" en YaBasic :
+codice_1
+Versions.
+YaBasic fut créé par Marc-Oliver Ihm, qui a annoncé en août 2007 que la version 2.763, sortie deux ans plus tôt, serait probablement la dernière version du logiciel. Cela dit, ce logiciel étant open source, une version 2.764 a été publiée depuis et une version 3 est en cours de développement.
+La version PlayStation 2.
+La version pour PlayStation 2 est incluse gratuitement avec les consoles vendues en Europe, Asie et Océanie. Le disque de démo contenant l'interprète YaBasic est un disque PAL et n'est pas prévu pour les marchés américains et japonais. Les programmes peuvent être enregistrés sur des cartes mémoires et ainsi échangés entre amis.

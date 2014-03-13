@@ -1,0 +1,9 @@
+TTCN
+
+TTCN est un langage de programmation pour les tests des protocoles de communication. Une suite de tests TTCN consiste en un grand nombre de scénarios de test écrits en TTCN.
+Jusqu'à la version 2, le langage est écrit d'une manière non conventionnelle dans des tables et appelé "tree and tabular combined notation" (« notation combinée arborescente et tabulaire »). La lecture et l'écriture dans ce langage nécessitaient des éditeurs spécifiques à TTCN.
+Avec la version 3, TTCN fut renommé "testing and test control notation" (« notation de tests et de contrôle de tests »). Il est plus proche des langages de programmation modernes et peut s'écrire dans un éditeur de texte traditionnel. TTCN-3 est encore plus flexible que TTCN-2, parce qu'il peut être utilisé pour tester les logiciels traditionnels, en plus des protocoles.
+Pour leur exécution, toutes les versions ont besoin de compilateurs ou d'interpréteurs dédiés.
+TTCN est largement utilisé par exemple par l'ETSI et l'UIT pour tester les protocoles de télécommunication. Les tests de conformité des standards ETSI comme ISDN, DECT, GSM, EDGE ou 3G ont été effectués en TTCN. Depuis quelques années, il est utilisé pour tester d'autres protocoles standards comme Bluetooth et IP.
+L'exécution de ces tests sur des produits (par exemple, des téléphones fixes ou mobiles ou des éléments de réseau) permet de vérifier que l'implémentation du protocole de ces produits respecte les exigences définies par les standards de télécommunication.
+TTCN est souvent utilisé en tandem avec ASN.1.

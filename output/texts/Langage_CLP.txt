@@ -1,0 +1,20 @@
+Langage CLP
+
+Le Langage CLP (Control Language Procedure) est un langage de programmation du système d'exploitation OS/400.
+Apparu sous ce nom sur les systèmes 38 (ancêtres de l'AS/400), il intègre les fonctions d'un langage OS traditionnel.
+Il s'appuie sur les commandes de l'OS400 et il a pour particularité d'être compilé.
+Description.
+La grammaire du langage est basée sur les commandes CL de l'OS400
+Les commandes.
+La plupart des commandes sont une combinaison d'un verbe (représentant une action) suivi d'un nom ou une phrase qui identifie le destinataire de l'action (l'objet concerné par l'action). Les différents "mots" de la combinaison sont en général sur trois lettres pour faciliter la mémorisation des commandes. Exemple : WRKJOB ⇒ Work + Job ⇒ Gérer un travail (ou tâche), celui en cours par défaut.
+On peut utiliser une aide à la saisie (ou invite), on l'obtient en pressant la touche de fonction F4 qui propose tous les paramètres disponibles et leur valeurs possibles pour chaque commande. Cette aide à la saisie est elle-même accompagnée d'un texte d'explication pour chaque paramètre, accessible par la touche F1.
+La création de procédures.
+L'éditeur natif est SEU (Source Editor Utility), désormais on peut éditer ses sources depuis MS-Windows surcouche à Eclipse, fournie par IBM sous le nom de WDSC (Websphere Development Studio Client).
+Contrairement au RPG, ou au COBOL, il n'est pas colonné. 
+Ce langage peut sauf interdiction exclusive être décompilé simplement ce qui facilite la lecture des chaines d'exploitation. 
+Futur.
+Les évolutions sont liées aux versions de l'OS/400, et les vrais changements arrivent à partir des versions 5.x 
+Voir aussi.
+System_i, iSeries, OS/400 
+Références.
+Se reporter aux références indiquées dans l'article System_i

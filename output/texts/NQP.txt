@@ -1,0 +1,4 @@
+NQP
+
+NQP signifie Not Quite Perl (Pas Vraiment Perl). Ce composant de Parrot est un sous ensemble de Perl 6 destiné à l'écriture de compilateurs. Il utilise PGE pour l'analyse syntaxique.
+Il est utilisé pour le bootstrap de Rakudo, un compilateur Perl 6.

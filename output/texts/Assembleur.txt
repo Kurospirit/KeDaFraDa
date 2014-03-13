@@ -1,0 +1,54 @@
+Assembleur
+
+Un langage d'assemblage ou langage assembleur est, en programmation informatique, un langage de bas niveau qui représente le langage machine sous une forme lisible par un humain. Les combinaisons de bits du langage machine sont représentées par des symboles dits « mnémoniques » (du grec "mnêmonikos", relatif à la mémoire), c'est-à-dire faciles à retenir. Le programme assembleur convertit ces mnémoniques en langage machine en vue de créer par exemple un fichier objet ou un fichier exécutable.
+Dans la pratique courante, le même terme "assembleur" est utilisé à la fois pour désigner le langage d'assemblage et le programme assembleur qui le traduit. On parle ainsi de « programmation en assembleur ».
+Histoire.
+Les programmes de l'EDSAC (1949), premier calculateur à programmes enregistrés, étaient rédigés en utilisant des mnémoniques alphabétiques d'une lettre pour chaque instruction. La traduction était alors faite à la main par les programmeurs, une opération longue, fastidieuse et entachée d'erreurs.
+Le premier programme assembleur a été écrit par Nathaniel Rochester pour l'IBM 701 (le premier ordinateur commercialisé par IBM) en 1954.
+Les langages d'assemblages ont éliminé une grande partie des erreurs commises par les programmeurs de la première génération d'ordinateurs, en les dispensant de mémoriser les codes numériques des instructions et de faire des calculs d'adresses. La programmation en assembleur était alors utilisée pour écrire toutes sortes de programmes.
+Dans les années 1970-80, l'utilisation de l'assembleur pour écrire des applications a été très largement supplantée par l'emploi de langages de programmation de haut niveau : FORTRAN, COBOL, PL/I, etc.
+Les systèmes d'exploitations ont été écrits en langage d'assemblage jusqu'à l'introduction de MCP de Burroughs, en 1961, qui était écrit en ESPOL, un dialecte d'Algol.
+L'assembleur est revenu quelque peu en faveur sur les premiers micro-ordinateurs, où les caractéristiques techniques (taille mémoire réduite, puissance de calcul faible, architecture spécifique de la mémoire…) imposaient de fortes contraintes, auxquelles s'ajoute un facteur psychologique important, l'attitude « hobbyiste » des premiers utilisateurs de micro-ordinateurs, qui ne se satisfaisaient pas de la lenteur des programmes écrits avec le BASIC interprété généralement fourni avec l'ordinateur.
+Des gros programmes ont été écrits entièrement en assembleur pour les micro-ordinateurs, comme le système d'exploitation DOS de l'IBM PC (environ 4000 lignes de code), et la tableur Lotus 1-2-3 (son rival Multiplan, qui existait déjà sous CP/M, était écrit en C). Dans les années 1990, c'était aussi le cas pour la plupart des jeux pour consoles vidéo.
+Particularités de l'assembleur.
+Un langage spécifique à chaque processeur.
+Le langage machine est le seul langage qu'un processeur puisse exécuter. Or chaque famille de processeurs utilise un jeu d'instructions différent.
+Par exemple, un processeur de la famille x86 reconnaît une instruction du type
+En langage assembleur, cette instruction est représentée par un équivalent plus facile à comprendre pour le programmeur :
+(10110000 = movb %al
+01100001 = $0x61)
+Ce qui signifie : « écrire le nombre 97 (la valeur est donnée en hexadécimal : 61 = 97) dans le registre AL ».
+Ainsi, le langage assembleur, représentation exacte du langage machine, est spécifique à chaque architecture de processeur. De plus, plusieurs groupes de mnémoniques ou de syntaxes de langage assembleur peuvent exister pour un seul ensemble d'instructions, créant ainsi des macro-instructions.
+Désassemblage.
+La transformation du "code assembleur" en langage machine est accomplie par un programme nommé assembleur. L'opération inverse, à savoir retrouver l'assembleur équivalent à un morceau de code machine, porte un nom : il s'agit de "désassemblage".
+Contrairement à ce que l'on pourrait penser, il n'y a pas toujours de correspondance un à un (une bijection) entre le code assembleur et le langage machine. Sur certains processeurs, le désassemblage est donc impossible à réaliser de façon certaine. L'impossibilité d'un désassemblage peut avoir diverses raisons : usage de code auto-modifiant, instructions de taille variables, impossibilité de faire la différence entre code et données, etc.
+Qui plus est, de nombreux éléments présents dans un code assembleur sont perdus lors de sa traduction en langage machine. Lors de la création du code en assembleur, le programmeur peut affecter des noms aux positions en mémoire, commenter son code, utiliser des macro-instructions ou utiliser du code généré sous conditions au moment de l'assemblage. Tous ces éléments sont réduits lors de l’assemblage à ce qui est strictement nécessaire pour la machine et n'apparaissent donc pas clairement lors du désassemblage : par exemple, une position en mémoire n’est repérée que par son adresse numérique ou par un offset.
+Instructions machine.
+Certaines opérations fondamentales sont disponibles dans la plupart des jeux d'instructions.
+Et on trouve des instructions spécifiques avec une ou quelques instructions pour des opérations qui auraient dû en prendre beaucoup. Exemples :
+Directives du langage assembleur.
+En plus de coder les instructions machine, les langages assembleur ont des directives supplémentaires pour assembler des blocs de données et affecter des adresses aux instructions en définissant des étiquettes ou labels.
+Ils sont capables de définir des expressions symboliques qui sont évaluées à chaque assemblage, rendant le code encore plus facile à lire et à comprendre.
+Ils ont habituellement un langage macro intégré pour faciliter la génération de codes ou de blocs de données complexes.
+Exemples simples.
+Voici quelques exemples simples :
+Exemples simples, syntaxe Intel x86.
+Voici les mêmes exemples, avec quelques différences :
+Usage du langage assembleur.
+Il y a des débats sur l'utilité du langage assembleur. Dans beaucoup de cas, des compilateurs-optimiseurs peuvent transformer du langage de haut niveau en un code qui tourne aussi efficacement qu'un code assembleur écrit à la main par un très bon programmeur, tout en restant beaucoup plus facile, rapide (et donc moins coûteux) à écrire, à lire et à maintenir.
+L'efficacité était déjà une préoccupation dans les années 1950, on en trouve trace dans le manuel du langage FORTRAN (sorti en 1956) pour l'ordinateur IBM 704:
+" Object programs produced by Fortran will be nearly as efficient as those written by good programmers."
+Les compilateurs ayant entre-temps fait d'énormes progrès, il est donc évident que l'immense majorité des programmes sont maintenant écrits en langages de haut niveau pour des raisons économiques, le surcoût de programmation l'emportant très largement sur le gain résultant de l'amélioration espérée des performances.
+Cependant, il reste quelques cas très spécifiques où l'utilisation de l'assembleur se justifie encore :
+Certains compilateurs transforment, "lorsque leur option d'optimisation la plus haute n'est pas activée", des programmes écrits en langage de haut niveau en code assembleur, chaque instruction de haut niveau se traduisant en une série d'instructions assembleur rigoureusement équivalentes et utilisant les mêmes symboles ; cela permet de voir le code dans une optique de débogage et de "profilage", ce qui permet de gagner parfois beaucoup plus de temps en remaniant un algorithme. En aucun cas ces techniques ne peuvent être conservées pour l'optimisation finale.
+La programmation des systèmes embarqués, souvent à base de microcontrôleurs, est une « niche » traditionnelle pour la programmation en assembleur. En effet ces systèmes sont souvent très limités en ressources (par exemple un microcontrôleur PIC 16F84 est limité à 1024 instructions de 14 bits, et sa mémoire vive contient ). et requièrent donc une programmation de bas-niveau très optimisée pour en exploiter les possibilités. Toutefois, l'évolution du matériel fait que les composants de ces systèmes deviennent de plus en plus puissants à un coût et à une consommation électrique constants, l'investissement dans une programmation « tout assembleur » beaucoup plus coûteuse en heures de travail devient alors un non-sens en termes d'efforts. Typiquement, la programmation en assembleur est beaucoup plus longue, plus délicate (car le programmeur doit prendre en compte tous les micro-détails du développement dont il s'abstient en langage évolué) et donc considérablement plus coûteuse que la programmation en langage de haut niveau. Il ne faut donc la réserver qu'aux situations pour lesquelles on ne peut pas faire autrement.
+Macro-assembleur.
+Beaucoup d'assembleurs gèrent un langage de macros. Il s'agit de regrouper plusieurs instructions afin d'avoir un enchaînement plus logique et moins fastidieux.
+Par exemple (en assembleur Microsoft MASM) :
+est une macro qui affiche un caractère sous MS-DOS. On l'utilisera par exemple ainsi :
+Et cela générera :
+Pseudo-instructions.
+Une pseudo-instruction est un type particulier de macro-instruction. Elle est prédéfinie par l'éditeur du logiciel assembleur et sa fonction est d'émuler une instruction manquante du processeur ou de faciliter l'usage d'une instruction existante. Comme la pseudo-instruction a un nom très ressemblant à celui d'une vraie instruction du processeur, il est possible à première vue de la confondre avec une de ces dernières. Par exemple, un processeur RISC peut ne pas posséder d'instruction JMP, instruction permettant de sauter à un point particulier du programme et de continuer son exécution en séquence. L'éditeur du logiciel aura dans ce cas créé à l'intention du programmeur une pseudo-instruction « JMP 'paramètre' », qui sera remplacée à l'assemblage par une instruction « mov "pc", 'paramètre' », "pc" étant le pointeur de l'instruction sur le point d'être exécutée. Autre exemple, une pseudo-instruction « PUSH 'paramètre' » sera remplacée par un stockage de 'paramètre' à l'adresse pointée par "sp" avec pré-décrémentation de celui-ci, "sp" étant le pointeur de pile du processeur.
+Sur des microprocesseurs ou microcontroleurs RISC tels que ceux de la famille ARM, il n'existe pas d'instruction assembleur permettant de charger n'importe quelle constante immédiate dans un registre, quelle que soit sa valeur. La plupart des assembleurs disposent d'une pseudo-instruction permettant un tel chargement de la façon la plus efficace possible en termes de temps d'exécution, épargnant cette tâche au programmeur.
+Programmation structurée en assembleur.
+Support pour programmation structurée : quelques éléments de programmation structurée ont été intégrés pour encoder le flux d'exécution par Dr. H.D. Mills (), et mis en œuvre par Marvin Kessler qui a étendu l'assembleur S/360 macro avec if / else / endif et même des blocs de contrôle de flux. Cela a été un moyen de réduire ou d'éliminer l'utilisation des opérations de GOTO dans le code assembleur.

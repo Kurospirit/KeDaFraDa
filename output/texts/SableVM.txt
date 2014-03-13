@@ -1,0 +1,4 @@
+SableVM
+
+SableVM est un programme informatique consistant en une machine virtuelle libre pour Java développée par l'équipe SableVM. Celle-ci se propose de réaliser un ensemble maintenable et portable. Le logiciel est distribué sous licence LGPL. Il utilise également GNU Classpath (dont les droits sont détenus par la Free Software Foundation) sous licence GPL sauf pour le lien.
+SableVM est compatible avec les spécifications complètes de Java. La machine virtuelle a été conçue de manière à s'approcher des performances des compilateurs JIT ("just-in-time"). SableVM est la première machine virtuelle Java libre qui supporte le "JVMDI" ("Java Virtual Machine Debugging Interface") et "JDWP" ("Java Debug Wire Protocol"). Ces interfaces de débogage sont utilisées par Eclipse pour offrir un environnement de développement efficace et riche.

@@ -1,0 +1,5 @@
+Locomotive BASIC
+
+Locomotive BASIC est un dialecte propriétaire du langage de programmation BASIC écrit par Locomotive Software. Disponible seulement sur certaines Compatible PC Amstrad (Amstrad PC-1512 par exemple) et tous les Amstrad CPC où l'interpréteur était intégré sur une puce mémoire non-modifiable (ROM). C'est le principal ancêtre du Mallard BASIC se trouvant sur les Amstrad PCW.
+Il a été édité en plusieurs versions : la version 1.0 se trouvait sur les modèles CPC464, la version 1.1 sur les CPC664, la version 1.2 sur les CPC6128 et la version 1.4 sur les machines Amstrad CPC Plus.
+À noter toutefois que les versions 1.2 et 1.4 s'annoncent comme étant des 1.1 à l'invite. Si la transition entre les versions 1.0 et 1.1 apportait son lot de nouvelles commandes, les versions 1.2 et 1.4 n'offraient rien de nouveau sinon des corrections de bugs ou des améliorations de performance.

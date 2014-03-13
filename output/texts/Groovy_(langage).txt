@@ -1,0 +1,18 @@
+Groovy (langage)
+
+Groovy est le nom d'un langage de programmation orienté objet destiné à la plate-forme Java. Il constitue une alternative au langage Java pour cette plate-forme et est inspiré de Python, Ruby et Smalltalk. Il est l'objet de la spécification JSR 241.
+Groovy utilise une syntaxe très proche de Java, avec des accolades, et est directement compilé, soit à la volée dynamiquement, soit classiquement avec un compilateur en bytecode. 
+Groovy s'intègre et est entièrement compatible avec la JVM étant donné que le bytecode est le même.
+Il peut donc
+Groovy peut être comparé à BeanShell, l'objectif de faire un langage de scripting proche de java est le même, la mise en œuvre étant différente.
+Principales caractéristiques du langage.
+Groovy possède certaines caractéristiques qui le différencient du Java standard :
+Comparaison entre Java et Groovy.
+Voici une comparaison de Java et Groovy :
+Standard Java (Java 5+)
+Groovy
+Langage de balisage (XML, HTML…).
+Une des caractéristiques notables de Groovy est sa gestion native des langages de balisage comme XML et HTML. Cette prise en charge permet de définir et manipuler par programmation plusieurs types de structures avec une syntaxe commune.
+Exemple :
+ce code Groovy… 
+… produit le contenu XML suivant :

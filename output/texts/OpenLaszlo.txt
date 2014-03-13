@@ -1,0 +1,13 @@
+OpenLaszlo
+
+OpenLaszlo est une plateforme de développement pour des applications web. Elle permet de créer des applications riches (Rich Internet Applications) comprenant une interface riche en fonctionnalités (drag  et  drop, onglet, menu déroulant, animation etc.) tout en offrant un déploiement facilité par le biais du navigateur web. OpenLaszlo est compatible avec la majorité des navigateurs web et des systèmes d'exploitation disposant soit d'un plugin Flash, soit simplement du support Javascript. OpenLaszlo se base sur une grammaire XML appelée LZX.
+Quelques compléments à propos de LZX et du serveur OpenLaszlo :
+Historique du projet.
+OpenLaszlo était originellement appelé Laszlo Presentation Server (LPS). Le développement de LPS a débuté originellement en automne 2001. Les versions de démonstration sont mises sur pieds pour acquérir des partenaires, courant 2002. Plusieurs d'entre eux ont déployé des applications. La première version officielle sort dans le début 2002.
+En octobre 2004, Laszlo Systems libère l'ensemble du code de Laszlo Presentation Server sous licence "CPL open source license" et démarre le projet OpenLaszlo. En 2005, parallèlement à la sortie de la version 3.0, le nom de Laszlo Presentation Server est changé en OpenLaszlo.
+Jalons :
+Déploiement.
+Une application Laszlo peut être déployée comme un servlet Java traditionnel. Celui-ci est compilé et renvoyé au navigateur dynamiquement. Ce procédé exige que le serveur OpenLaszlo tourne sur le serveur web.
+Une autre manière de faire est de compiler une application LZX en un binaire SWF ou en HTML/AJAX. Cette méthode est appelée le déploiement SOLO. Les applications déployées de la sorte ont certaines fonctionnalités en moins, bien que les dernières versions ont essayé de remédier à ce problème.
+Licence.
+OpenLaszlo est proposé sous Common Public License, érigée par IBM.

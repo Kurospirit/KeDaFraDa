@@ -1,0 +1,9 @@
+RPL
+
+Le RPL est un langage de programmation procédural inventé par Hewlett-Packard en 1984 pour ses calculatrices (HP-28, 48, 49).
+Origine du nom.
+Le seul nom commercial du langage est RPL, et, bien que la transcription officielle d'HP soit « "ROM-based Procedural Language" », de nombreux utilisateurs l'ont traduit par « "Reverse Polish Lisp" » (« "Lisp polonais inversé" ») en raison des ascendants de ce langage : le LISP et le FORTH. Il dérive des langages Forth (langage pour machines de 4 génération) et Lisp, dont le nom signifie « LISt Processor ». Le RPL utilise la notation polonaise inverse.
+Fonctionnement.
+Ce langage utilise une pile et est pourvu des instructions classiques de boucles et tests. (), qui permet de faire une réelle programmation, similaire au Basic
+Évolution.
+Le langage RPL/2 est une version améliorée du langage originel disponible sur la plupart des systèmes d'exploitation actuels : tous Unix (Posix 2001 ou SysV), OS/2 et eComStation, Windows avec Interix ou Cygwin.

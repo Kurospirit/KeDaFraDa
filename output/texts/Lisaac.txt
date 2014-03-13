@@ -1,0 +1,57 @@
+Lisaac
+
+Lisaac est un langage de programmation impératif à prototype compilé conçu afin d'écrire le système d'exploitation Isaac. 
+C'est un système intégralement modulaire et entièrement composé d'objets posés sur le matériel de la machine. C'est ainsi un langage de haut niveau conçu pour être adapté au développement de pilotes de périphériques.
+Présentation générale.
+Lisaac est inspiré du langage Self pour les concepts d'objets à prototypes, issu de recherches poursuivies dans les années 1990 par "Sun Research". Il est aussi inspiré du langage Eiffel, un langage objet à classes, pour les aspects d'ingénierie logicielle et notamment pour la programmation par contrat. Enfin les concepts utiles à la programmation système comme la gestion des interruptions ont été rajoutés.
+L'objet à prototypes se différencie de l'objet à classe en ce qu'il n'est plus nécessaire de créer une classe, un « moule » de l'objet que l'on instanciera dans le corps du programme. 
+Dans le monde à prototype, ne règnent que des objets. Un objet est vivant dès l'exécution. Un objet ne s'instancie pas, il se clone. Un objet peut posséder plusieurs parents (héritage multiple). Un objet peut dynamiquement changer de parents (héritage dynamique).
+Le compilateur Lisaac génère du C ANSI optimisé et est ainsi multi-plateforme.
+Caractéristiques.
+Un langage objet à prototype.
+Dans ce type de langage, l'objet règne en maître. Un objet est physiquement présent en mémoire, il se clone. L'héritage se situe au niveau des objets, pas des classes.
+Un objet héritant d'un autre objet, plusieurs objets peuvent hériter d'un même objet physique. Étant une entité physiquement séparée, il est possible de changer de parent à l'exécution (voir héritage dynamique)
+Protections.
+En lisaac, on n'est plus limité par le "private", "public" et "protected". Plus exactement le "protected" est étendu :
+On défini une méthode ou propriété publique ou privé en définissant dans Section Public ou Section Private.
+Par contre, pour faire du protected, on va faire Section SELF ie. tous les objets héritant de SELF vont pouvoir accéder aux propriétés/méthodes de cette section, ce qui revient à protected.
+Mais là où cela devient intéressant est la possibilité de définir Section NUMERIC ou Section ARRAY.
+Dans ces sections, seuls les objets (resp.) NUMERIC et ARRAY ainsi que leur descendance auront accès aux méthodes et propriétés définies dans ces sections.
+Héritage dynamique.
+En lisaac, l'héritage peut se définir par une fonction. Imaginons l'objet DECOD_MPEG2 possédant une méthode renvoyant les Bitmap video issus du décodage :
+On veut pouvoir lire la vidéo en mode fenêtré, en plein écran sur l'écran SVGA ou sur la sortie TV...
+on a :
+Redéfinition des opérateurs.
+On peut redéfinir les opérateurs dans n'importe quel objet vu qu'ils sont des méthodes comme les autres (il faut les mettre entre apostrophes, c'est tout).
+Dans l'objet NUMERIC on a :
+Si on crée un objet MATRICE, on peut le redéfinir
+On a redéfini l'opérateur + pour l'objet MATRICE.
+Priorités des opérateurs.
+Comme on peut le voir dans l'exemple précédent, la priorité et l'associativité des opérateurs est programmable. Cela demande de la part du compilateur une étude approfondie afin de fixer l'ordre d'évaluation des expressions.
+Généricité.
+On peut définir un objet générique de plusieurs objets :
+DICTIONARY(CLE,VALEUR)
+Programmation par contrat.
+Pour une meilleure fiabilité du code, des mécanismes de programmation par contrat inspirés de la Notation Z ont été ajoutés. 
+Lisaac permet de définir des "require", "invariants" et "ensure" comme en Eiffel.
+Facilités système.
+Lisaac offre deux fonctionnalités systèmes :
+Performances.
+De récents benchmarks ont démontré les performances du code produit par le compilateur : un décodeur MPEG1/2 complet, écrit en C a été traduit en lisaac en conservant rigoureusement les mêmes structures algorithmiques.
+Les résultats sont encourageants : avec 37 % de lignes de code en moins que le source C, Lisaac produit un exécutable 1,9 % plus lent que l'exécutable produit à partir du source C. De plus, grâce à la gestion dynamique de la mémoire, le lecteur est plus fiable.
+De nouvelles optimisations sont à l'étude afin de réduire cet écart.
+Voir aussi suppression de la liaison dynamique
+Suppression de la liaison dynamique.
+Les langages objets classiques, jusqu'à SmartEiffel, utilisent des VFTs (de l'anglais "Virtual Function Table") pour compiler la liaison dynamique: :
+Soient l'objet IMAGE, et ses deux descendants PNG et XCF. Quand on appelle la fonction PNG.affiche_toi() en Java ou PNG→affiche_toi() en C++, on se retrouve en assembleur avec un appel du type :
+L'adresse de PNG (l'objet receveur) pointe sur la base de la VFT, ensuite on ajoute le bon index pour recuperer le champ correspondant à la bonne méthode...
+Ce qui implique que cela vide le cache du processeur et que l'inlining est bloqué à la compilation.
+Le compilateur lisaac optimise la liaison dynamique en analysant finement le type dynamique des objets grâce à un algorithme de prédiction de type. La liaison dynamique supprimée, il devient possible de procéder à des inlining et à des spécialisations de code.
+Syntaxe et sémantique.
+La syntaxe est d'abord inspirée de Smalltalk mais aussi d'Eiffel et de Self, la syntaxe des blocs d'instructions est largement inspirée de C.
+Lisaac est sémantiquement et syntaxiquement très proche des langages Self et Eiffel. Il reprend aussi quelques éléments syntaxique du C et du Pascal. Comme son grand frère Self, ce langage est minimaliste avec l’absence de construction pour les conditionnelles, les boucles et les itérations : Le compilateur Lisaac ne sait pas ce qu'est une conditionnelle, on implémente celle-ci avec les trois objets Boolean, True, False (True et False héritant de Boolean), dans lesquels les conditionnelles (if ; if/else, etc.) sont définies.
+Un pattern matching, au sein du compilateur, va reconstruire les séquences afin de les optimiser et de les rendre aussi rapides qu'en C.
+L’approche à objets a pu être respectée par l’absence de types de base (comme par exemple le "int", nombre entier, en Java) pour laisser place à une encapsulation objet à la manière du langage Eiffel et de ses objets de type "expanded".
+Versions.
+La numérotation des versions du compilateur Lisaac ne suit pas le schéma classique : chaque numérotation du compilateur suit la spécification qu'il implémente.
+Les compilateurs disponibles en téléchargement sont généralement stables, attendus qu'ils ne sont disponibles que lorsqu'ils sont débogués. C'est une volonté ferme de son auteur.

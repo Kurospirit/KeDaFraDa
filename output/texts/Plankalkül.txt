@@ -1,0 +1,11 @@
+Plankalkül
+
+Plankalkül est un langage de programmation, conçu de 1942 à 1946 par l'allemand Konrad Zuse. À l'époque, Zuse ne fit aucune communication scientifique à ce sujet, pour diverses raisons : la Seconde Guerre mondiale faisait rage, et il consacrait tous ses efforts à la conception et à la commercialisation de son ordinateur, le Zuse 3.
+La première publication mentionnant Plankalkül date de 1948. En 1975, il fut décrit et implémenté à l'occasion de la thèse de J. Hohmann. Le premier compilateur, proposé par l'université libre de Berlin, a été achevé en 2000, soit cinq ans après la mort de Zuse.
+Description.
+D'après Zuse, Plankalkül est le premier langage de haut niveau.
+Ce langage eut pourtant le même destin malheureux que son créateur. Ainsi il était extrêmement innovant, mais en dehors du courant principal, mondial, du développement de l'informatique. Il demeura donc très largement inconnu. 
+Ce langage présente une innovation rare, voire unique, pour un langage informatique : les programmes s'écrivent en deux dimensions, de la même façon que la notation algébrique. Il est donc plus proche des traditions du plan et de la formule que de celles de la prose et du récit.
+Pour ces raisons, certains le rapprochent même des langages à objet dont il serait un ancêtre, à un niveau intermédiaire entre ces derniers et l'algèbre classique.
+Exemple.
+Le programme ci-dessous calcule le maximum de trois variables en appelant la fonction "max":

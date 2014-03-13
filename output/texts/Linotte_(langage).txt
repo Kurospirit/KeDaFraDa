@@ -1,0 +1,37 @@
+Linotte (langage)
+
+Linotte est un langage de programmation interprété de type L4G. Sa particularité est sa syntaxe en français. 
+Ce langage est libre et a été créé dans le but de permettre aux enfants et aux personnes n'ayant pas une connaissance approfondie de l’informatique d’apprendre la programmation facilement. 
+Comme sa devise l'indique : « Tu sais lire un livre, alors tu peux écrire un programme informatique », ce langage se veut très simple ; une variante de la devise dit aussi « tu sais écrire une phrase, donc tu sais écrire un programme ».
+Il est adapté à l'apprentissage de l'algorithmique au lycée.
+Le vocabulaire.
+Linotte a la particularité d'utiliser un vocabulaire non technique plutôt proche de termes utilisés, soit dans le monde cinématographique, soit dans la littérature. 
+Un programme devient un livre, une variable, un acteur et l'écran, une toile. On n'exécute pas un livre, mais on le lit.
+Linotte n'introduit pas de nouveaux concepts mais les renomme tout simplement.
+Le livre.
+Le livre est la structure mère d'un programme écrit en Linotte. Un livre est représenté par un fichier texte dont l'extension est ".liv".
+La première fonction d'un livre est la première lue lors du lancement de la lecture d'un livre.
+Les acteurs et les rôles.
+L'association d'une valeur à un nom s'effectue par l'instanciation dans la mémoire de l'ordinateur d'un acteur. 
+Chaque acteur est un objet caractérisé par une valeur, un nom et un rôle (son type).
+L'acteur porte la sémantique d'une expression en langage Linotte.
+L'acteur peut être comparé au mot variable que l'on retrouve dans les autres langages de programmation.
+Les rôles disponibles en Linotte sont : nombre, texte, drapeau, casier, espèce.
+Les actions.
+Un programme informatique est une suite d'opérations, un livre en langage Linotte, une suite d'actions. Une action est constituée d'un verbe et d'acteurs ; elle est destinée à lancer un traitement particulier :
+Caractéristiques du langage.
+Programmation impérative.
+Historiquement implémentée dans le langage, elle offre un accès rapide à la compréhension des bases de la programmation.
+Exemple d'utilisation de paramètres et de fonctions : 
+Il est également possible d'utiliser des acteurs locaux aux fonctions (n'étant visibles à l'exécution que dans cette fonction).
+Programmation objet.
+Les espèces sont un type d'acteur complexe caractérisé par des attributs. Elles permettent au développeur de créer ses propres "objets" :
+Programmation événementielle.
+Les événements sont attachés à des composants graphiques lors de la construction d'IHM :
+Programmation de pages Web dynamiques.
+À partir de la version 1.2.2, le concept de "weblivre" est introduit. Il mélange, dans un même fichier, du langage HTML et du langage Linotte. Ce dernier est intégré directement dans le HTML par un balisage précis à l'instar des langages PHP ou JAVA (JSP).
+L'interprète "L'atelier Linotte".
+Linotte est un langage interprété. Pour l'instant un seul interprète est disponible, mais il reste néanmoins libre. Il est développé en Java, son code source est distribué sous la licence GNU-GPL.
+Il existe également en version packagée pour les plateformes MS-Windows, Ubuntu, Fedora, Archlinux et la clé USB Framakey
+Le webonotte.
+Le Webonotte est un serveur HTTP intégré à l'Atelier Linotte basé sur Jetty. Il produit des pages web dynamiques développées en langage Linotte.

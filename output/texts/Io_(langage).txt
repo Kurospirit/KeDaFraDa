@@ -1,0 +1,22 @@
+Io (langage)
+
+Io est un langage de programmation pur objet basé sur les prototypes et distribué sous licence BSD. Il a été créé en 2002 par Steve Dekorte.
+Présentation.
+Lorsque Steve Dekorte imagina son langage, il le voulait léger, simple, multi-plateforme et facile à embarquer dans un autre programme. C'est ainsi qu'est né Io (dont le nom doit refléter sa simplicité).
+Il s'inspire de différents langages tout en tirant parti de leurs qualités respectives :
+Io est un langage de script disposant de plusieurs extensions dans divers domaines tels que le chiffrement des données, la programmation réseau, le graphisme ou encore les bases de données.
+Machines virtuelles.
+Io se décline sous trois machines virtuelles ce qui lui apporte une grande portabilité puisque celui-ci (comme tout langage interprété) peut être exécuté sous n'importe quelle architecture pour autant que la machine virtuelle soit disponible pour celle-ci.
+IoVM.
+"IoVM" est la base du langage ; la plupart des fonctionnalités se trouvant dans "IoServer" et "IoDesktop". Elle peut être utilisé indépendamment ou en tant que langage embarqué dans un plus grand projet.
+IoServer.
+"IoServer" apporte de nombreuses fonctionnalités par rapport à la conception d'applications serveurs telles que les applications Web.
+IoDesktop.
+Et enfin, "IoDesktop", se veut être une solution de développement multimédia. Il est donc possible par son intermédiaire d'exploiter des images, OpenGL et tout ce qui est en rapport avec le multimédia.
+Ces trois machines virtuelles permettent aux scripts Io de fonctionner de manière identique peu importe le système. Elles sont actuellement disponibles sous Mac OS X, Linux, BSD, Irix, Win32 et Symbian. Cependant, écrites en C ANSI, elles peuvent être facilement portées sur de nombreuses autres plates-formes.
+Exemples de code.
+Io est un langage qui se veut simple et puissant. Voici quelques exemples de code.
+Bonjour tout le monde.
+La ligne de code suivante fera apparaître le message "Bonjour tout le monde !" à l'écran.
+Compter les moutons.
+Pour plus d'exemples, vous pouvez visiter la page d'exemples sur le site officiel.

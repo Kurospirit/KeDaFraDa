@@ -1,0 +1,14 @@
+Natural
+
+Natural est un langage de programmation de quatrième génération semi-compilé, édité par la société allemande Software AG. 
+Définition.
+Sa syntaxe est fortement inspirée de celle de Cobol : on y retrouve des instructions telles que "move", "perform", "compute", ainsi que des principes tels que la redéfinition de données ou la possibilité de définir le scope d'une variable. Néanmoins, cette syntaxe reste assez simple et beaucoup moins verbeuse que Cobol :
+L'intérêt d'un langage semi-compilé est sa portabilité sur différents systèmes (mainframe, Unix, Windows, etc.) ; en effet il suffit de porter le « RunTime Natural » sur une plateforme pour pouvoir y exécuter des programmes Natural originellement créés sur une autre plateforme (c'est le même principe que celui de Java avec les portages des JVM.
+Ce langage fut créé au départ pour permettre l'accès aux bases de données Adabas (du même éditeur). Il s'est rapidement enrichi pour pouvoir supporter des bases de données relationnelles comme DB2 ou non relationnelles comme DL1, VSAM.
+Il est surtout utilisé dans l'industrie et les sociétés de grande taille, car la base Adabas est supportée non seulement sur des plateformes comme Unix ou Windows mais surtout sur de gros systèmes autorisant une gestion d'I/O massive.
+Les instructions d'accès au système de gestion de base de données (SGBD) sont fonctionnelles (elles masquent les requêtes physiques et l'organisation des données) : chaque instruction d'accès à une table de la base se présente sous forme d'une boucle de lecture suivant une clé simple ou composée. 
+Par exemple, la lecture se présente sous la forme de deux mots-clefs.
+Le langage dispose d'extension permettant également le codage des accès sous forme de requêtes SQL.
+Évolutions.
+Natural 2006 dispose d'un vocabulaire étendu pour traiter de façon native les documents XML.
+Natural reste, comme Cobol, fortement orienté vers les applications de gestion, du fait:

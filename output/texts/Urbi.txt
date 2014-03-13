@@ -1,0 +1,23 @@
+Urbi
+
+Urbi est une plate-forme logicielle, sous licence libre BSD, utilisée pour le développement d'applications dans les domaines de la robotique et des systèmes complexes.
+Urbi intègre une architecture distribuée de composants en C++ appelée UObject, ainsi qu'un langage de script parallèle et événementiel appelé urbiscript. UObject facilite l'intégration d'objets C++ ou Java dans le langage, et permet leur exécution locale ou distante, tandis qu'urbiscript agit comme un outil d'orchestration pour coordonner les différents composants et leurs interactions.
+Le langage urbiscript.
+Urbi a été initialement développé depuis 1999 par Jean-Christophe Baillie au laboratoire de Robotique Cognitive de l'ENSTA ParisTech, à Paris. Il est maintenant développé par la société Gostai, fondée en 2006.
+Le langage urbiscript est un langage de script qui peut être décrit comme un langage d'"orchestration" : de même que Lua dans le domaine du jeu vidéo, Urbi peut intégrer des composants C++, les parties algorithmiques gourmandes en CPU étant allouées aux composants C++/Java, tandis que la description des modèles comportementaux généraux restent du domaine du langage de script, qui est plus flexible, plus facile à maintenir, et qui permet des interactions dynamiques durant l'exécution du programme. Le langage urbiscript apporte de nouvelles abstractions utiles lors du développement, les concepts de programmation parallèle et de programmation évènementielle faisant partie intégrante du langage. La spécification de comportements concurrents et la réaction à des évènements étant des exigences clefs de la plupart des applications de robotique et d'intelligence artificielle, Urbi est de fait particulièrement adapté à ce type d'applications.
+Outre sa flexibilité et sa modularité, le point fort du langage urbiscript est sa simplicité, offrant une interface intuitive aux débutants, mais également des fonctions avancées aux développeurs confirmés.
+Exemples.
+L'exemple ci-dessous montre comment écrire une boucle vision/action de suivi de balle en Urbi : "headYaw" et "headPitch" représentent deux objets moteurs (des composants matériels, c'est-à-dire des drivers), "ball" est l'objet (composant logiciel) représentant la balle détectée :
+"whenever" est utilisé pour déclencher un bloc de code de façon répétée tant que la condition associée reste vraie. Le signe «  et  » est utilisé pour spécifier que deux commandes (ou groupes de commandes) doivent être lancées exactement au même instant et exécutées en parallèle.
+Un autre mot-clef événementiel est "at", qui déclenche le code associé une fois seulement, lorsque la condition invoquée devient vraie :
+Toute commande (ou groupe de commandes) est « marquable », ce qui permet plus tard si besoin de l'annuler, de la bloquer ou de la geler :
+Dans l'exemple ci-dessus, la virgule à la fin de la commande permet l'exécution en tâche de fond de la commande qui la précède, entrainant la poursuite de l'exécution du programme et en particulier à la commande 'at' qui suit de s'exécuter sans attendre la fin de la boucle infinie.
+Architecture de composants UObject.
+L'architecture de composants UObject, actuellement basée sur la bibliothèque C++ UObject, permet d'interfacer n'importe quel objet C++/Java avec Urbi/urbiscript, rendant les méthodes et les attributs sélectionnés du code C++ visibles directement depuis le langage de script. Des indicateurs peuvent être positionnés pour permettre de prévenir le composant C++ de tout changement effectué sur les attributs de l'objet par le langage urbiscript. 
+Un UObject peut être utilisé localement, soit en le liant statiquement lors de la compilation, soit par chargement dynamique ultérieur. L'objet C++ partage alors directement la mémoire du noyau Urbi, permettant une intégration efficace. Il s'agit d'une utilisation typique pour les composants critiques tels que les drivers de moteurs ou de capteurs. Ce même objet C++ peut également être utilisé sans modifications en tant que composant distant. Dans ce cas, il devient un programme autonome qui est exécuté avec comme paramètre l'adresse IP du moteur Urbi. Dans les deux cas, l'objet apparaitra et sera traité dans Urbi comme s'il était un objet natif.
+Les composants développés par la communauté peuvent être trouvés et échangés sur le site web communautaire Urbiforge.
+Robots et simulateurs compatibles Urbi.
+Livrés :
+Non maintenus :
+Environnement de développement.
+Urbi permet d'utiliser Gostai Studio qui intègre un éditeur de comportements pour créer graphiquement des machines à états finies hiérarchiques. Gostai Lab est une autre application permettant de réaliser rapidement des interfaces utilisateur par simple glisser-déposer de widgets sur une page de composition.

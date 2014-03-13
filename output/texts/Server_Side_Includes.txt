@@ -1,0 +1,12 @@
+Server Side Includes
+
+Les Server Side Includes, abrégés SSI, sont un langage de programmation fait pour être interprété par un serveur HTTP lorsqu'il sert un document HTML. Ce langage tire son nom de sa principale utilisation : inclure plusieurs fichiers pour construire et servir à la demande un document HTML.
+Rôle.
+Les SSI facilitent la maintenance des sites web en permettant de conserver dans un seul fichier les parties de page web qui se retrouvent à l'identique dans toutes les pages du site. Il s'agit souvent de l'en-tête et du pied de page, qui contiennent des informations comme le nom du site, les coordonnées de son auteur, etc.
+Syntaxe.
+Les directives SSI ont la syntaxe suivante : codice_1.
+
+On remarque que ces directives sont des commentaires SGML.
+Support des serveurs HTTP.
+Les SSI sont apparues rapidement dans l'histoire du World Wide Web. Depuis, elles ont été éclipsées par les langages comme et Active server pages.
+Le module codice_2 du Apache HTTP Server est fréquemment utilisé pour interpréter les SSI. L'extension de nom de fichier codice_3 est fréquemment utilisée pour identifier les fichiers que le serveur HTTP doit interpréter. Un autre moyen d'identifier les fichiers HTML à interpréter sans changer leur nom consiste à les marquer comme exécutables (directive codice_4 de codice_2).

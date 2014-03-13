@@ -1,0 +1,3 @@
+VisualWorks
+
+VisualWorks est une implémentation de Smalltalk développée initialement au Xerox PARC, puis par ParcPlace Systems et enfin repris par Cincom. VisualWorks s'exécute sur plusieurs plates-formes comme Apple Macintosh, GNU/Linux, plusieurs versions d'UNIX et Windows.

@@ -1,0 +1,5 @@
+XLispStat
+
+xLispStat est un logiciel libre multi-plateformes d'analyse statistique. Il a été réalisé par Luke Tierney à la fin des années 80. Luke Tierney s'est basé sur l'interpréteur Lisp de Thomas Almy xLisp-Plus. Il a connu un grand essor dans la communauté scientifique dans les années 90 et jusqu'à récemment. Plusieurs plateformes de statistique en sont issues comme Arc. L'intérêt de la communauté scientifique semble s'être émoussé ces dernières années au profit de R, lui-même en open source.
+Ce logiciel permet de réaliser un grand nombre de traitements statistiques : régressions linéaires, anova, modèle linéaire généralisé, détection des outliers, graphes dynamiques, etc.
+C'est un logiciel libre distribué sous une licence de type BSD.

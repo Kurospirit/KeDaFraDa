@@ -1,0 +1,30 @@
+Object-PL/SQL
+
+Object-PL/SQL (Object-Procedural Language/Structured Query Language ou tout simplement O-PL/SQL) est une méthodologie d'usage de l'extension procédurale pour le langage SQL dans la Base de Données Oracle. Les particularités additionnelles de la version 7 au-delà d'autres améliorations ultérieures sont orientées vers l'usage du paradigme de la base de données orientée objet.
+Bien que la syntaxe générale du langage PL/SQL ressemble à celle du Pascal et de l'Ada, il y a eu beaucoup d'améliorations, qui incluent surtout le "code java intégré" et la "syntaxe orientée objet" dans le SQL.
+L'intégration de déclencheurs et de procédures stockées constituent conjointement une des plus grandes percées qui ont favorisé l'usage du PL/SQL dans un paradigme orienté objet. L'inclusion pour le syntaxe SQL de déclarations comme ., et aussi l'implementation de l'objet "type" (similaire à presque tous les langages OO), ont complété le minimum d'articles nécessaires pour la démarche d'une extension du SQL sans l'usage d'aucun logiciel particulier de projection ou "persistence framework" .
+Autonomie, notorieté et importance de l'O-PL/SQL.
+L'O-PSL/SQL n'est pas simplement l'usage d'une version d'un langage de programmation, mais c'est le "modus faciendi" qui définit l'autonomie du thème Chacune des versions du PL/SQL, en débutant de la , apporte de si nombreuses innovations que c'est impossible de traiter ces usages-ci de sub-thèmes du PL/SQL. Il y a eu une vraie révolution qui a établi la frontière entre le langage usé jadis et l'aspect orienté objet dans ce nouveau langage. C'est précisément cet abord qui a provoqué l'emploi à large échelle de l'O-PL/SQL.
+Une confusion d'objets.
+On ne doit pas confondre les notions d'"objet de base de données" avec celles-là d'"objet de classe". Il faut, en chaque situation, identifier qu'est-ce que c'est un "objet" dans un contexte donné.
+"Objet de base de données" est un concept qui concerne la base de données relationnelle ou séquentielle et qui est utilisé dans les nouveaux modèles. "Tables", "déclencheurs", "colonnes", "indices" sont des exemples d'objets de base de données qui sont rencontrés dans Object-PL/SQL, mais les mêmes éléments peuvent être traités dans l'autre contexte, de la notion des objets Java, spécifiquement un élément d'un ensemble dont le début de son existence se passe à partir de l'"instanciation" d'une classe.
+The PL/SQL.
+le PL/SQL est le langage SQL étendu utilisé par la Base de données Oracle.
+PL/SQL est disponible dans l'Oracle (depuis version 7) et dans l'IBM DB2 (depuis version 9.7).
+O-PL/SQL permet de définir des classes et les "instancier" comme objets, de créer des types de données définis par l'utilisateur (programmateur) et "constructeurs", au-delà d'écrire des procédures stockées et des déclencheurs en Java, et aussi de la création de types "user-defined" et de constructeurs.
+Exemples d'usage de la syntaxe de l'O-PL/SQL.
+Il y a ici un petit ensemble d'exemples extraites de la documentation officielle et d'autres sources:
+Exemple 1.
+Un exemple simple d'"object-oriented PL/SQL"
+Maintenant, la codification du type est accomplie. Donc, il est défini comment se conduisent-ils les fonctions de type, les procédures et les constructeurs:
+On est prêt à dériver de "base_type". Le mot-clé "under" est utilisé pour la dérivation. Le type dérivé definit un nouveau attribut (nommé "m"), qui superpose "func".
+Bien comme les types bases, il faut codifier les méthodes superposées au type dérivé:
+Les types créés peuvent être instanciés et les méthodes peuvent être demandées:
+Résultats
+Les types créés sont devenus des types "réels" et on les peut utiliser pour attributs dans tables:
+Résultats:
+Résultat:
+Exemple 2.
+Un autre exemple de procédure stockée en Java intégré est rencontré dans Oracle Documentation.
+Liens externes.
+Examples d'O-Pl/SQL

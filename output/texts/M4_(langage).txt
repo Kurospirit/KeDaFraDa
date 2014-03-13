@@ -1,0 +1,7 @@
+M4 (langage)
+
+M4 est un langage de traitement de macros.
+Un processeur de macros est un outil de remplacement de texte. Sa principale utilisation est de réutiliser des canevas de texte, typiquement dans les applications de programmation mais aussi dans les éditeurs de texte. Parmi les usages les plus courants, l’implémentation GNU de M4 est utilisée dans GNU autoconf, ou encore dans Sendmail pour générer le fichier de configuration sendmail.cf.
+À l’époque où l’assembleur était une étape importante du développement logiciel, les programmeurs remarquèrent que la plupart de leurs programmes était de la répétition de texte. Des moyens simples de réutiliser ces textes furent donc inventés. Ils découvrirent rapidement que cela permettait non seulement de réutiliser des pans entiers de texte, mais aussi de substituer des valeurs différentes en fonction de paramètres. Cela définit la portée des processeurs de macro.
+M4 offre les possibilités suivantes :
+À la différence des processeurs de macros précédents, M4 n’a pas été ciblé pour un langage informatique ou humain particulier. Historiquement, il a toutefois été développé pour supporter le dialecte ratfor du Fortran.

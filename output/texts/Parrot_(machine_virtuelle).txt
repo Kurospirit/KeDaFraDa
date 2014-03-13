@@ -1,0 +1,31 @@
+Parrot (machine virtuelle)
+
+Parrot est une machine virtuelle à base de registres développée par la communauté Perl. Parrot sera la cible de l'interpréteur de Perl 6 en cours de spécification.
+La plupart des autres machines virtuelles sont à base de piles. Les développeurs de Parrot considèrent comme un
+avantage la ressemblance avec l'architecture des processeurs actuels. Cela permettra d'utiliser la littérature sur ce sujet pour le développement de la machine virtuelle Parrot. Parrot est aussi destiné à supporter d'autres langages dynamiques tels que
+Ruby, Python, Tcl ou JavaScript.
+Conformément à la tradition de cette communauté, Parrot est un logiciel libre distribué sous licence artistique (Perl) et sur de nombreuses plates-formes logicielles, parmi lesquelles GNU/Linux.
+Historique.
+Le projet a commencé comme un poisson d'avril. Simon Cozens a annoncé que Larry Wall et Guido van Rossum (les auteurs respectifs de Perl et de Python) unifiaient leurs efforts pour créer Parrot un langage synthèse de Perl et de Python. Ce nom fut ensuite adopté pour un projet au but similaire. Déjà, des petits langages sont supportés par Parrot et permettent de tester ses capacités.
+Il est probable que Parrot vient du Sketch "Dead Parrot" des "Monty Python" (Comme le langage)
+Techniques.
+Parrot utilise des techniques éprouvées mais peu répandues en dehors du monde Lisp telles que le COW (ou Copy-On-Write), les continuations.
+Le Copy-On-Write, c’est-à-dire copie sur écriture, permet de partager la mémoire d'objets différents tant qu'ils gardent la même valeur.
+Extensibilité.
+Parrot est conçu pour être extensible et pour être la cible de divers langages. On peut inclure l'interpréteur Parrot dans du code C. On peut appeler du code C de l'interpréteur. On pourra étendre dynamiquement les opérateurs. Parrot supportera l'objet.
+Parrot Polymorphic Containers.
+Parrot supporte dynamiquement et de manière efficace de nouveaux types grâce aux PMC ("Parrot Polymorphic Containers"). Lorsqu'on crée un type nouveau que l'on veut implémenter en C, on implémente les méthodes nécessaire pour ce type supportées par l'interface PMC. Certaines méthodes ont un nom et interface prédéfini. Elles sont accessibles rapidement car
+le PMC se comporte alors comme une vtable à la C++. Mais un PMC peut avoir des méthodes qui lui sont propres et définir des
+attributs. Chaque instance d'un PMC contiendra lesdits attributs.
+Il ne faut pas confondre les PMC avec le support objet de plus haut niveau dont l'implémentation sera spécifique à tel ou tel langage utilisant Parrot mais qui utilisera des PMC prédéfinis par Parrot ou chargés dynamiquement.
+Assembleurs.
+Parrot comprend actuellement deux assembleurs : PASM ("Parrot ASseMbly" - Assembleur Parrot) et PIR ("Parrot Intermediate Representation" - Représentation Intermédiaire Parrot). Ces assembleurs sont partiellement orientés objet pour permettre de supporter nativement un nombre indéfini de types.
+Historiquement, le premier assembleur sur Parrot, PASM est destiné à terme à devenir une représentation lisible du format binaire PBC (Parrot Bytecode).
+PIR, un macro assembleur est l'assembleur de choix.
+PIR est de plus haut niveau que PASM car il expose la fiction d'un nombre illimité de registres soulageant le programmeur qui n'a plus à associer manuellement variables et registres. Les registres peuvent être de type entier, numérique, chaîne de caractères ou PMC.
+Exemples.
+Opérations arithmétiques:
+Chaîne de compilation.
+Parrot supporte une chaîne de compilation assez complète. La classe HLLCompiler pilote cette compilation. Le programmeur peut définir les passes de la compilation. Une passe peut être appelée plusieurs fois de manière consécutive.
+Passes typiques de compilations.
+Patrick Michaud a écrit un moteur d'analyse syntaxique appelé PGE ("Parrot/Perl Grammar Engine") qui implante l'essentiel des règles Perl 6 telles que spécifiées dans le synopsis 6. PGE génère typiquement un arbre syntaxique en format PAST ("Parrot Abstract Syntax Tree"). Cet arbre sera typiquement transformé par TGE ("Tree Grammar Engine"), outil de manipulation d'arbre. Finalement du code PIR sera émis.

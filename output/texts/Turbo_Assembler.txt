@@ -1,0 +1,3 @@
+Turbo Assembler
+
+Turbo Assembler ou TASM, est un assembleur pour la famille de processeurs x86, créé par Borland. Il est toujours distribué par Embarcadero, dans sa version 32 bits, avec Delphi et C++Builder.

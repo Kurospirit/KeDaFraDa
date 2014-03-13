@@ -1,0 +1,17 @@
+IronRuby
+
+IronRuby est une implémentation de l'interpréteur du langage de programmation Ruby visant le .NET Framework de Microsoft. C'est une surcouche au DLR, une bibliothèque se superposant au CLR 2.0 qui fournit, entre autres, un typage dynamique et la délégation dynamique des méthodes pour les langages dynamiques.
+Histoire.
+Le 30 avril 2007, à la conférence MIX 2007, Microsoft dévoila IronRuby, qui utilise le même nom que le projet de Wilco Bauwer, avec l'accord de ce dernier. Sa sortie publique était annoncée pour l'OSCON 2007.
+Le 23 juillet 2007, comme prévu, John Lam et la DLR Design Team présentèrent la version pré-Alpha du compilateur IronRuby à l'OSCON. Il annonça également une intégration rapide de IronRuby au sein de la communauté open source.
+Le 31 août 2007, John Lam et la DLR Design Team publièrent le code (au stade de version pre-alpha) sur RubyForge. Le code source a été mis à jour régulièrement par l'équipe de Microsoft. L'équipe n'accepte pas les contributions de la part de la communauté concernant le noyau de la bibliothèque DLR, du moins pour le moment.
+Le 24 juillet 2008, la IronRuby team publia la première version alpha exécutable, dévoilée pour l'OSCON 2008. Le 19 novembre 2008, une seconde version alpha vit le jour. 
+L'équipe de développement travailla activement sur le support de Rails par IronRuby. Quelques tests fonctionnels de Rails donnent des résultats, mais il y a encore beaucoup de travail à faire avant de pouvoir utiliser Rails dans un environnement de production.
+Le 21 mai 2009, ils publièrent la version 0.5 lors de la RailsConf 2009. Cette version de IronRuby peut exécuter des applications Rails, mais pas encore dans un environnement de production.
+L'annonce de la version 1.0 est attendue pour l'OSCON 2009. La version 0.9 a été publiée le août 2009.
+Prise en charge par Mono.
+Normalement, IronRuby s'exécute aussi bien sur Mono que sur le CLR de Microsoft, mais comme l'équipe de développement ne l'a testé qu'avec le CLR s'exécutant sur Windows, il pourrait ne pas être supporté par Mono suivant l'architecture.
+Interopérabilité vis-à-vis de .NET.
+L'interopérabilité entre les classes d'IronRuby et les classes habituelles du .NET Framework est plutôt limitée pour le moment car de nombreuses classes de Ruby ne sont pas des classes de .NET. Cependant, un meilleur support des langages dynamiques dans .NET 4.0 pourrait accroître l'interopérabilité à l’avenir.
+Licence.
+IronRuby est disponible sous la Microsoft Public License, certifiée par l'Open Source Initiative.

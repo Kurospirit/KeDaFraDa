@@ -1,0 +1,10 @@
+Profil Ravenscar
+
+Le profil Ravenscar est un sous-ensemble du langage Ada dédié aux systèmes temps réel nécessitant une grande sûreté de fonctionnement. 
+Il ne restreint que les fonctionnalités liées au parallélisme.
+L'idée est de permettre de prouver formellement les propriétés temps-réel des programmes écrits selon ce profil. Le profil Ravenscar, en interdisant un certain nombre de caractéristiques du langage Ada, permet de rendre applicables les outils de preuve de programme.
+Les restrictions apportées permettent également de réaliser des exécutifs plus simples, et donc eux-mêmes certifiables. 
+Ce profil a aussi été appliqué à la spécification temps réel RTSJ du langage Java.
+Restrictions apportées par le profil.
+Le profil Ravenscar est maintenant intégré à la norme Ada (2005). Il suffit d'appliquer la directive de compilation suivante:
+Ce profil est équivalent à l'ensemble de pragmas de configuration suivants:

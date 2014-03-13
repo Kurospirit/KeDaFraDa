@@ -1,0 +1,13 @@
+Langage K
+
+Le langage K est un langage d'abstraction des concepts de l'informatique, un langage de formalisation des structures de données et un langage d'approche mathématique et théorique de la programmation.
+Présentation.
+Langage d'enseignement, il permet d'aller au-delà des distinctions de tout type (langage de programmation, déclaration de type, mots-clés par sa syntaxe extrêmement pauvre).
+Ce langage étant à vocation pédagogique, il n'existe pas de notation stricte de langage.
+Néanmoins, une norme a été définie à l'adresse libe4.free.fr.
+Ce langage ne permet d'effectuer que des modifications sur des nombres, des listes ou des tableaux, son intérêt est de voir la trace des algorithmes écrits.
+Un programme K se divise par fonctions définies récursivement. Elles sont constituées de cas, autrement dit des conditions suivies d'un rendu de résultat.
+Exemple.
+Déterminer la valeur maximum d'un tableau :
+Interpréteurs.
+Plusieurs interpréteurs existent :

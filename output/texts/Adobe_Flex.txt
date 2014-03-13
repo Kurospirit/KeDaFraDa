@@ -1,0 +1,31 @@
+Adobe Flex
+
+Flex est une solution de développement créée par Macromedia en 2004 puis reprise par Adobe en 2006, permettant de créer et de déployer des applications Internet riches (RIA) multiplate-formes grâce à la technologie Flash et particulièrement son lecteur. Son modèle de programmation fait appel à MXML (basé sur XML) et ActionScript 3.0, reposant sur ECMAScript.
+La technologie Flex produit un fichier .swf intégré dans une page html. La richesse de l'interface graphique ainsi créée présente l'inconvénient, comme toute applet, de créer ici un fichier .swf sur le serveur un peu long à télécharger sur le poste client lors du chargement de la page.
+Le 26 avril 2007, Adobe annonçait choisir la licence libre MPL 1.1 pour sa solution de développement Flex. Adobe Flash Player, le lecteur multimédia sur lequel les applications Flex sont lues, et Adobe Flex Builder, l'IDE construit sur la plate-forme libre Eclipse utilisé pour développer des applications Flex, restent propriétaires.
+Le 17 novembre 2011, Adobe place Flex sous l'égide de la Fondation Apache.
+Vue d'ensemble.
+Il était difficile pour les développeurs d'applications traditionnelles de travailler avec la plate-forme Flash en elle-même. En effet, celle-ci sert à la base à créer des animations. Flex cherche à minimiser ce problème en fournissant un modèle de programmation qui est familier à ces développeurs. MXML, un langage de description basé sur XML, offre la possibilité de créer rapidement une interface utilisateur. L'interactivité est créée par l'utilisation d'ActionScript 3.0, reposant sur le standard ECMAScript.
+Le SDK Flex fournit de nombreux composants graphiques, dont des boutons, des listes, des arbres, des tableaux de données, et plusieurs conteneurs utilisés pour la mise en page de l'interface. Les graphiques (Flex Charting) sont disponibles en tant qu'extension. D'autres fonctionnalités comme les services Web, le glisser-déposer, les effets ou la validation de formulaires viennent compléter ce framework applicatif.
+Dans une architecture trois tiers, les applications Flex représentent la couche présentation. Contrairement aux applications HTML, les applications Flex fournissent un client "stateful", c'est-à-dire que les changements de la vue ne requièrent pas le chargement d'une nouvelle page. De la même manière, Flex et le Flash Player offrent la possibilité d'envoyer et de recevoir des données depuis et vers un serveur sans que le client ne doive recharger la vue.
+Versions.
+Macromedia Flex Server 1.0 et 1.5.
+Macromedia a au départ ciblé le développement d'applications entreprise avec ses versions de Flex 1.0 et 1.5. Dans ces premières versions qui ne sont désormais plus disponibles, la compilation des fichiers SWF se faisait au niveau serveur. La licence par CPU était de 15000$US et comprenait 5 licences pour l'IDE Flex Builder.
+Adobe Flex 2.
+Avec la sortie de Flex 2, Adobe a complètement modifié sa ligne de produit Flex. Le SDK Flex 2 a été mis à disposition gratuitement. Il contient un compilateur en ligne de commande (mxmlc) ainsi qu'une bibliothèque de composants graphiques et d'utilitaires. Les applications Flex peuvent être construites et déployées uniquement avec le SDK Flex 2.
+Adobe a basé sa nouvelle version de Flex Builder sur la plate-forme Eclipse open-source. Flex Builder 2 était distribué en deux versions: Standard et Professionnelle. La version Professionnelle contient la bibliothèque de composants Flex Charting, utilisée pour la création de graphiques.
+La composante serveur reste encore disponible grâce à Flex Data Services 2. Contrairement à Flex 1.0 et 1.5, Flex Data Services n'est pas requis pour déployer des applications Flex.
+Avec la sortie de Flex 2, Adobe a introduit la nouvelle version de son langage de programmation ActionScript, ActionScript 3. L'utilisation d'ActionScript 3 et de Flex 2 requiert la version 9 ou ultérieure de Flash Player.
+Adobe Flex 3.
+Le 25 février 2008, Adobe a annoncé la sortie du SDK Flex 3 sous licence Mozilla Public License ainsi qu'Adobe AIR 1.0, sa solution RDA. Dans le même temps, Adobe a sorti le nouveau Flex Builder 3, toujours basé sur Eclipse, permettant de développer des applications Flex et Air.
+Adobe Flex 4.
+Version disponible depuis décembre 2009. Cette version apporte une nouvelle bibliothèque de composants personnalisables nommée Spark ainsi que le support de fichiers FXG. Une nouvelle version du compilateur conçu par Adobe accompagne sa sortie, renommée en Flash Builder 4.
+Adobe Flex 4.5.
+Sortie début mai 2011, Flash Builder 4.5 intègre la version 4.5 du SDK Flex. La principale nouveauté réside dans la possibilité de compiler des applications mobiles pour Google Android, Apple iOS ou encore BlackBerry Tablet OS.
+Une version d'évaluation de 60 jours est disponible en téléchargement sur le site officiel.
+Exemple.
+Voici un exemple d'application Flex 3 utilisant MXML et ActionScript :
+codice_1
+Ce code dessine un formulaire permettant à un utilisateur de saisir son nom puis d'afficher "Hello + nom saisi" lorsque l'on clique sur le bouton "Dis Bonjour!".
+Le même exemple avec Flex 4 et en utilisant les composants Spark:
+codice_2

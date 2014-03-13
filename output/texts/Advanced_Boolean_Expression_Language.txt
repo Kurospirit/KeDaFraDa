@@ -1,0 +1,3 @@
+Advanced Boolean Expression Language
+
+ABEL, acronyme de Advanced Boolean Expression Language, est un langage de programmation informatique utilisé dans le domaine de l'électronique, pour notamment la programmation des PLD. Il a été créé en 1983 par Data I/O Corporation, à Redmond, Washington.

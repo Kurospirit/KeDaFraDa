@@ -1,0 +1,15 @@
+Identificateur
+
+En programmation informatique, un identificateur ou identifiant est un mot reconnu par le langage (concrètement par un compilateur ou interpréteur) qui permet, tel une étiquette, de désigner une donnée du programme : variable, constante, procédure, type
+On peut distinguer les langages de programmation suivant les jeux de caractères autorisés pour l’écriture des identifiants : ASCII uniquement, jeux de caractères locaux, ou Unicode.
+Langages à identifiants Unicode.
+Unicode définit dans une de ses annexes, une base pour spécifier les identificateurs, tout en permettant à chaque langage de fonctionner sur des variantes de cette base.
+Les langages Ada, Java, Microsoft .NET, Perl 5.16, Perl 6, StarOffice Basic sont compatibles avec des identificateurs Unicode.
+Les langages Clisp, Delphi devraient/pourraient être compatibles avec des identificateurs Unicode.
+Le langage Python ambitionne de pouvoir supporter des identificateurs dans des langues autres que la seule langue anglaise avec le PEP 3131 .
+Règles de nommage.
+Les développeurs ont parfois besoin d’exprimer les concepts qu’ils utilisent avec des mots et des symboles qui leur sont familiers, en particulier pour les non anglophones.
+Par ailleurs, avec l’usage croissant d’Internet, l’usage d’Unicode se répand. En programmation, il est présent :
+Les langages s’interfaçant avec Java et .NET nécessitent le support d’identifiants Unicode, pour être interopérables. Sans cela, une portion de l’espace de noms ne serait pas accessible.
+Relation avec les métadonnées.
+Dans les langages de balisage, mais également dans tous les types de ressources informatiques et tous les types d’application, on peut employer des métadonnées pour décrire les données. L’identifiant est l’un des éléments couramment employés pour l’accès aux ressources (URI). L’identifiant peut faire l’objet de règles de nommage.

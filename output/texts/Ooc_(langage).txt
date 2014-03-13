@@ -1,0 +1,34 @@
+Ooc (langage)
+
+ooc est un langage de programmation compilé. Il permet d'allier la programmation orienté objet avec la programmation fonctionnelle avec une syntaxe simple qui favorise la lisibilité et la concision des programmes. L'implémentation principale traduit le code ooc en sources C puis utilise un compilateur C pour produire un exécutable.
+Le langage ooc et la plupart de son écosystème sont placés sous la licence BSD. Il est conçu pour combiner une syntaxe simple avec la performance d'un langage compilé, tout en restant flexible. Il est développé par des individus dans leur temps libre. Sa bibliothèque standard est multiplateforme (Linux, Mac OS X, et Windows sont notamment supportés), grâce aux blocs de versions intégrés au langage.
+Caractéristiques.
+Syntaxe.
+ooc, tout comme le Python, a été conçu pour être lisible, et pour être facilement écrit par un humain dans un simple éditeur de texte. Les blocs sont délimités par des accolades, comme en C.
+Le principe DRY est au cœur de la syntaxe ooc. Par exemple, l'opérateur ":=" permet de déclarer une variable à partir de l'expression à droite, en inférant son type:
+Types de bases.
+ooc possède les mêmes types de bases que le langage C, toutefois, tous les types commencent par une majuscule, par convention.
+La bibliothèque standard offre également de nombreuses structures de données telles que les tableaux-listes, les listes chaînées, les tables de hachages, les piles, etc. Les tableaux sont inclus dans le langage et, contrairement aux pointeurs C, sont sûrs (on ne peut y accéder en-dehors de leurs bornes).
+On peut créer des types en définissant une classe, une interface, ou en faisant une cover d'un type défini en C.
+Programmation objet.
+Héritage simple.
+Le modèle orienté objet d'ooc supporte l'héritage simple.
+Interfaces.
+Les interfaces permettent un semblant d'héritage multiple, à l'instar du Java.
+Programmation fonctionnelle.
+ooc supporte les fonctions anonymes et les fermetures. On peut manipuler les fonctions comme n'importe quelle valeur, grâce à une syntaxe claire et lisible :
+Cet exemple utilise également des types génériques, montre une manière simple de créer des tableaux-listes (ArrayList), de parcourir des objets itérables, de retourner implicitement des objets, ainsi que la syntaxe courte pour les fonctions anonymes.
+Modularité.
+Chaque fichier .ooc correspond à un module qui peut être importé depuis n'importe où. Les modules peuvent être organisés en paquetages (les dossiers où ils sont placés). Il est possible d'importer un module dans un espaces de noms donné, par exemple
+Contrairement au C il n'y a pas de fichiers d'en-tête séparés des fichiers sources. import, plutôt que de copier/coller le contenu du fichier, définit une dépendance entre deux modules.
+Le compilateur ayant ainsi une vue claire des dépendances entre modules, il supporte la recompilation partielle sans besoin de fichiers de projets du type Makefile.
+Les fichiers .use permettent également de spécifier des dépendances sur des bibliothèques externes, des options à passer au compilateur C, des informations de versions, etc. La directive use permet d'en faire usage dans du code ooc. Ainsi, utiliser par exemple la SDL, OpenGL est l'affaire d'une ligne de code source.
+Exemples de code.
+Le hello world classique :
+Afficher le contenu d'un fichier :
+Afficher les 5 premières puissances de 2
+Implémentations.
+L'implémentation principale d'ooc est rock, entièrement écrit en ooc et qui se compile lui-même. Il a été développé en quelques mois et a rendu obsolète j/ooc, l'implémentation initiale en Java qui a permis au langage de bootstrapper en 
+Il existe également un effort pour implémenter un compilateur ooc écrit en Ruby, nommé rooc.
+Liens externes.
+Site officiel

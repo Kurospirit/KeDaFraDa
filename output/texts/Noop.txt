@@ -1,0 +1,5 @@
+Noop
+
+Noop est un nouveau projet de Google dans le but de développer un nouveau langage de programmation. Noop doit fonctionner sur la machine virtuelle Java.
+Exemple.
+"Hello world" en Noop :

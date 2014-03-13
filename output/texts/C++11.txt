@@ -1,0 +1,118 @@
+C++11
+
+C++11, anciennement connu sous le nom de C++0x, est la nouvelle norme pour le langage C++ en informatique. Elle a été approuvée unanimement le 12 août 2011. Elle remplace la précédente norme, ISO/CEI 14882, publiée en 1998 et mise à jour en 2003. Ces dernières sont plus connues sous les noms informels de C++98 et C++03. C++11 introduit plusieurs nouveautés au langage initial, ainsi que de nouvelles fonctionnalités à la bibliothèque standard du C++ comme la plupart des bibliothèques du Technical Report 1, à l'exception de la bibliothèque de fonctions mathématiques spéciales.
+C++11 a été publié sous le nom de ISO/IEC 14882:2011 en septembre 2011. Une version payante est disponible sur le site de l'ISO. Le dernier "working draft" gratuit est le N3337, qui date du 12 janvier 2012, les seules différences avec le standard étant des corrections éditoriales.
+Un langage de programmation comme le C++ suit une évolution qui permet aux programmeurs de coder plus rapidement, de façon plus élégante et permettant de faire du code maintenable. Ce processus soulève inévitablement des questions de compatibilité avec le code existant, ce qui s'est produit de temps en temps pendant le processus de développement du C++. Cependant, d'après l'annonce faite par Bjarne Stroustrup (l'inventeur du langage C++ et membre du comité), la nouvelle norme sera presque totalement compatible avec la norme actuelle.
+Changements prévus pour la mise à jour de la norme.
+Comme dit précédemment, les changements du langage C++ concernent aussi bien le langage initial que la bibliothèque standard.
+Durant le développement de chaque fonctionnalité de la nouvelle norme, le comité a appliqué les directives suivantes :
+Extensions du langage.
+Multitâche.
+Mémoire locale pour un thread.
+La mémoire locale de thread ou Thread Local Storage n'est pas un concept inventé par la nouvelle norme : de nombreux compilateurs proposent déjà cette fonctionnalité, ainsi que la bibliothèque threads de Boost. C++11 introduit le mot-clef codice_1 pour déclarer qu'une variable doit être stockée dans une zone mémoire appartenant au thread. Chaque thread embarque ainsi sa propre copie d'une variable déclarée de la sorte, et les modifications d'une de ces copies n'affectent pas les copies appartenant aux autres threads.
+Lorsqu'une variable statique (ou une variable de classe) est ainsi définie, sa durée de vie est alors réduite à celle du thread (le destructeur des objets, notamment, est appelé lorsque le thread s'achève).
+Les classes.
+Délégation du constructeur.
+En C++, un constructeur appartenant à une classe ne peut pas appeler un autre constructeur de cette même classe, ce qui peut entraîner de la duplication de code lors de l'initialisation de ses attributs. En permettant au constructeur de déléguer la création d'une instance à un autre constructeur, C++11 apporte donc une solution.
+Dans l'exemple ci-dessus, on peut voir que le second constructeur appelle le premier constructeur, ce qui aurait conduit à une erreur de compilation en C++.
+Sizeof sur les attributs de classes sans objet explicite.
+En C++03, codice_3 peut être utilisé sur des types ou des objets, mais pas sur un membre de classe (excepté dans la bibliothèque Qt).
+C++11 le rend possible. On peut donc maintenant faire :
+Ce qui résultait en une erreur de compilation avant.
+Liste d'initialiseurs.
+Pour initialiser un conteneur à l'aide de valeurs connues, il fallait le faire élément par élément. C++11 introduit le patron de classe codice_4 qui permet d'initialiser les conteneurs avec la même syntaxe que celle permettant en C d'initialiser les tableaux , donc à l'aide d'une suite de valeurs entre accolades.
+Les Templates.
+Les templates variadiques.
+Pour remplacer les fonctions variadiques du C (déconseillées en C++), C++0x introduit les templates variadiques. Ces templates étendent le concept précédent en lui ajoutant la possibilité de prendre un nombre quelconque d'arguments. Elles sont supportées par le compilateur GCC depuis la version 4.3 car elles font partie de l'expérimentation du support de C++0x.
+L'utilité de templates possédant un nombre quelconque d'arguments se perçoit aisément avec la classe codice_6, qui généralise le concept de paire (triplet, n-uplet, etc.) ou bien avec cet exemple d'implémentation de la fonction "printf" :
+C++0x définit un certain nombre de concepts que nous pouvons approcher grâce au code source suivant :
+Les concepts.
+Les concepts ont été retirés de la norme.
+Les chevrons (codice_10).
+Les compilateurs C++ actuels traitent toujours une séquence de deux signes "supérieur à" comme un opérateur de décalage binaire vers la droite. En conséquence, lors de l'imbrication de l'utilisation de patrons, les programmeurs sont obligés d'insérer un espace entre les deux chevrons fermants.
+Par exemple, en C++03, ce code provoque une erreur de compilation :
+C++11 tentera de détecter automatiquement si les symboles doivent jouer le rôle de chevrons fermants ou d'opérateur de décalage binaire.
+Template externe.
+Les templates ne sont actuellement pas pris en compte par l'éditeur de liens : il est nécessaire d'incorporer leur définition dans tous les fichiers sources les utilisant en programmation modulaire. Leur compilation était donc longue et gourmande puisque la classe était recompilée dans chaque fichier source, pour chaque type utilisé.
+C++11 permettra l'utilisation du mot-clé codice_11 pour rendre les templates globaux. Les fichiers désirant utiliser le template n'ont qu'à le déclarer.
+Autres nouvelles fonctionnalités du C++11.
+Assertions statiques.
+La bibliothèque Boost propose déjà cette facilité à travers la macro codice_12. Cependant, son implémentation est étrange, basée sur la métaprogrammation et des comparaisons de taille de structures intermédiaires créées pour l'assertion sans trop de rapport avec le concept.
+Par conséquent, intégrer la fonction dans le langage apporte une solution propre au problème.
+En pratique, une assertion statique permet de vérifier à la compilation qu'une valeur est vraie. Par exemple, il est possible d'implémenter les concepts en utilisant codice_13 et codice_12. Si une classe template nécessite que son type template soit un POD, elle peut faire une assertion statique sur codice_15, ce qui est une constante intégrale de type codice_16 et remplit dont le critère pour paraître dans une assertion statique.
+En outre, en C++11, l'expression :
+permettrait à une bibliothèque d'être certaine qu'elle est compilée sur un système vérifiant cette condition (x86-64 par exemple).
+codice_17 permet aussi de préciser un message d'erreur. Dans ce cas-là, l'assertion précédente ressemblerait à :
+Inférence de types.
+Le mot clé codice_18 se voit assigner une nouvelle sémantique par le nouveau standard. Nous connaissions son unique sémantique d'indicateur de classe de stockage pour une variable. En effet, déclarer une variable automatique revenait à indiquer au compilateur qu'elle était valide seulement dans l'espace où elle était déclarée ; ce comportement étant aussi celui par défaut, le mot clé était inutile. Dans le nouveau standard, il change de sémantique et prend la place du type dans la déclaration. Le type sera alors automatiquement décidé par correspondance avec le type retourné par l'objet utilisé pour l'initialisation de la variable. Les variables étant déclarées avec codice_18 devront donc impérativement être initialisées. Exemple :
+Le type de codice_20 est un type interne de la bibliothèque surchargé environ quatre-vingts fois avec un script Perl. Trouver le type exact pour stocker le résultat d'un codice_21 dans un objet n'était pas pratique du tout avant le nouveau rôle du mot clé codice_18, d'où son apparition.
+Le nouveau standard ajoute le mot clé codice_23 qui permet de typer une variable à partir du type d'une autre variable. Exemple:
+Le type de codice_24 sera du même type que codice_25, soit codice_26. Cette déclaration automatique du type d'une variable peut être très utile dans les templates.
+Sémantique des RValues Reference/Move.
+L'introduction de la sémantique "move" (déplacement) prend son sens en constatant qu'en C++, il n'y a aucune manière générique de déplacer un objet sans le copier. Par exemple lorsqu'une fonction retourne un objet de grosse taille, celui-ci est copié dans une zone temporaire avant d'être à nouveau copié là où le résultat de la fonction est affecté. Après chaque étape de copie l'objet copié devient inutile et est détruit. Cela est très peu efficace car il serait beaucoup plus rapide de déplacer l'objet plutôt que de le recopier et détruire l'original. C'est particulièrement vrai si l'objet est d'un type proche du type codice_27 ci-dessous, où codice_28 est un type d'objet coûteux à dupliquer :
+En effet le déplacement d'un objet de ce type codice_27 requiert simplement la recopie du membre codice_30 alors que sa duplication alloue et copie un nouvel objet codice_28. Le problème que résout C++11 par l'ajout des RValues reference est de pouvoir appeler la fonction codice_32 en lieu et place du constructeur de recopie dans les cas où la copie correspond à un déplacement.
+Ceci s'obtient par l'ajout du constructeur de déplacement ci-dessous :
+Le double  et  marque la référence sur "rvalue" (parfois aussi appelée "temporaire"). C'est-à-dire une référence sur quelque chose qui est temporaire ou est sur le point d'être détruit. Le constructeur de déplacement sera donc choisi par le compilateur à la place du constructeur de recopie en cas de copie d'un objet temporaire ou sur le point d'être supprimé. Sur tous les autres aspects une référence sur une rvalue est identique à une référence classique maintenant appelée référence sur "lvalue" (que l'on peut définir grossièrement par : tout ce qui a une adresse).
+De cette définition ressort un fait qui peut sembler paradoxal : une variable de type référence sur une rvalue n'est généralement pas une référence sur une rvalue ! En effet à partir du moment où une référence sur une rvalue est écrite dans une variable, y compris si elle est de type référence sur rvalue, elle perd son caractère temporaire dans l'espace de définition de cette variable.
+Mais parfois il est utile d'appeler le constructeur de déplacement même à partir d'une variable qui n'est pas temporaire. Par exemple la commande "swap" est souvent introduite par le patron de fonction ci-dessous :
+Cette fonction a pour inconvénient d'appeler d'abord le constructeur de recopie, puis deux opérateurs d'assignation. Ce sont donc 3 copies au total, qui peuvent être des opérations extrêmement coûteuses, voire impossibles si les objets impliqués sont de taille importante. Ici le constructeur de déplacement n'est pas appelé car a, b et c comme source de la copie ne sont pas temporaires.
+C++11 introduit la fonction codice_33 qui retourne une référence à une rvalue et prend pour paramètre une référence à une lvalue ou à une rvalue. Son patron est le suivant :
+La fonction codice_34 donne à ce qu'il retourne la valeur de son paramètre. La fonction move ne modifie pas l'objet qui lui est passé mais reçoit et fourni une référence sur un objet non constant. L'objet d'origine peut donc être modifié à partir du résultat de la fonction codice_34. Le point important de "move" est qu'il n'y a aucune copie de faite. En utilisant "move", on peut ainsi réécrire de façon concise codice_36, sans qu'il n'y ait de copie.
+Énumérations fortement typées.
+L'énumération du langage C était similaire à une liste de définitions de symboles (macros) correspondant à des nombres entiers, et C++ n'avait répondu qu'en interdisant la conversion d'un type énumération dans un autre.
+C++11 proposera des énumérations « fortement typées ». Ces énumérations seront obtenues en remplaçant codice_37 par codice_38 ou codice_39.
+La conversion d'éléments de ces énumérations vers les entiers sera prohibée et l'accès aux éléments se fera à l'aide de l'opérateur de résolution de portée. Voici un exemple d'utilisation :
+L'opérateur de résolution de portée sera optionnel avec des énumérations faiblement typées :
+De plus, C++11 vous permettra de choisir le type d'entier sous-jacent des énumérations (tous sauf codice_40):
+Par défaut, ce type sera codice_26.
+Ce comportement sera aussi possible avec les énumérations normalement typées, et il sera bien sûr toujours possible de définir la valeur d'une partie de l'énumération :
+Boucles basées sur des intervalles.
+Le code nécessaire en C++ pour le parcours d'un intervalle et l'action sur ses éléments est répétitif et long. De nombreux langages, comme Java, ont fourni à leurs utilisateurs un opérateur codice_42 qui permet de parcourir une liste avec aisance. Pour répondre aux attentes, la norme C++11 fournira une nouvelle syntaxe de l'instruction codice_43 qui s'implémentera de cette façon :
+Ce code permet de doubler tous les éléments du tableau codice_44. L'entier codice_45 défini pour le corps de la boucle codice_43 référence successivement chacun des éléments du tableau.
+Ce type de parcours fonctionnera pour les listes classiques, les listes d'initialiseurs, ainsi que les conteneurs de la STL définissant les fonctions membres codice_47 et codice_48.
+Pointeur codice_49.
+Le nouveau mot-clé codice_50 a été proposé comme constante du langage avec le caractère particulier d'être assignable à tous les types de pointeurs. En effet, contrairement au C où la macro préprocesseur est généralement définie avec codice_51, en C++ il est interdit d'assigner un codice_52 à un pointeur d'un type différent. L'usage était donc de définir codice_49 avec l'entier 0. Ce comportement restera compatible, mais il sera aussi possible d'écrire :
+La constante NULL définie comme l'entier 0 ne permettait pas au compilateur de déterminer quelle surcharge de codice_20 choisir dans le code suivant:
+Le mot clé codice_50 est une constante du type codice_56, non convertible en entier. Pour appeler la fonction f avec un pointeur NULL, la surcharge est correctement choisie en C++11 dans le code suivant:
+Extension de la bibliothèque standard.
+Threads.
+La bibliothèque standard a implémenté dans la nouvelle norme du C++, le modèle de classe std::thread, celui-ci n'est qu'une implémentation des threads de la bibliothèque Boost.
+Voici, un exemple résumant quelque peu son utilisation:
+Type tuple.
+Un tuple (ou encore isplate) est une collection de dimension fixe d'objets de types différents. Tout type d'objet peut être élément d'un tuple.
+Cette nouvelle fonctionnalité est implémentée dans un nouvel en-tête et bénéficie des extensions de C++11 comme :
+Le patron de classe codice_6 est déclaré par la ligne :
+Un exemple de définition et d'utilisation du type codice_6 :
+Il est possible de créer le tuple codice_59 sans définir son contenu si les éléments du tuple possèdent un constructeur par défaut. De plus, il est possible d'assigner un tuple à un autre tuple : si les deux tuples sont de même type, il est nécessaire que chaque élément du tuple ait un constructeur par copie, sinon il faut que le type de chaque élément de l'opérande de droite soit compatible avec le type correspondant dans l'opérande de gauche ou que l'élément correspondant de l'opérande gauche ait un constructeur approprié.
+Les opérateurs relationnels sont disponibles (pour les tuples ayant le même nombre d'éléments).
+Deux expressions sont introduites pour vérifier les caractéristiques d'un tuple (à la compilation) :
+Table de hachage.
+Intégrer les tables de hachage (conteneurs associatifs non ordonnés) dans la bibliothèque standard du C++ est l'une des demandes les plus récurrentes.
+Cela n'avait pas été réalisé pour la norme actuelle (celle écrite en 1995 et approuvée en 1998) à cause des contraintes de temps.
+Bien que cette solution soit moins efficace que les arbres équilibrés dans le pire des cas (en cas de collisions importantes), elle est cependant la meilleure dans la plupart des applications réelles.
+Les collisions seront uniquement gérées par chaînage linéaire car le comité ne considère pas opportun de standardiser des solutions d'adressage ouvert qui introduisent un nombre important de problèmes intrinsèques (en particulier quand la suppression d'éléments est permise).
+Pour éviter les conflits de noms avec les bibliothèques non standards qui ont leur propre implémentation des tables de hachage, on utilisera le préfixe codice_65, au lieu de codice_66.
+Cette nouvelle fonctionnalité intégrera quatre types de tables de hachage, différentes selon qu'elles acceptent ou non des éléments de même clé (clé unique ou clé équivalente) et qu'elles associent chaque clé à la valeur associée.
+Ces nouvelles classes remplissent toutes les demandes des classes de conteneurs et contiennent toutes les méthodes nécessaires pour accéder aux éléments : codice_67, codice_68, codice_47, codice_48.
+Ces classes n'ont pas nécessité les nouvelles extensions du langage C++ mais seulement une légère extension du header codice_71 et l'introduction des headers codice_72 et codice_73. 
+Aucun autre changement aux classes de la norme actuelle n'est nécessaire et elles ne dépendent d'aucune autre extension de la bibliothèque standard.
+Expressions régulières.
+La bibliothèque définie dans le fichier d'en-tête codice_74 est fait d'un ensemble de nouvelles classes :
+La fonction codice_77 est utilisée pour une recherche.
+codice_78 est utilisée pour effectuer un "chercher-remplacer", elle renvoie pour cela une nouvelle chaîne.
+Les algorithmes codice_77 et codice_78 prennent une expressions régulières et une chaîne et écrivent les occurrences trouvés dans la structure codice_76.
+Voici, un exemple d'utilisation de codice_76:
+Notez l'utilisation du double backslash, car le C++ utilise le backslash comme un caractère d'échappement. Les chaînes littérales en C++11 peuvent permettre d'éviter le problème.
+L'utilisation de la bibliothèque codice_74 ne requiert aucune dépendance explicite.
+Amélioration des nombres aléatoires extensibles.
+La bibliothèque standard de C permet de générer des nombres pseudo-aléatoires grâce à la fonction codice_84. L'algorithme de génération n'est pas standardisé mais laissé au choix du fournisseur de la bibliothèque. Le C++ n'y a rien changé, mais C++11 va fournir une manière différente de générer les nombres pseudo-aléatoires.
+Cette fonctionnalité est découpée en deux parties qui forment un objet de génération de nombres aléatoires :
+C++11 définit trois algorithmes de génération, chacun ayant des avantages et des inconvénients.
+C++11 fournira un certain nombre de lois standard : codice_85, codice_86, codice_87, codice_88, codice_89, codice_90, codice_91, codice_92 et codice_93.
+Le générateur et la distribution se combinent comme dans l'exemple suivant :
+Fonctions mathématiques spéciales.
+Le fichier header codice_94 définit déjà plusieurs fonctions mathématiques usuelles :
+Le comité a décidé d'ajouter de nouvelles fonctions qui nécessitent actuellement l'utilisation de bibliothèques non-standards.
+Ces nouvelles fonctions auront un intérêt principalement pour les programmeurs de disciplines scientifiques et pour l'ingénierie.
+Le tableau suivant montre les 23 fonctions décrites dans TR1.
+Chacune de ces fonctions possède deux variantes supplémentaires. En rajoutant le suffixe ‘f’ ou ‘l’ au nom de la fonction, on obtient les mêmes fonctions agissant sur des codice_126 ou des codice_127 respectivement. Par exemple :

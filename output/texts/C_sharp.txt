@@ -1,0 +1,47 @@
+C sharp
+
+Le C♯ (prononcé []) est un langage de programmation orienté objet à typage fort, créé par la société Microsoft, et notamment un de ses employés, Anders Hejlsberg, le créateur du langage Delphi.
+Il a été créé afin que la plate-forme Microsoft .NET soit dotée d'un langage permettant d'utiliser toutes ses capacités. Il est très proche du Java dont il reprend la syntaxe générale ainsi que les concepts (la syntaxe reste cependant relativement semblable à celle de langages tels que le C++ et le C). Un ajout notable au C# est la possibilité de surcharge des opérateurs, inspirée du C++. Toutefois, l'implémentation de la redéfinition est plus proche de celle du Pascal Objet.
+Capacités du langage.
+Le C♯ est, d’une certaine manière, le langage de programmation qui reflète le mieux l’architecture Microsoft .NET qui fait fonctionner toutes les applications .NET, et en est par conséquent extrêmement dépendant. Les types natifs correspondent à ceux de .NET, les objets sont automatiquement nettoyés par un ramasse-miettes ("garbage collector" en anglais), et beaucoup de mécanismes comme les classes, interfaces, délégués, exceptions, ne sont que des moyens explicites d’exploiter les fonctionnalités de la bibliothèque .NET. Pour achever de marquer cette dépendance, le CLR () est obligatoire pour exécuter des applications écrites en C♯, comme l’est la JVM ( ou Machine virtuelle Java) pour des applications Java.
+Le langage compte un certain nombre de changements par rapport au C/C++ ; On notera particulièrement les points suivants :
+Capacités introduites avec C♯ 2.0.
+Microsoft mit à disposition du public en , après une longue période de beta-tests, la version 2.0 de la bibliothèque .NET, accompagnée d’une nouvelle version de la quasi-totalité des outils associés. C♯ ne fait pas exception à la règle et sort donc en version 2.0, avec les ajouts suivants :
+À titre de référence, les spécifications complètes des nouveautés introduites dans la version 2.0 sont disponibles dans les liens externes.
+Anders Hejlsberg, le père de Delphi, s’est exprimé sur l’implémentation des génériques dans C♯, Java et C++ dans cette interview .
+La fonctionnalité des types nullables fut fixée quelques semaines seulement avant la sortie publique de la version 2.0, car il a été mis en lumière que si la valeur de la variable était bien nulle, cette variable n’était pas nulle au sens traditionnel du terme, c'est-à-dire qu’il ne s’agit pas d’une référence vide. Ainsi, la conversion d’un type primitif de valeur nulle en objet donnait une référence non nulle vers une valeur nulle. Il fallut donc, pour corriger ce problème, corriger le noyau du CLR et effectuer de nombreuses vérifications et corrections sur tous les produits de la gamme .NET 2.0 (Visual Studio 2005, SQL Server 2005, C♯ et VB.NET).
+Capacités introduites dans C♯ 3.0.
+Le C♯ 3.0 fut présenté au salon PDC 2005. La version finale est disponible depuis le au téléchargement sur le site de Microsoft . Les principales nouveautés sont les suivantes :
+Une présentation du C♯ 3.0 et de LINQ peut être trouvée sur la page du centre de développement de .NET Framework.
+Le code compilé en C♯ 3.0 est entièrement compatible avec celui du 2.0, étant donné que les améliorations apportées ne sont que purement syntaxiques ou ne consistent qu’en des raccourcis compensés au moment de la compilation. Les nouveautés introduites dans les bibliothèques de la version 3.5 (LINQ…) ne sont cependant pas utilisables avec les versions précédentes de C♯.
+Cette version exige Windows XP ou une version supérieure (Vista ou Windows 7). Elle n'est pas disponible pour Windows 2000.
+C♯ 4.0.
+La version 4 du langage apporte plusieurs nouveautés:
+Le framework .NET 4.0 est sorti le , accompagné de Visual Studio 2010.
+Il propose entre autres :
+C♯ 5.0.
+La version 5 du langage permet de programmer plus simplement des programmes asynchrones grâce à l'ajout des mots clés async et await.
+Le comportement des closures dans la boucle foreach a été modifié. Il n'est désormais plus nécessaire d'introduire une variable locale dans une boucle foreach pour éviter les problèmes de closure.
+À noter également les informations relatives à l'appelant permettent de connaître le nom de la méthode qui a appelé une propriété.
+Différences entre Java et C♯.
+Bien que le C♯ soit similaire à Java, il existe des différences notables, par exemple :
+Standardisation.
+Le C♯ a été normalisé par l'ECMA (ECMA-334) en et par l'ISO/CEI (ISO/CEI 23270) en 2003.
+Les modifications survenues dans la Version 2.0 ont été normalisées par l'ECMA (ECMA-334) en et par l'ISO/CEI (ISO/IEC 23270:2006) en .
+Microsoft a ouvert le code source de certaines bibliothèques utilisées par le C♯ en sous la licence Microsoft Reference License (MS-RL).
+Nom du langage.
+C♯ est une note de musique dans le système de notation musical américain (cette note correspond à "Do dièse" dans la notation française). Le symbole ♯ signifie en musique que la note doit être augmentée, l'idée de "C augmenté" rappelle la manière dont le langage C++ a été nommé (++ étant l'opérateur d'incrémentation).
+Usuellement, un croisillon (#) est utilisé comme second caractère à la place du dièse (♯) car ce dernier est moins accessible sur le clavier et non reconnu dans certaines polices de caractères.
+On peut aussi voir dans ce croisillon # quatre signes +, d'où le fait que certains codeurs disent que le nom du C# est en fait C++++ : ce serait une version sur-améliorée du C (C++ étant une première amélioration, C++++ serait la seconde). Cependant, on peut remarquer que l'instruction i++++; est illégale. Cela peut conduire à penser que cette hypothèse est fausse.
+Le langage.
+Voici un exemple d'un programme typique, écrit en C♯ :
+Gestion des exceptions.
+C♯ possède les instructions "try" et "catch" permettant de gérer les exceptions (comportement non attendu des instructions du programme), similaires dans la syntaxe à celles du C++.
+Exemple de code tentant de créer un fichier "document.txt" sur le serveur "Toto":
+Notez l'utilisation d'une chaîne de caractères verbatim : le caractère arobase précède le guillemet donc l'anti-slash n'est pas doublé. Ce genre de chaîne de caractères est pratique pour les chemins sous Windows.
+Dans cet exemple, la fonction File.Create retourne un flux (FileStream), ou elle peut lancer une exception si une erreur s'est produite (problème de connexion par exemple).
+Dans cet exemple, aucune information sur l'exception n'est obtenue : on cherche juste à savoir si le programme ne s'est pas comporté normalement, auquel cas on arrive dans le bloc catch.
+À l'instar de C++ qui a un type d'exception de base (class exception dans l'en-tête exception>) et dont les autres exceptions héritent, toute exception C# est héritée (ou une instance) du type System.Exception. Ainsi, si on cherche à savoir ce qui s'est passé, une solution simple reste d'obtenir une référence vers l'exception de la manière suivante :
+Ainsi, une information complète sera retournée, décrivant la nature de l'exception qui s'est produite.
+En fonction des fonctions appelées, le framework .NET fournit la liste des exceptions que l'appel est susceptible de retourner en cas d'erreur. Dans le cas de la fonction 'Create', voici la liste des exceptions possibles:
+De la même manière qu'en C++, l'envoi d'une exception se fait avec le mot-clef throw :

@@ -1,0 +1,5 @@
+Izibasic
+
+IziBasic est un langage de programmation de la famille des BASIC, destiné aux assistants personnels sous Palm OS. Le public visé est constitué aussi bien de programmeurs débutants ou amateurs que plus expérimentés.
+IziBasic est un outil de développement de haut niveau, de type compilateur pour BASIC, qui construit des applications autonomes, directement sous Palm OS, sans nécessiter l'utilisation d'un PC.
+Les codes sources sont écrits en utilisant :

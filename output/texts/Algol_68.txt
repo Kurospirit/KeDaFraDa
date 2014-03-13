@@ -1,0 +1,18 @@
+Algol 68
+
+Algol 68 est un langage de programmation universel dérivé du langage Algol 60, principalement conçu par des Européens.
+Principe.
+Au-delà d'Algol 60, l'objectif des concepteurs d'Algol 68 était d'offrir un langage de programmation universel, résolument innovant, dérivant sa puissance d'une conception orthogonale.
+En Algol 68,
+Niklaus Wirth qui faisait à l'origine partie du groupe de travail a refusé l'innovation extrême d'Algol 68 et a fait sécession pour proposer Algol W qui deviendra par la suite Pascal.
+Syntaxe.
+La syntaxe a été définie à l'aide d'une grammaire indépendante du contexte, à deux niveaux, qui porte le nom de son concepteur Adriaan van Wijngaarden. Le Rapport Révisé (1973) a montré que la grammaire d'Algol 68, proposée par van Wijngaarden, reconnaît tout programme Algol 68 valide. En effet, elle formalise aussi les contraintes contextuelles et/ou sémantiques du langage, décrites antérieurement en langue naturelle de façon plus ou moins ambiguë. 
+Réalisation.
+L'analyse syntaxique d'Algol 68 a été implantée dans les premiers compilateurs par du code "ad hoc" ajouté à un analyseur lexical traditionnel. 
+Algol 68R est le dialecte traité par le premier compilateur, réalisé en 1970 au Royal Radar and Signal Establishment de Malvern (UK).
+Voir aussi.
+Bibliographie.
+Groupe Algol de l'AFCET. "Définition du langage algorithmique ALGOL 68" ; présent. et trad. française du Report on the algorithmic language Algol 68 éd. par J. Buffet, P. Arnal, A. Quéré - 1972 - Hermann (Actualités scientifiques et industrielles) - VII-222 p. ; 24 cm
+Lindsey C.H., "Informal Introduction to Algol 68", 1977, North Holland Publishing Cy. 
+Woodward P.M. and S. G. Bond S. G., "Algol 68-R Users Guide", (2nd Second edition), 1974, Her Majesty's Stationary Office.
+Cleveland  et  Uzgalis "Grammars for Programming Languages", 1977, Computer Science Library, Elsevier.

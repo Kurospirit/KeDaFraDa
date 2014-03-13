@@ -1,0 +1,24 @@
+Phrogram
+
+Phrogram (anciennement nommé Kid's Programming Language ou KPL) est un langage de programmation informatique conçu afin d'être compréhensible et accessible pour les débutants et les enfants. La première version est sortie en août 2005. L'actuelle version 2, conçue et publiée par Morrison Schwartz inc, est sortie en mai 2007.
+Survol technique.
+Phrogram est un langage de programmation procédurale ayant quelques similitudes avec le Visual Basic. Les codes sources en Phrogram peuvent aussi être portés automatiquement en VB.NET ou en C# par l'intermédiaire d'un IDE particulier. Le langage gère de nombreuses données de type : scalaires ou complexe, incluant leurs structures. 
+Phrogram est pour le moment supporté uniquement par les systèmes d'exploitation Windows, à partir de Windows 2000. 
+Un programme en Phrogram se présente sous la forme de blocs imbriqués les uns dans les autres.
+Phrogram est organisé sous forme d'un unique bloc, où les blocs de méthodes et fonctions sont définis. Lesdites fonctions et méthodes en KPL sont réutilisables. Les fonctions renvoient toujours une valeur, tandis que les méthodes n'en renvoient pas forcément. Les structures de données sont définies par l'intermédiaire du "Program scope". Les variables doivent quant à elles, être définies et typées au moment de leur déclaration. 
+Le langage est étroitement liée à Microsoft Framework .NET, et fournit beaucoup de fonctions et méthodes runtime pour communiquer avec cette plate-forme. . La compagnie qui distribue le langage (Morrison-Schwartz), est en partie possédée par Jon Schwartz, un ancien gestionnaire de programmes pour Microsoft.
+Graphismes en KPL.
+Le KPL est un langage éloigné du langage machine. Pour créer un jeu par exemple, KPL dispose d'une bibliothèque graphique de manipulation de sprites. Un grand nombre de format d'images y sont supportés, seuls 65 images sont fournies par défaut avec KPL.
+Un moteur 3D succinct est aussi à disposition.
+Historique.
+Jonah Stagner a commencé le développement de KPL quand il a voulu enseigner à ses enfants la programmation, insatisfait des solutions disponibles. Dès lors, Jon Schwartz et Walt Morrison ont pris en main le projet. 
+Le but premier de KPL a été de créer un langage neuf pour faire des programmes ludiques et petits. Phrogram a immédiatement attiré l'intérêt de novices grâce à la facilité d'écriture de programmes aux interfaces, musiques et animations attirantes. 
+Le second but pour Phrogram est de fournir un nouveau langage avec quelques recettes de grands langages (comme le C++, le Java, Visual Basic ou encore le C#) et une syntaxe similaire à Visual Basic pour permettre un changement vers ces langages le plus facilement possible. 
+En 2007, la version 2 est créée, et le langage renommé Phrogram. Il se base sur la seconde version du Framework .NET. Phrogram prétend être totalement compatible avec les autres langages qui utilisent .NET Framework, ainsi les bibliothèques compilées peuvent être utilisés par des applications .NET, et inversement. Il supporte donc la Programmation orientée objet (POO), permettant la définition de classes, leurs propriétés et les méthodes associées, ce qui donne aux débutants une introduction à la Programmation Orientée Objet.
+Utilisateurs.
+L'interface Utilisateur de Phrogram est disponible en 18 langues : anglais, espagnol, russe, chinois, allemand, français, italien, néerlandais, suédois, thaïlandais, grec, polonais, roumain, norvégien, portugais, danois, tchèque et catalan.
+Toutes les traductions de l'anglais ont été faite par des volontaires et la compagnie continue à les encourager à continuer les traductions.
+Bien que le KPL a été créé pour les 8-14 ans (d'où le nom Kid's Programming Language), il est approprié pour les débutants en programmation de tout âge, c'est pourquoi le nom a changé. Il est actuellement utilisé par des personnes plus âgées l'ayant téléchargé pour eux-mêmes plutôt que pour leurs enfants ou élèves. Phrogram est proposé pour les premiers cours de programmation à tous niveaux scolaires et est utilisé ou a été utilisé par des collèges, lycées et universités dans plusieurs pays, comme les États-Unis, la Grande Bretagne, le Canada, le Mexique, la Colombie, la Russie, l'Islande, la Suède, la République Tchèque, la Slovaquie, le Portugal, le Brésil, la Chine, Guam, les Philippines et la Nouvelle Zélande.
+Phrogsoft, LLC.
+La version 2 du KPL a été réalisée et renommée Phrogram, maintenue par The Phrogram Company sur le site du même nom, puis Phrogsoft, LLC. 
+L'environnement de développement, qui inclut le compilateur, est propriétaire et vendu dans de multiples versions et modules complémentaires.

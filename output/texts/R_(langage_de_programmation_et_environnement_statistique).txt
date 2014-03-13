@@ -1,0 +1,20 @@
+R (langage de programmation et environnement statistique)
+
+R est un logiciel libre de traitement des données et d'analyse statistiques mettant en œuvre le langage de programmation S. C'est un projet GNU fondé sur l'environnement développé dans les laboratoires Bell par John Chambers et ses collègues. Depuis plusieurs années, deux nouvelles versions apparaissent au printemps et à l'automne. Il dispose de nombreuses fonctions graphiques.
+Le logiciel R est considéré par ses créateurs comme étant une exécution de S, avec la sémantique dérivée du langage Scheme. C'est un logiciel libre distribué selon les termes de la licence GNU GPL et est disponible sous GNU/Linux, FreeBSD, NetBSD, OpenBSD, Mac OS X et Windows. Il représente aujourd'hui l'un des objectifs techniques majeurs de la communauté hacker GNU.
+Une enquête menée par Rexer Analytics auprès de analystes, retrouve que R est le logiciel le plus souvent utilisé lorsqu'il s'agit d'un travail en entreprise, dans le monde académique, au sein d'organismes publics ou d'ONG et chez les analystes travaillant comme consultants.
+Les paquets.
+Si R dispose dans sa version de base de la plupart des fonctionnalités utiles pour la statistique courante, ses possibilités s'élargissent dès que l'on utilise les paquets (ou « extensions »), souvent écrits en R et mis librement à disposition. Ces paquets couvrent un très large champ et vont de la statistique multivariée aux méthodes de ré-échantillonnage, de l'économétrie à la biométrie, des modèles de régression sur séries chronologiques ou les modèles à équations simultanées, en passant par l'analyse de données écologiques (Ade4 et vegan), sans oublier l'approche bayésienne. 
+Face au nombre toujours croissant de paquets (on comptait près de 80 nouveaux paquets d'octobre à décembre 2007), une page offre des regroupements des paquets selon les domaines abordés.
+Parmi ces extensions, on peut également citer celles qui permettent d'interfacer directement R avec des bases de données comme PostgreSQL (via le langage procédural PL/R) et MySQL ou des SIG comme GRASS, celles qui permettent d'exporter ses résultats en LaTeX ou OpenDocument, ou encore celles regroupant des fonctions décrites dans des ouvrages de référence, telles MASS, UsingR ou ISwR.
+L'installation des extensions se fait de la manière suivante :
+Pour pouvoir l'utiliser, il suffit ensuite d'exécuter :
+Interface graphique.
+Il existe des interfaces graphiques pour R, comme 
+Certains éditeurs de texte proposent également des modes pour R :
+Il est également possible d'exécuter des fonctions R directement sur le Web, sans installer le logiciel.
+Éléments permettant la réalisation technique du logiciel R.
+Les sources du logiciel R sont disponibles dans le dépôt R sources. Il est codé dans les langages C, C++, Fortran et Java. Avant de penser à le recompiler, il faut donc installer un certain nombre de composants.
+Sous Windows, la plupart des outils ont été regroupés dans un seul exécutable qui s'appelle R-tools (R-tools). De plus, pour travailler sur la documentation du logiciel, il faut installer le compilateur de fichiers d'aide Microsoft (HTML Help Workshop). Il faut aussi l'outil LaTeX (MiKTeX). Enfin pour la création de l'exécutable d'installation, on utilise le classique inno-setup (inno-setup). Pour retrouver ces quelques indications techniques et pour aller plus loin, on peut consulter le lien suivant : .
+Communauté.
+Le projet R a été représenté par Toby Dylan Hocking lors de la réunion hacker GNU organisée à Paris du 25 au 28 août 2011 dans les locaux de l'IRILL.

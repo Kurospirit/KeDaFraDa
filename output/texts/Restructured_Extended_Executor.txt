@@ -1,0 +1,16 @@
+Restructured Extended Executor
+
+Restructured Extended Executor (REXX) est un langage, qui a été inventé par Mike Cowlishaw, chercheur d'IBM. Il s'appelait initialement REX ("R"evised "EX"ecutor), mais le sigle était déjà déposé. Langage interprété procédural, il est un des seuls héritiers du PL/I, ou du moins de la syntaxe claire du PL/I. 
+, en particulier "VM/ CMS", puis plus tard "MVS/ TSO" et "z/OS". 
+Il dispose d'une version Open Source, fournie en standard avec certaines distributions Linux. Les interprètes REXX, tant commerciaux qu'open source, sont disponibles sur une vaste gamme de plates-formes et des compilateurs sont disponibles pour toutes les unités centrales IBM.
+Sa syntaxe a été conçue dans un but essentiel de faciliter l’apprentissage et la relecture du code.
+Voici par exemple un programme REXX :
+Son exécution donne 
+un autre exemple de programme REXX :
+qui peut s'écrire également :
+Son exécution donne 
+Principes.
+Il existe un compilateur Rexx qui permet d'obtenir à la fois des scripts plus stables dans le cas d'une gestion par version, une exécution plus rapide, et une certaine protection contre le vol ou les modifications intempestives du code source.
+Dérivés.
+REXX a donné deux évolutions différentes, mais restées peu utilisées car incompatibles entre elles :
+Regina a davantage de succès : c'est simplement la version de REXX en logiciel libre.

@@ -1,0 +1,3 @@
+JADE (langage de programmation)
+
+JADE est une plateforme de programmation multi-agent implémentée en java. Les agents qui tournent sous JADE communiquent via le langage "Agent Communication Language" ou ACL.

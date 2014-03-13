@@ -1,0 +1,11 @@
+Objective-J
+
+Objective-J est un langage de programmation développé en même temps que le "" Cappuccino. Sa syntaxe est sensiblement identique à celle de Objective-C. Par ailleurs il partage avec Javascript la même relation qu'il y a entre l'Objective-C et le langage C : il s'agit d'une sorte de sur ensemble ajoutant la notion d'héritage ainsi que le typage dynamique du style Smalltalk/Objective-C au JavaScript. 
+Les programmes écrits en Objective-J ont besoins d'être compilés avant de pouvoir être lancés dans un navigateur web. Cette compilation peut être effectuée directement dans le navigateur au moment de l'exécution par un compilateur qui compile les programmes Objective-J en pur code Javascript. Le compilateur Objective-J est écrit en JavaScript, de ce fait le déploiement de programme écrit en Objective-J ne nécessite pas de "" attaché au navigateur.
+Application.
+La première utilisation connue de l'Objective-J a été faite avec le ' Cappuccino pour le développement de l'application web 280Slides. Bien que l'Objective-J peut être utilisé (et a été conçu) indépendamment du ' Cappuccino, Objective-J a été, à la base, inventé pour supporter le développement web avec Cappuccino.
+Syntaxe.
+Objective-J est un sur-ensemble du Javascript, cela implique que n'importe quel code JavaScript valide est aussi valide dans du code Objective-J. L'exemple suivant montre la déclaration en Objective-J d'une classe nommée , cette classe est une sous classe de l'objet de base CPObject qui joue le même rôle que le NSObject en Objective-C/Cocoa. Même si ce n'est pas le même nom pour l'objet de base, ce code pourrait être aussi un exemple pour une déclaration de classe en Objective-C.
+Tout comme en Objective-C, la déclaration des méthodes de classes et des méthodes d'instances commencent respectivement par '+' (plus) et '-' (moins).
+Gestion de la mémoire.
+Contrairement à l'Objective-C, les objets en Objective-J n'ont pas besoin d'être libéré étant donné qu'ils sont automatiquement libérés par le ramasse-miettes de JavaScript.

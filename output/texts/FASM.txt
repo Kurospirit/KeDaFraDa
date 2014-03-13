@@ -1,0 +1,3 @@
+FASM
+
+FASM ("flat assembler") est un programme assembleur pour l'architecture IA-32 (appelée également architecture x86) . Le nom signifie "flat assembler". FASM est écrit en langage assembleur et existe pour les systèmes DOS, DexOS, GNU/Linux, Windows, et Menuet. FASM a quelques caractéristiques évoluées pour un langage assembleur tel que les macros, les structures, et les données virtuelles. FASM intègre des bibliothèques pour l'environnement graphique Windows et OpenGL.

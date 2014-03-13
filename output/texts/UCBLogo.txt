@@ -1,0 +1,5 @@
+UCBLogo
+
+UCBLogo (appelé aussi "Berkeley Logo") est une implémentation libre du langage de programmation Logo concue par Brian Harvey et ses étudiants au sein de l'université de Californie à Berkeley.
+Comme beaucoup d'autres implémentations, UCBLogo fournit un interpréteur Logo avec l'appel de récursion finale.
+Écrit en C, "Berkeley Logo" est un logiciel libre distribué selon les termes de la licence publique générale GNU et disponible sur plusieurs systèmes libres comme GNU/Linux ou FreeBSD.

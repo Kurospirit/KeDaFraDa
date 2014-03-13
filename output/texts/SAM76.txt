@@ -1,0 +1,5 @@
+SAM76
+
+SAM76 est un langage de programmation développé à la fin des années 70.
+Juridique.
+Les auteurs seront poursuivis par Calvin Mooers pour violation de brevets logiciels, mais l'affaire sera classée sans suite.

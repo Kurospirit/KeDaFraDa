@@ -1,0 +1,40 @@
+Ruby
+
+Ruby est un langage de programmation libre. Il est interprété, orienté objet et multi-paradigme. Le langage a été standardisé au Japon en 2011 (JIS X 3017:2011), et en 2012 par l'Organisation internationale de normalisation (ISO 30170:2012).
+Historique.
+Yukihiro « Matz » Matsumoto est le créateur de Ruby. Frustré par son expérience en développement Smalltalk et Lisp, il débute la conception d'un nouveau langage en 1993 sous Emacs, puis publie une première version en 1995 sous licence libre. Il enchaîne depuis les nouvelles versions.
+Des changements de version majeurs ont eu lieu :
+La dernière version stable est la 2.1.0, publiée le 25 décembre 2013.
+Depuis l'arrivée d'une documentation anglophone, et du en 2004, Ruby a connu un certain engouement qui n'a cessé de croître jusqu'en 2007 dans le monde de la programmation.
+Philosophie.
+Ruby est fortement orienté objet et se rapproche ainsi du paradigme objet de Smalltalk :
+Malgré cet aspect exclusivement objet, la programmation procédurale est possible et fréquente.
+Ruby utilise une syntaxe simple, inspirée par Eiffel et Ada.
+Le langage est souvent présenté comme évitant au maximum les mauvaises surprises, selon le principe de moindre surprise.
+Mais puisqu'il n'est pas possible d'éviter la surprise de "tous" les utilisateurs, Yukihiro Matsumoto précise qu'il cherche surtout à éviter "sa" propre surprise.
+Ainsi, plus on connaît le langage, plus on connaît la logique de son auteur, et moins on s'étonne des fonctionnalités qu'on découvre.
+Fonctionnalités.
+Les fonctionnalités principales sont :
+Implémentations.
+L'interpréteur officiel, Ruby MRI, fonctionne sur de nombreux systèmes d'exploitation : UNIX, Linux, Microsoft Windows, MS-DOS, OS X, OS/2, AmigaOS, etc.
+Il est publié sous la double licence libre GNU GPL et la licence Ruby.
+Ruby est fourni avec irb, un interpréteur de commandes interactif pour tester en profondeur le fonctionnement du langage. Il existe une version web d'irb pour tester Ruby dans un navigateur.
+Depuis le , le développement de Ruby (1.9) est basé sur l'interpréteur YARV écrit par Koichi Sasada.
+Ce nouvel interpréteur apporte un gain notable en performances.
+Il existe plusieurs autres interpréteurs Ruby :
+" À noter qu'il existe aussi une solution non-libre, commercialisée par HipByte basée sur le travail du projet MacRuby, appelé RubyMotion crée par Laurent Sansonetti"
+"La version 2.0 permet de créer des applications graphiques pour OS X et pour IOS."
+Interprètes embarqués.
+Ruby possède une interface de programmation en langage C qui lui permet d'être intégré au sein d'autres logiciels. Ruby est notamment utilisable dans :
+Le logiciel de création de jeu vidéo intègre dans ses versions XP et VX une bibliothèque nommée RGSS, permettant l'usage de scripts en Ruby.
+Bibliothèques.
+Il existe de nombreuses bibliothèques de fonctionnalités adjoignables au langage.
+Le dépôt historique de ces bibliothèques est le (RAA).
+Il contient des fonctionnalités supplémentaires pour Ruby comme des bibliothèques de classes et de modules, mais aussi des extensions permettant d'utiliser des bibliothèques tierces.
+Le "RAA" contient également des logiciels écrits en Ruby. Parmi ces logiciels on trouve notamment "Rubygems" qui est un outil d'empaquetage et d'installation pour les extensions Ruby.
+Il permet de déployer rapidement des bibliothèques et des programmes Ruby.
+Le site web "Rubyforge" est également un hébergeur important de programmes et de bibliothèques écrites en Ruby.
+Exemples.
+Le classique :
+Utilisation des objets :
+Utilisation de Mixin et de l'Héritage

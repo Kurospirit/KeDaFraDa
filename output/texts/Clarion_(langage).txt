@@ -1,0 +1,7 @@
+Clarion (langage)
+
+Clarion est un langage de quatrième génération et un environnement de développement intégré propriétaire développé par Softvelocity, facilitant le développement d'applications de gestion (orientés principalement sur la manipulation des bases de données).
+La dernière version de Clarion est la 7.2
+Particularités.
+C'est un langage procédural et orienté objet. Clarion fournit un environnement de développement intégré (IDE).
+Il permet à la fois d'écrire des applications 16 et 32-bits. La manipulation des données peut se faire à travers des fichiers XML ou des bases de données SQL ou autres (comme Excel).

@@ -1,0 +1,165 @@
+Perl 6
+
+Perl 6 est la sixième version majeure du langage de programmation Perl. Il s'agit aussi d'une refonte profonde du langage, aussi bien dans sa conception que dans son implémentation, rompant avec l'exigence de rétrocompatibilité qui avait primé pour les versions majeures précédentes.
+Cette refonte garde tout de même l'esprit du langage qui laisse une grande liberté au programmeur et lui permet une expression concise. Perl 6 reste un langage générique et permet toujours de programmer des unilignes, mais il facilite aussi l'écriture de programmes importants, grâce à des fonctionnalités telles que le typage statique des données et un meilleur support de la programmation orientée objet.
+Contrairement aux versions antérieures de Perl, Perl 6 n'est pas défini par une implémentation de référence, mais par des spécifications en langage naturel, dont la rédaction a commencé en avril 2001. Ces spécifications sont publiques et par conséquent tout développeur est libre de créer son implémentation. Perl 6 ne dispose donc pas d'une implémentation unique et en 2012, au moins trois projets tentent d'implémenter le langage. En 2013, aucun d'entre eux n'implémente la totalité de la spécification.
+La fondation Perl détient le "copyright" d'une de ces implémentations: "rakudo", ciblant la machine virtuelle Parrot. Rakudo est elle-même en grande partie écrite en Perl 6, ce qui lui fait jouer un rôle particulièrement important au sein de la communauté de développeurs en Perl6.
+Le logo de Perl 6 est appelé Camelia. C'est un papillon, sur les ailes duquel on peut lire la lettre "P" et le chiffre "6".
+Il est complètement intégré au système objet.
+Le système objet, minimaliste en Perl 5, supporte maintenant le dispatch multiple, les rôles et la réflexion via un Protocole à méta-objets inspiré de CLOS.
+La programmation orientée prototype et la programmation orientée objet sont toutes deux possibles car le programmeur peut modifier le comportement par défaut des métaclasses et du mécanisme de dispatch vers les méthodes et multiméthodes.
+Les rôles sont un système de composition de code similaire aux mixin mais de granularité inférieure à la classe.
+Les concepteurs de Perl 6 ont apporté un soin tout particulier à la syntaxe du langage qui avait été notablement alourdie en Perl 5 avec l'ajout du support des références. Les principes directeurs dans la conception du
+langage sont : le principe de Huffman, la lisibilité, l'extensibilité.
+Chaque aspect du langage est hautement paramétrable via des constructions lexicales ou syntaxiques appelés adverbes ou modificateurs. Certains opérateurs sont des caractères Unicode mais souvent un alias plus verbeux en ASCII est disponible. L'interopérabilité avec les bibliothèques d'autres langages dynamiques de haut niveau est un but à terme grâce à la mise en œuvre de ces langages par le même moteur (Pugs ou Parrot).
+Le typage explicite du contenu d'une variable est optionnel. Le typage des données est donc statique lorsqu'il est explicite ou inferré, dynamique sinon.
+Le programmeur dispose donc d'un continuum entre la programmation lâche typique des langages de script et la rectitude et les performances d'un langage à typage statique. Typiquement, un programme évoluera au cours du temps vers un typage plus "serré".
+Perl 6 devrait être un langage rapide car, outre le typage statique, le support de la parallélisation, ses implantations supportent la compilation à la volée en code natif.
+FIN "A RECYCLER"
+Motivations.
+Le langage Perl était au départ très modeste et a grossi en respectant la rétrocompatibilité. Créé en 1987, Perl a accumulé beaucoup de scories qui rendent son apprentissage difficile et complexifient inutilement l'interpréteur. Il fallait s'en débarrasser. Les comportements par défaut du langage étaient conçus pour des programmes de quelques lignes. Même si le langage avait évolué (variables lexicales, orientation objet…) pour supporter de gros programmes, une grande partie des programmeurs n'avaient pas adapté leur style, ce qui a donné à Perl une réputation de langage sale.
+L'interpréteur de Perl 5 n'utilise pas au mieux les architectures multiprocesseurs ou multi cœur dont la mémoire est lente par rapport au processeur. De plus, pour la programmation en grand, il est nécessaire d'avoir un système puissant de passage de paramètres. De même il était important de donner la possibilité au programmeur, mais non l'obligation, d'un typage statique des données. Ce typage constitue à la fois une documentation, une forme d'assertion exécutée à la compilation et une amélioration des performances par rapport au typage dynamique.
+Historique.
+Le processus de conception de Perl 6 a été annoncé pour la première fois le 19 juillet 2000, par Larry Wall le jour de la conférence annuelle OSCON dans son discours sur l'état de l’oignon 2000 (« State of the Onion 2000 »). À cette date, les principaux objectifs étaient de débarrasser le langage de verrues historiques ("historical warts") et de nettoyer d'une manière générale la conception interne et les API. Le tout était alors résumé par la phrase: « les choses faciles doivent rester faciles, les choses difficiles doivent être plus faciles, et les choses impossibles ne devraient pas être difficiles ».
+Le processus a commencé avec une série de demandes de changements ou « RFC » (par analogie aux "Request for comments" d'internet). Ce processus était ouvert à tous les contributeurs et ne laissait aucun aspect du langage à l’abri du changement. Alors que Larry Wall s'attendait à recevoir une vingtaine de RFC, 361 demandes de changements furent émises par les membres de la communauté PERL.
+Une fois le processus des RFC terminé, Wall a revu et classé chaque demande. Il a alors commencé la rédaction de ce qu'il a alors appelé les Apocalypses. Bien que le but initial était d’écrire une Apocalypse pour chaque chapitre du manuel de référence en perl intitulé « Programmation en Perl », il est devenu évident à la rédaction de chacune des Apocalypses que les précédentes apocalypses devenaient invalides de par les derniers changements. Pour cette raison, un ensemble de synopsis ont été publiés, chacun relatif au contenu d’une Apocalypse, mais mis à jour suivant les modifications apparues. Aujourd’hui, les spécifications de Perl 6 continuent presque entièrement à travers les Synopsis.
+Au fil des ans, Perl 6 a connu plusieurs changements de direction. L’introduction de concepts provenant de Python et Ruby ont influé au début, mais lors de l’écriture de l’interpréteur pugs dans le langage Haskell, on a pu noter une large influence de la programmation fonctionnelle sur l’équipe de conception de Perl 6.
+Pugs est historiquement la première mise en œuvre expérimentale de Perl 6. Pugs peut exécuter du code Perl 6 directement, ainsi que compiler du Perl 6 vers du JavaScript, du Perl 5 ou du bytecode Parrot. Écrit essentiellement par Audrey Tang, maintenant peu active, Pugs utilise des fonctionnalités avancées de Haskell, ce qui est un obstacle à la reprise du projet par d'autres programmeurs.
+Durant 2006, Pugs était suffisamment avancée pour permettre d'écrire des jeux de tests, de valider, de corriger et d'affiner les spécifications.
+Mises en œuvre.
+En 2013, au moins deux projets implémentent un sous-ensemble conséquent de Perl 6.
+Niecza.
+Niecza est un compilateur ciblant la machine virtuelle du Framework .NET.
+Rakudo.
+Rakudo est une implémentation utilisant la machine virtuelle Parrot, et visant à terme l'auto-hébergement de Perl 6.
+Parce qu'il est lui-même essentiellement écrit en Perl 6, Rakudo est susceptible d'être porté relativement facilement vers d'autres machines virtuelles. Le portage vers la Machine virtuelle Java a commencé en 2013, ainsi que vers MoarVM, une machine virtuelle conçue spécialement pour faire tourner Rakudo.
+La communauté Perl n'a pas la main d'oeuvre pour maintenir une machine virtuelle moderne avec des optimisations dynamiques de code telles que celles fournies par CrankShaft de V8, il est donc probable que d'autres machines virtuelles lui succéderont.
+Rakudo, dont le copyright est détenu par la fondation Perl, sera probablement la première mise en œuvre substantielle de Perl 6. Pour le bootstrap de Perl 6, Rakudo utilise NQP (Not Quite Perl), un sous-ensemble de Perl 6 avec qui comporte le moteur d'analyse syntaxique.
+Une distribution spéciale de rakudo, appelée "Rakudo Star", incluant divers modules afin de la rendre "utile et utilisable" est publiée mensuellement depuis juillet 2006.
+Changements incompatibles.
+Perl 6 est la première version majeure de Perl qui n'est pas rétrocompatible avec les versions précédentes. Cela signifie qu'un code écrit en Perl5 échouera probablement à la compilation ou à l'exécution si on tente de l'exécuter ou de le compiler sans modification comme s'il s'agissait de code Perl6.
+Les changements incompatibles sont nombreux, mais les plus notables sont l'invariance du sigil, les simplifications syntaxiques et le passage d'arguments.
+Invariance du sigil.
+En Perl 5, le sigil — le caractère non alphanumérique qui précède un nom de variable — pouvait changer selon son contexte d'utilisation
+(scalaire ou tableau) :
+En Perl 6, l'abondance des contextes possibles nécessite un mécanisme différent
+des sigils. Le sigil ne désigne plus le contexte d'accès. Perl 6 propose des opérateurs spécialisés pour ce faire. Le sigil d'une variable est donc invariant. Il est plus pédagogique d'avoir
+deux mécanismes syntaxiques pour deux fonctions grammaticales différentes (le
+typage faible de la variable et son contexte d'accès).
+Passage de paramètres.
+Les versions antérieures de Perl définissent les sous-routines sans liste formelle de paramètres.
+Les arguments de sous-routines entrant dans une sous-routine devenaient des alias dans les éléments du tableau @_. Si @_ était modifié, les changements étaient reflétés dans les données originales :
+Même en tenant compte de l'invariance du sigil, la plupart des déclarations de fonctions en Perl5 échoueront si on cherche à les exécuter comme du code Perl6, car Perl 6 utilise un système très différent de passage de paramètres, grâce à un formalisme dans le langage qui va au-delà des signatures de types. En Perl 6, une déclaration de sous-routine ressemble à :
+Comme en Perl 5, les paramètres formels (exemple, les pseudo-variables dans la liste de paramètres) sont aliasés en leurs paramètres effectifs (valeurs d'entrées), mais par défaut, les alias sont marqués is readonly signifiant qu'ils sont en lecture seule et donc constants :
+Si un paramètre formel est suivi par is copy ou is rw, cependant, il "peut" être modifié. Dans le cas is copy, Perl 6 copie les paramètres actuels plutôt que des les aliaser ; ainsi ils peuvent être modifiés, mais les changements restent locaux à la sous-routine. Dans le cas is rw (rw signifie lecture-écriture, "read-write" en anglais), l'alias n'est pas marqué readonly. Ce changement détecte aussi, lors de la compilation, des erreurs telles que :
+De nouvelles fonctionnalités de Perl 6 dans les listes de paramètres rendent le passage de paramètres beaucoup plus puissant qu'en Perl 5 :
+Par exemple :
+Perl 6 supporte aussi la curryfication.
+Simplification syntaxique.
+Les changements de syntaxe entre Perl5 et Perl6 sont nombreux et parfois subtils. Par exemple une règle fondamentale en Perl6 est l'interdiction absolue d'avoir deux termes consécutifs. C'est pourquoi la syntaxe d'une fonction telle que codice_1 fait désormais apparaître une virgule. Ainsi un code Perl5 tel que:
+échouera à la compilation si on cherche à l'exécuter comme du code Perl6. Il faudra ajouter une virgule entre la fonction anonyme et la liste:
+Pour les mêmes raisons, la notation objet indirecte (qui était de toute façon déconseillée par la communauté) a disparu.
+Nouveaux concepts et fonctionnalités.
+Syntaxe auto-hébergée.
+La syntaxe de Perl 6 est elle-même définie en Perl 6. Ce point qui peut paraître anodin a des conséquences très profondes sur la structure et les possibilités offertes par le langage.
+En particulier, cela signifie que Perl 6 obéit syntaxiquement aux même règles que celles imposées par les fonctionnalités d'analyse textuelle du language. Ainsi, l'analyse lexicale satisfait aux mêmes priorités que celles imposées par le traitement des expressions régulières en Perl 6. En l'occurrence, cette règle est, en simplifiant, celle de la plus longue unité lexicale ("longuest token matching"). Cette règle est fondamentale en Perl 6 et possède une grande portée sur de nombreux aspects du langage. Par exemple, la règle de la plus longue unité lexicale permet aux noms de variables de contenir le caractère '-', sans que celui-ci soit confondu avec la soustraction.
+Une autre conséquence est la possibilité pour le langage de modifier sa propre syntaxe en cours d'exécution, ce qui constitue une performance accomplie par de très rares langages de programmation, le plus emblématique étant Lisp.
+Types de données.
+Le système statique de typage de Perl 5 comporte peu de types. Lors de la déclaration d'une variable, son sigil détermine si elle est de type scalaire, tableau ou hash (métonyme pour table associative). Un scalaire peut contenir un entier, un flottant ou
+une chaîne de caractères. Puisque le type du contenant ne détermine que partiellement
+le type du contenu, on parle de typage semi-dynamique.
+En Perl 6, les sigils et le typage dynamique de Perl 5 ont été étendus par l'addition de types statiques. Cela consiste en la déclaration explicite du type du
+contenant. Par exemple :
+Cependant, tout comme en Perl 5, les programmeurs peuvent se passer de typage explicite :
+Le typage statique est une forme de documentation et de tests intégrée au code source. Il améliore la maintenance, spécialement dans les grands projets logiciels. Mais le typage statique alourdit le code de scripts courts ou d'unilignes. Ce style concis sans déclaration explicite de type autre que par les sigils est une force du Perl lorsque utilisé pour l'écriture de code à usage
+unique.
+Perl 6 introduit aussi des sigils secondaires appelés twigils.
+Orientation objet.
+Perl 5 supportait l'orientation objet via un mécanisme propre à Perl et nommé
+bénédiction. N'importe quelle référence pouvait être bénie comme étant un objet d'une classe particulière, comme :
+Un objet béni pouvait alors avoir des méthodes invoquées en utilisant la « syntaxe flèche » :
+L'invocation identifie la sous-routine appropriée de nom codice_2, et l'appelle avec codice_3 comme premier argument.
+Bien que très puissant — virtuellement n'importe quel autre modèle objet d'un autre langage pouvait être simulé en utilisant cette simple fonctionnalité — il rendait le cas le plus commun d'orientation objet, comme une
+structure C associée à du code, inutilement difficile. De plus, Perl ne pouvant faire d'hypothèse sur le modèle objet utilisé, l'invocation de méthode ne pouvait pas être très bien optimisée.
+Dans l'esprit de rendre les choses simples plus simples, et les choses compliquées faciles, Perl 6 garde le principe de bénédiction pour créer une instance pour les programmeurs qui désirent des fonctionnalités communes. Cela fournit un modèle objet plus robuste pour les cas communs. Par exemple, une classe pour encapsuler un point cartésien peut être écrite comme :
+et utilisée :
+Le point remplace la flèche (propre à Perl 5) comme opérateur d'accès au membre d'une instance. C'est la syntaxe propre à
+de nombreux langages dont C++, Java, Python, et Ruby.
+Notez que les méthodes « codice_4 » et « codice_5 » ne sont pas déclarées explicitement. Elles sont appelées des auto-accesseurs. Le modificateur « is rw » 
+dans la définition de la classe permet à tous ses attributs publics d'être écrits par défaut, en utilisant les auto-accesseurs.[http://dev.perl.org/perl6/doc/design/syn/S12.html]
+Les données membres d'une instance sont appelés « attributs ». Elles peuvent être déclarées ainsi :
+Résolution multiple.
+Dans un même champ lexical, on peut définir plusieurs routines ou méthodes du même nom en les
+préfixant par le mot-clé multi. On parlera de multi pour désigner l'ensemble des routines
+ou méthodes de même nom. Lors de l'appel d'une multi,
+la routine ou méthode dont la signature correspond aux arguments passé sera appelé.
+Le système de liage entre les arguments de l'appel et les paramètres de l'appelé est très pointu.
+Ainsi, pour traverser un arbre n-aire, l'argument attendu est soit un nœud de type Nary
+dont les enfants sont un tableau commençant par l'$ainé et suivi éventuellement de @frères,
+soit une $feuille. 
+Ce système de multiméthodes inclut donc la fonctionnalité de filtrage par motif propre à la programmation fonctionnelle.
+Expressions rationnelles.
+Les expressions rationnelles
+(en anglais, "regex", pour "regular expression") de Perl ont connu tellement de succès qu'elles ont été mises en œuvre par une bibliothèque appelée PCRE (Perl Compatible Regular Expressions). 
+Via PCRE, les expressions rationnelles ont été incluses sans amélioration dans beaucoup d'autres langages.
+Pourtant, comme le fait remarquer Larry Wall, ce sont les expressions rationnelles qui ont contribué à donner à Perl une réputation de langage peu lisible.
+Elles sont trop compactes et trop malignes, les mêmes caractères sont utilisés pour des usages divers. Il y a peu de support pour les captures nommées, peu de support pour les grammaires, et une intégration pauvre avec les langages réels.
+Perl 6 fournit un sur-ensemble des fonctionnalités de Perl 5 concernant les expressions rationnelles.
+Le mécanisme des regex fournit une puissance comparable aux analyseurs syntaxiques.
+Ces regex agissent comme des fermetures par rapport à leur champ lexical. 
+Les regex sont introduites avec un des mots-clefs codice_6, codice_7, codice_8.
+La définition d'une regex est similaire à une définition de sous-routine et peut admettre des
+paramètres. Le choix du mot-clef permet de contrôler si les espaces sont significatifs
+ou non dans la regex, et de spécifier s'il peut y avoir retour sur trace ou non.
+Comme en Perl 5, on peut aussi définir des regex anonymes ou les utiliser directement dans les opérateurs codice_9 (matching) ou codice_10 (chercher et remplacer).
+Seules six fonctionnalités n'ont pas été changées depuis les regex du Perl 5 :
+Quelques-uns des ajouts les plus efficaces sont :
+Les changements suivants ont grandement augmenté la lisibilité des regexes :
+Exemples :
+La dernière ligne est identique à :
+Comparaisons chaînées.
+Les nouveaux programmeurs attendent souvent que les comparaisons chaînées
+comme dans l'uniligne ci-dessous fonctionnent :
+En Perl 6, ce code fonctionne maintenant naturellement, dans l'esprit du DWIM ("Do What I Mean"), et s'exécute comme :
+Évaluation paresseuse.
+Perl 6 propose l'évaluation paresseuse de listes qui est une fonctionnalité de certains langages de programmation fonctionnelle tels que Haskell.
+L'évaluation paresseuse simplifie des tâches communes en Perl6 comme les opérations d'entrées/sorties, la
+transformation de listes et le passage d'arguments à une routine :
+Le code ci-dessus ne crashera pas en essayant d'assigner une liste de taille infinie à la table codice_25.
+Meta-opérateurs.
+Les méta opérateurs sont des opérateurs qui agissent sur un autre opérateur pour obtenir un opérateur au comportement différent.
+Opérateurs d'affectation.
+Perl5 avait hérité de certains opérateurs emblématiques du langage C tels que '+=', '*=' etc. Perl6 généralise cette notion avec le métaopérateur d'affectation '='. 
+Ainsi, pour n'importe quel opérateur binaire "Op", on peut écrire:
+Pour:
+"Op" peut très bien être un opérateur défini par l'utilisateur.
+hyper-opérateurs.
+Les "hyper-opérateurs" sont similaires aux opérateurs de manipulation de tableaux dynamiques du langage APL. Ils agissent sur un opérateur et le font opérer sur toutes les valeurs d'un tableau. Ainsi, pour créer un tableau dont tous les éléments sont ceux d'un tableau @a auxquels on a ajouté 1, il suffit d'écrire :
+Imbrication de méta-opérateurs.
+Les méta-opérateurs peuvent être imbriqués, quitte à utiliser des crochets ('[]') pour désambiguïser.
+Jonctions.
+Perl 6 introduit le concept de "jonctions".
+Nous choisissons ce terme pour le distinguer des jointures, concept propre aux bases de données relationnelles.
+Les jonctions sont des valeurs scalaires composites.
+Les jonctions ont été initialement appelées superpositions, par analogie au concept de physique quantique de superpositions quantiques — des courbes qui peuvent simultanément occuper plusieurs états jusqu'à ce que leur observation les "effondre". Un module Perl 5 réalisé en l'an 2000 par Damian Conway appelé codice_26 fournissait une preuve de concept initiale. D'abord une curiosité programmatique, les jonctions sont ensuite devenus un concept important de Perl 6.
+Dans leur forme la plus simple, les jonctions sont créées par combinaison d'un ensemble de valeurs avec l'opérateur de jonction :
+Ces valeurs peuvent être utilisées arithmétiquement :
+ou dans des comparaisons :
+ou même pour l'accès à un tableau :
+Les jonctions peuvent aussi être utilisées pour étendre le système de types :
+Les jonctions ne sont pas ordonnées ; codice_27 et codice_28 représentent les mêmes valeurs. Cette absence d'ordre signifie que le compilateur Perl 6 peut choisir d'évaluer les expressions jonctives "en parallèle". En fait, plusieurs dans la communauté Perl 6 croient que les jonctions peuvent surpasser l'explicite multithreading comme manière ordinaire d'accomplir le parallélisme en Perl 6.
+Macros.
+Dans les langages de bas niveau, le concept de macros a été synonyme de substitutions textuelles du code source à cause de la large utilisation d'un préprocesseur ignorant la syntaxe du langage.
+Le langage C utilise la construction codice_29.
+Perl 5 utilise des systèmes de filtres sources à cet effet. Ils sont notoirement peu fiables, car leur empilement a des effets aléatoires. En effet, chaque filtre suppose que le code qu'il filtre est du code Perl 5 alors qu'il reçoit du code modifié par ces prédécesseurs.
+Lisp est privilégié, car il propose un système de macros qui manipulent directement l'arbre syntaxique correspondant au source du programme. C'est facile car sa syntaxe concrète est identique à sa syntaxe abstraite. A terme, Perl6 vise à intégrer un système de macro tout aussi puissant qu'en Lisp, ce qui constitue l'un des objectifs les plus ambitieux du langage.
+Perl 6 proposera les deux types de macro: substitutions textuelles et manipulation de l'AST.
+Une définition de macro Perl 6 ressemblera à une définition de sous-routine ou méthode, et peut travailler sur des chaînes non analysées, un arbre de syntaxe abstrait AST représentant du code préanalysé, ou encore une combinaison des deux. Une définition de macro pourrait ressembler à :
+Dans cet exemple particulier, la macro n'est pas plus complexe qu'une substitution textuelle en C, mais parce que l'analyse du paramètre de la macro se produit avant que la macro n'opère sur le code appelé, les messages de diagnostic seront beaucoup plus informatifs. Cependant, parce que le corps de la macro est compilé à chaque lancement du programme, diverses techniques d' optimisation peuvent être employées.
+Hello world.
+En Perl 6 comme en Perl 5, on peut écrire
+En Perl 6, on préfèrera écrire le hello world ainsi :
+codice_30 est semblable au codice_30 de REXX, au codice_32 de Pascal et au codice_33 de Ruby et C.
+JAPH.
+Comme en Perl 5, les JAPHs (programmes qui impriment « Just another Perl hacker »), sont de bons moyens d'expérimentation avec Perl 6.
+Ici un exemple de curryfication :

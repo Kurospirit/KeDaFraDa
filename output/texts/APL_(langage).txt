@@ -1,0 +1,95 @@
+APL (langage)
+
+L'APL (initialement "A Programming Language", officieusement "Array-Processing Language") est un langage de programmation conçu entre 1957 et 1967 par Kenneth Iverson pour décrire commodément des opérations portant globalement sur des tableaux (booléens, numériques ou, dans une moindre mesure, de caractères).
+Révolutionnaire à son lancement (usage du terminal à boule ou à écran alors que la carte perforée restait encore la référence, gestion dynamique de mémoire, interactivité totale, concision par suppression de la nécessité des ordres de boucles), il connut un succès croissant jusqu'au milieu des années 1980, époque où le tableur le concurrença pour les petits travaux, et des outils comme SAS, puis R (langage de programmation et environnement statistique) pour le travail sur les grands volumes de données.
+Historique.
+APL s’est montré particulièrement adapté en son temps aux calculs statistiques, aux ventilations, aux consolidations, aux descriptions fonctionnelles d’architectures comme celle de l’IBM 360, aux graphiques interactifs (GRAPHPAK) et à quelques travaux en combinatoire et en théorie des graphes. Il a également été utilisé pour le prototypage d’applications et l’écriture de langages de manipulation simples dans le cadre d’un infocentre en masquant les symboles appropriés sous des dénominations commodes et parlantes, par exemple en permettant d’écrire simplement :
+"MOYENNE X" pour "(+/X)÷⍴X".
+"NORMALISER X" pour "X÷+/X"
+etc.
+Il permet de manipuler aisément des tableaux de 1 à N indices (N variant de 7 à 255 selon l’implémentation considérée) de façon "globale". Les opérations puissantes de "feuilletage" ("lamination") ainsi que les opérateurs de "réduction", "expansion", "compression", "produit intérieur" et "produit extérieur" évitent souvent toute nécessité d’indices de boucle explicite - ainsi d’ailleurs que l’usage de boucles lui-même.
+Il utilise de nombreux symboles représentant des opérations utilisables en programmation comme en calcul immédiat à la console, par exemple le « domino » (⌹) qui inverse directement une matrice, ou résout un système d’équations linéaires surdimensionné au sens des moindres carrés.
+On estimait dans les années 1970-80 qu’une équipe de 5 développeurs APL avait la puissance de développement d’une équipe de 25 programmeurs FORTRAN. L’application APL se montrait plus gourmande en ressources matérielles, mais le prix de celles-ci était en constante diminution. Aujourd'hui, 2013, son adaptation à la programmation agile lui donne un regain d'intérêt pour toutes les applications à mettre en place ou faire évoluer rapidement, aussi bien que pour les applications à courte durée de vie. Il a été utilisé entre autres par NASA, British Airways, Banque de France (études économiques éclair), Direction générale des Impôts (impact fiscal de lois nouvelles), etc.
+Depuis 2013 également, il est proposé pour la réalisation de servlets.
+Son interface initiale (bicolore en mode machine à écrire) a inspiré celle de logiciels comme Maple.
+Présentation.
+APL innovait à son époque par plusieurs aspects conviviaux : 
+Exemples.
+Ainsi pour écrire « Hello, World! » en APL, les choses se passent ainsi :
+Il faut y ajouter la possibilité spectaculaire d’indexer un tableau par un autre tableau. Ainsi :
+Voire :
+Pas de traduction automatique ici ni dans un cas ni dans l'autre : l'indice a simplement été remplacé par ce qui était indicé (ainsi "T" est le septième caractère), ce qui est le propre de l'opération d'indexation. Ce qui est indicé prend également la forme de l'indice (ainsi, une matrice 2x3 dans le second cas).
+Grâce à sa priorité de gauche à droite, le langage se lit simplement, comme une langue naturelle : « 1 plus somme des inverses des factorielles des entiers de 1 à 30 » s'écrira :
+Une extension d'APL, nommée APL2, gère quant à elle des tableaux de tableaux, et permet à l'utilisateur de définir lui-même ses propres « opérateurs ». Elle travaille également en nombres complexes automatiquement si les besoins du calcul le demandent.
+Opérations sur tableaux.
+APL a créé une matrice A de 2 lignes et 2 colonnes, la remplit avec les nombres 1 2 3 4, puis l'imprime
+le résultat est une matrice booléenne indiquant les éléments de A égaux à 2
+APL concatène la matrice A avec elle-même, formant une matrice de 2 lignes et 4 colonnes
+APL concatène le scalaire 5 à la matrice A
+APL concatène à A un vecteur 'somme des lignes de A' 
+même chose suivant l'autre axe : colonnes
+concaténation en créant une nouvelle dimension : la matrice devient cube
+concaténation en créant une nouvelle dimension sur un autre axe
+APL met dans A et imprime un produit externe ou cartésien, genre table de multiplication
+APL édite la suite résultant du tri ascendant des éléments de A
+Opérateurs.
+De même qu'une "fonction" agit sur une ou plusieurs "variables", un "opérateur" agit sur une ou plusieurs "fonctions" (ou opérations). Pour prendre une comparaison mathématique, « sigma » et « pi » correspondent à l'opérateur APL de "réduction" (« / ») appliqué aux opérations « + » et « × ». Sigma (somme de termes) s'écrit "+/", « pi » (multiplication entre termes) "×/", « Union » ("ou" logique entre termes) ∨"/", etc. On parle, dans d'autres langages, de clôture ("closure").
+Dans la première version d’APL, les "opérateurs" sont définis de façon fixe (réduction (/), scan (\), produit externe (°.), composition (.), …). En APL2, l’utilisateur peut fabriquer les siens à volonté et leur donner des noms. Un opérateur peut agir indifféremment sur des opérations de base du langage ou sur des fonctions définies par l’utilisateur dans sa "workspace".
+APL2 introduit également l'opérateur tréma ('¨', nommé "each"), généralisant au niveau de chaque sous-tableau une opération dans les "tableaux de tableaux".
+Tableaux de tableaux, et fonction ⍎.
+Une opération nommée "enclose" (⊂) permet d’"encapsuler" un tableau qui est alors vu comme un scalaire. Il est dès lors facile de représenter des structures complexes sous forme de "tableaux ayant pour éléments d’autres tableaux". L’existence d’une fonction "execute" (⍎) permet même d’inclure dans ces tableaux de tableaux des désignateurs de fonction que l’on peut exécuter à la demande, comme en langage C. Elle permet aussi à un programme d’engendrer lui-même un code qu’il exécutera ensuite, comme en Lisp.
+Le nombre d'"indices" d’un tableau est par convention nommé "rang" (rank) en APL. Le nombre de "niveaux" d’un tableau de tableaux est nommé "profondeur" (depth).
+Espace de travail.
+L’utilisateur travaille dans un "espace de travail" où il stocke ses fonctions et ses variables. Il peut à tout moment sauvegarder l’ensemble (y compris en état d’exécution suspendue) et reprendre plus tard son travail exactement dans les conditions où il l’avait laissé. Des commandes comme ")COPY" et ")PCOPY", et la notion de "groupe" permettent des transferts aisés de fonctions et de variables d’un "workspace" à un autre.
+Horodatage automatique.
+Chaque objet APL2 (variable, fonction ou opérateur) est horodaté dans la "espace de travail", ce qui facilite sa gestion sur le long terme. Le type et la date des objets sont retournées par la fonction système "⎕AT" (="AT"tributes). Couplé aux opérateurs de tri ⍋ ("grade-up") et ⍒ ("grade-down"), cet horodatage des objets facilite beaucoup le processus de développement.
+Implémentations.
+Exemple de session NARS2000
+Trois implémentations en Open Source d'APL sont téléchargeables gratuitement à ce jour, 2013 :
+Réalisations.
+Des interpréteurs APL ont existé pour l’IBM 7090, les IBM 360 à zSeries (sous TSO, VM/CMS et même CICS!), l’IBM 1130, le "Xerox XDS Sigma 7" alias CII 10070, et le CII Iris 80, le Bull DPS-7, le Burroughs B1700, le Bull SEMS T1600 (ex-"Télémécanique Électrique T1600"), la série des Mitra, etc. 
+Ce langage était même directement en ROM dans des ordinateurs personnels du milieu des années 1970 comme le "MCM-70" ou l’IBM 5110 modèles A et C.
+Des versions station de travail et ordinateur personnel en ont aussi été commercialisées ou réalisées gratuitement pour AIX, Solaris, Linux, Windows, Mac OS, OS/2 et même le DOS (une version gratuite nommée TRYAPL2 existe pour le DOS, en version anglaise comme française).
+La société Microsoft considérait l'APL comme le successeur naturel de son BASIC et avait entrepris deux implémentations du langage sur 8080 et 6800, comme le montre un extrait de lettre de Bill Gates aux utilisateurs de l'Altair BASIC 
+Le succès de DOS, de Windows et surtout des tableurs Multiplan et Excel fit abandonner ce projet, qui s'adressait à un marché potentiel bien plus restreint.
+Environnements informatiques.
+Le mécanisme d’échange dit des "processeurs auxiliaires" permet à des workspaces APL de communiquer avec le monde extérieur : fichiers, SQL/DB2, TCP/IP, X-window, OpenGL, ainsi qu'"autres workspaces APL et consoles du réseau actives au même moment" si celles-ci en donnent l’autorisation. On peut ainsi commencer à mettre au point un calcul sur un PC, puis une fois qu’il est au point l’exécuter à distance sur un mainframe équipés de dizaines de processeurs parallèles depuis la même session.
+Les processeurs auxiliaires se codent le plus souvent en langage C.
+Situation présente du langage.
+L’apparition du tableur, plus intuitif et plus facile à manier, a fait disparaître une partie de l’intérêt du langage. Cela n’enlève rien pour autant à sa puissance d’expression et à sa concision, et plusieurs interpréteurs APL sont téléchargeables gratuitement sur Internet, pour le PC comme pour le Macintosh. La généralisation des écrans et des imprimantes à laser ont éliminé l’ancien problème que représentait l’usage de caractères spécifiques. Les caractères APL/APL2 sont d’ailleurs présents dans l’Unicode.
+APL traitant globalement les tableaux, ses implémentations tirent aisément parti des possibilités de calcul parallèle ou de pipeline des processeurs modernes. Elles utilisent extensivement les possibilités vectorielles du S/390 (zSeries), de l’architecture PowerPC et des instructions multimédia (SSE) de l’architecture Intel/AMD.
+Il a deux successeurs, le langage A+, et le langage J, ce dernier ayant été promu par K. E. Iverson lui-même, et ne nécessitant pas l’usage de caractères spéciaux. APL possède toutefois une lisibilité supérieure, à condition de disposer de la police de caractères appropriée. La mise à disposition du langage lui-même n’aurait pas été possible dès 1969 sans les "terminaux IBM à boule" également nommés Selectric (par exemple le "2741").
+Pour information, des calculs actuels typiques sur un Celeron s’effectuent à peu près en un dixième du temps de calcul qu’ils prenaient en 1970 sur un "IBM 360/91". Le cœur de l’interpréteur tient entièrement dans le cache d'instructions d’un microprocesseur contemporain (2004), donnant à APL des performances comparables à celle qu’on obtenait il y a quelques années avec un langage compilé.
+GRAPHPAK est une des workspaces fournies avec APL et combinable avec toute autre application de l’utilisateur pour lui donner des possibilités d’entrée-sortie graphiques 2D comme 3D. La structure des appels du langage (pas de nécessité de parenthèses pour les appels de fonctions et de sous-programmes) permet de donner des ordres ayant une vague allure de langage naturel. Les éléments "IBM" et "AP", fournis avec cette workpsace, sont simplement des matrices contenant des coordonnées de points respectivement en 2D et en 3D, la première colonne spécifiant une indication de tracé (couleur et style).
+Caractères APL/APL2 en Unicode.
+Vérifiez que votre navigateur accepte bien l’Unicode; dans le cas contraire, vous verrez s’afficher des rectangles blancs ou des points d’interrogation à la place des caractères APL.
+Glyphes.
+Tous les caractères APL ne sont pas encore associés à une signification aujourd'hui (2004).
+Polices APL existantes.
+En mai 2010, les principales polices APL téléchargeables depuis l'Internet sont les suivantes :
+Quelques opinions.
+« APL is a mistake, carried through to perfection. It is the language of the future for the programming techniques of the past: it creates a new generation of coding bums ».
+"« APL est une erreur, poussée jusqu'à la perfection. C’est le langage de l’avenir pour les techniques de programmation du passé : il crée une nouvelle génération de fainéants du codage»".
+« APL is a write-only language. I can write programs in APL, but I can’t read any of them ».
+"« APL est un langage en écriture seule. Je peux écrire des programmes en APL, mais je ne peux en lire aucun. »"
+« APL is like a diamond. It has a beautiful crystal structure; all of its parts are related in a uniform and elegant way. But if you try to extend this structure in any way - even by adding another diamond - you get an ugly kludge ».
+"« APL est comme un diamant. Il a une superbe structure cristalline ; toutes ses parties sont en correspondance d’une façon uniforme et élégante. Mais si vous essayez d’étendre cette structure de quelque façon que ce soit — même en y ajoutant un autre diamant — vous obtenez un bricolage hideux »". (Allusion au passage d’APL à APL2).
+« Je ne recommanderais pas de mettre rapidement APL entre les mains des étudiants ».
+Lacune d’APL.
+APL n’a jamais officiellement connu les tables associatives, indexant un tableau avec autre chose que des valeurs entières. On ne peut donc pas écrire :
+"CAPITALE[⊂'FRANCE']←⊂'PARIS'
+ou, pour rester dans le vectoriel,
+"CAPITALE['FRANCE' 'ESPAGNE' 'ITALIE']←'PARIS' 'MADRID' 'ROME
+ce qui est regrettable, car :
+Il est peu ergonomique de contourner cette lacune au prix de variables supplémentaires, comme par exemple:
+"FRANCE←32" (dès lors, "CAPITALE←⊂"PARIS"". Si le pays provient d'une saisie, l'indice peut être retrouvé par "execute" : "⍎"FRANCE"" qui rend 32, mais l'application perd en robustesse et on encombre inutilement la table des symboles (APL/X contourne la difficulté par des "namespaces").
+Une autre manière est de définir un vecteur des noms de pays :
+"PAYS ←'BELGIQUE' 'FRANCE' ", l'instruction devenant alors :
+"CAPITALE[PAYS⍳⊂'FRANCE']←⊂'PARIS' "
+Mais en ce cas, indépendamment de la lisibilité plus faible, le temps d'accès n'a plus le moindre rapport avec un accès direct de type "hash" en Perl ou PHP, surtout si s'il y a des centaines de noms.
+Non seulement la lisibilité des programmes n'y gagne rien, mais leur facilité de maintenance s'effondre compte tenu des variables "surajoutées" au programme.
+APL, langage cryptique.
+Épargnant l’usage des indices et des boucles en multipliant les opérateurs, APL permet l'écriture rapide et concise d'expressions qui seraient bien plus longues avec un langage classique. Vue la compacité et la puissance du langage, certains puristes considéraient que pour être « élégant », un programme APL ne devait pas dépasser une ligne de code. Ces programmes, nommés "one-liners" dans la revue de l'ACM "APL Quote-Quad" étaient les ancêtres des "deulignes" de ce qui sera plus tard Hebdogiciel.
+Cependant, la multiplicité des glyphes, leur usage unaire ou binaire, les superpositions de caractère sensées les exprimer ont fait qualifier ce langage de "cryptique". D'autant que l'absence de mécanismes conditionnels amenait chacun à employer diverses astuces, nuisant à la lisibilité et à la maintenance des applications, sauf à introduire des opérateurs nommés à usage auto-documentaire.
+Succession.
+Ces deux langages, du fait de leur appartenance au projet GNU, sont par ailleurs gratuits.

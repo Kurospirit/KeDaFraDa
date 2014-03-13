@@ -1,0 +1,96 @@
+Rational Modeling Language
+
+Ce langage est une abstraction et une modélisation de langage de programmation libre sous licence GNU General Public License, se basant sur la théorie des graphes et la théorie des groupes. Il utilise également les travaux réalisés par le consortium OMG qui vient d'éditer UML2. Ce modèle utilise abondamment la notion de récursivité.
+Ce langage, à la différence d'UML, est basé sur la théorie des graphes et la relation entre chaque représentation. Il a une vocation pédagogique et mathématique.
+Ce langage définit un système complet par ses représentations. Il définit en premier lieu la famille génératrice et les variables libres du système.
+Les variables libres du système sont le temps, la structure, les états, les prédicats.
+Pour définir une représentation il est nécessaire de combiner au moins deux dimensions (variables libres) du système : classe, objet, prédicat, temps, état, etc.
+Les vues.
+Vue tri-dimensionnelle.
+Pour définir une représentation tri-dimensionnelle, il est nécessaire de sélectionner trois variables libres du système.
+Exemple une vue constitué des variables libres : temps, prédicat et classe.
+Vue matricielle.
+Pour définir une représentation matricielle, il est nécessaire de combiner deux dimensions du système.
+Pour avoir une vue d'ensemble du système, il faut croiser toutes les combinaisons possibles de ces dimensions.
+Le système doit être vu comme un système matriciel qui ne peut être vu que par des "vues", c’est-à-dire des observables sur ce système. Il peut être intéressant de faire le lien avec les observables en mécanique quantique. 
+Le premier groupe défini est celui des objets. Il énumère les objets que le système comporte.
+Le second groupe défini l'espace des prédicats. Il énumère les prédicats du système. En informatique un groupement de prédicats est appelé interface.
+La gestion concurrente est déterminée par la variable libre "temps" et nécessite une projection.
+Les couches d'abstraction (abstraction layers).
+Pourquoi des couches d'abstraction ? Car il est impossible de définir un système par énumération. Toutes les fonctionnalités (prédicat ou objet) du système n'ont pas les mêmes valeurs et n'ont pas les objectifs. Il faut faire un tri abstrait.
+Lorsque le système est défini, il se positionne dans un environnement spécifique. Les acteurs du système sont positionnés dans la couche N du modèle. 
+La couche N défini tous les acteurs, objets et interactions qu'elle peut manipuler par ce niveau d'abstraction.
+Nota : Ce concept de couche peut être apparenté à la notion de "domain" en executable UML, mais sans la dimension récursive.
+Nota2 : un prédicat est vu comme un "use case" en UML.
+Définition : Un prédicat peut être public ou privé. Un prédicat privé n'est vu que par l'objet qui le manipule. Un prédicat public est vu des acteurs de la couche d'abstraction qui le définit. Un prédicat peut faire appel à un autre prédicat d'une autre couche d'abstraction. Le passage d'une couche d'abstraction N à une autre N-1 est vu comme un paradigme. 
+Chaque couche à sa propre ontologie et tout l'art réside dans la connexion des couches entre elles.
+Par exemple s'il faut modéliser un logiciel de gestion commerciale, il faut définir des prédicats orienté commerce ("business activity"). Dans ce type de système, une base de données régit les transactions et le stockage des informations. Le logiciel commercial utilise une base de données mais n'est pas là pour définir ce qu'est une base de données, c'est-à-dire la modéliser.
+C'est notion d'utilisation est très importante car elle conduit à la notion d'interface. Cette Interface est proposée par une autre couche (N-1 par exemple).
+S'il faut modéliser une base de données, il faut définir les prédicats orientés base de données. Elle définit comment est stocké logiquement l'information et non physiquement. Ici le logiciel utilisera le système d'exploitation pour le stockage physique des données.
+Il est possible d'aller plus en profondeur pour voir que les fabricants de système d'exploitation modélisent les prédicats spécifiques à l'OS et se base sur les possibilités du micro-processeurs. Les fabricants de micro-processeurs se basent sur les possibilités physiques et mécaniques. Les physiciens étudient les siciles, etc.
+Même si dans cet exemple la décomposition du système est simpliste, elle a le mérite de présenter objectivement le besoin de couches d'abstraction. Le périmètre d'une couche d'abstraction à l'heure actuelle ne peut pas être calculé (au sens calculabilité et preuve mathématique).
+Les groupes.
+RML repose sur quatre groupes :
+Groupe des classes.
+Ce groupe identifie chaque élément comme une classe. Ce groupe est fini.
+Groupe des objets.
+Ce groupe identifie chaque élément comme un objet. Ce groupe est infini.
+Chaque objet est une instance d'une classe.
+Groupe des prédicats.
+Ce groupe identifie chaque élément comme un prédicat. Ce groupe est fini.
+Un prédicat regroupe les notions UML de cas d'utilisation et opération. Un cas d'utilisation est un prédicat. Une opération est un prédicat.
+Groupe des méthodes.
+Ce groupe identifie chaque élément comme une méthode. Ce groupe est infini.
+Chaque objet est une instance d'un prédicat.
+Portée des noms.
+Le nom des prédicats et des classes est lié à la couche d'abstraction. Le RML n'a pas de grammaire ambiguë. 
+En Java comme en UML pour les classes, l'ambiguïté est levée grâce à la notion de "package" (ou paquetage). Chaque package à son propre ensemble de nom. Les noms des classes sont préfixés par le nom de package.
+Pour les couches d'abstraction il faut bien 
+Pour les prédicats en langage orienté objet, l'espace des noms est défini par la classe sur laquelle le prédicat porte. Un prédicat ne peut exister seul alors qu'une classe oui :
+Classe1 c; // existe 
+Classe2.prédicat1(); // existe
+prédicat1(); // n'existe pas 
+Pour pallier l'impossibilité de créer un prédicat seul, on passe par une interface, qui est une classe ne contenant que des prédicats.
+Un nom hors de son contexte peut avoir plusieurs sens.
+Exemple : un prédicat dans deux couches d'abstraction
+predicat1 : définition 1 (dans la couche 1)
+prédicat1 engendre 2 méthodes méthode1 (orienté temps de traitement) et méthode2 (orienté espace alloué).
+méthode1 et méthode2 sont équivalentes.
+predicat1 : définition 2 (dans la couche 2)
+prédicat1 engendre 2 méthodes méthode3 (orienté temps de traitement) et méthode4 (orienté espace alloué).
+méthode3 et méthode4 sont équivalentes.
+méthode1 et méthode3 ne sont pas équivalentes.
+méthode2 et méthode4 ne sont pas équivalentes.
+Les graphes.
+Les graphes se reposent en partie sur les concepts d'UML. Ce n'est pas une copie des diagrammes d'UML mais une reconstruction, brique par brique de façon rationnelle (d'où le terme "Rational") les dépendances entre arc et sommet.
+Il faut prendre, a minima, deux variables libres pour constituer un graphe. L'ordonnée représentant les sommets et l'abscisse les arcs.
+Par exemple, les graphes suivants :
+Assis ---10 secondes--→ Debout ---20 secondes--→ Assis
+Assis ---seLever()--→ Debout ---sassoir()--→ Assis
+seLever() ---10 secondes--→ sassoir() ---20 secondes--→ seLever() 
+Homme ---10 secondes--→ Femme ---20 secondes--→ Homme
+Chapeau ---tranformer()--→ Chapeau de paille ---tranformer()--→ Casquette
+Un des points à aborder est la dualité des graphes, comme on peut le voir dans le tableau ci-avant, 
+Par exemple, les graphes suivants :
+Assis ---10 secondes--→ Debout ---20 secondes--→ Assis
+10 secondes ---Assis--→ 20 secondes ---Debout--→ .
+Récursivité.
+Notion de récursivité apparaît dans le fait qu'un graphe est constitué :
+- d'un ensemble d'arcs
+- d'un ensemble de sommets
+Un sommet est soit une variable libre soit un graphe.
+Un arc est soit une variable libre soit un graphe.
+Pour les prédicats :
+Par exemple, le graphe G1 "ouvrir la porte" est composé de la manière suivante : (les états et les arcs ne sont pas forcément nommés)
+--- chercher clé -→ . --- insérer clé dans la serrure --→ . --- tourner clé --→
+G2 "rentrer chez soi" 
+--- prendre métro ---→ . --- arriver maison --→ . --- ouvrir porte --→ . --- entrer maison --→
+Pour les classes :
+chien ---estun() --→ animal
+labrador --estun() -→ chien
+Les itérations du système.
+Un système est "vivant" dans le sens où un programme informatique évolue sans cesse. Le système par de la première itération S(1) et est itéré jusqu'à n-ième itération S(n). Soit I(i) l'opérateur (au sens mathématique) qui fait passer de S(i) à S(i+1), on obtient :
+formula_1
+La version v du système correspond à la n-ième itération pour laquelle le système est jugé correspondre aux spécifications définit.
+formula_2
+Plusieurs types de version existent :

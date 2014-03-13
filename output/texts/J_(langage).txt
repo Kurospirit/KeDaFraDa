@@ -1,0 +1,7 @@
+J (langage)
+
+Le langage J a été créé au début des années 1990 par Kenneth Iverson, inventeur d'APL. Iverson a raffiné APL et considère avoir simplifié sa notation en lui ajoutant des concepts de verbes, d'adverbes et de conjonctions. Ces notions étaient déjà présentes en APL, où les variables ont un rôle de mots, les "filtres" d'adjectifs et les "opérations" et "fonctions" de verbes.
+Le langage J s'interface avec le web, les bases de données, etc. Il est disponible sur plusieurs plateformes, dont MS Windows, Linux et MacOS X. La version "J701" est sous double licence : GPLv3 ou une licence commerciale suivant l'usage envisagé.
+Accueil.
+L'arrivée du J a créé une scission dans le front des utilisateurs d'APL.
+L'apparition de différentes extensions non compatibles entre mises en œuvres du langage APL a donné un peu d'élan supplémentaire à J, qui présente une plus grande portabilité.

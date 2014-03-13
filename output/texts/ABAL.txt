@@ -1,0 +1,13 @@
+ABAL
+
+ABAL est un langage de programmation conçu et distribué par la société Prologue (aux Ulis en France).
+ABAL (Avanced Business Application Language) est un langage procédural orienté objet.
+ABAL est un langage interprété, le code source est traduit en T-code par un traducteur (Atr) et un éditeur de liens (ald) sous forme d'un fichier informatique .at qui n'est pas exécutable directement.
+Les programmes ABAL sont exécutables grâce à un exécuteur spécifique à chaque système d'exploitation (Windows, Twinserver, Useit, Unix/SCO).
+Il existe différents type d'exécuteurs : 16Bits et 32Bits pour répondre aux spécificités des différents systèmes d'exploitation et des besoins applicatifs.
+L'exécuteur s'appuie sur des BDA (bibliothèques dynamiques) pour ajouter des fonctionnalités :
+L'exécuteur s'appuie aussi sur des bibliothèques systèmes spécifiques à chaque système d'exploitation (DLL sous Windows, .so sous Useit, .xp sous Twinserver).
+Le langage ABAL est une amélioration de BAL (Business Application Language). ABAL a évolué depuis de nombreuses années : ABAL, ABAL2 et maintenant ABAL3. ABAL se compose d'un éditeur de texte, d'un éditeur de lien, d'un traducteur et d'un débuggeur.
+Il existe un intégré de développement qui regroupe l'éditeur, l'éditeur de lien, le traducteur et le débuggeur.
+Un nouvel intégré nommé SING s'appuie sur la BDA VISUAL. Il permet de définir des formulaires (écran de saisie ou d'édition) et crée automatiquement le code ABAL3 et VISUAL correspondant au formulaire de saisie ou d'impression (… à développer…) et qui permet, coupler à la BDA BDANET de réaliser un serveur HTTP qui répond aux requêtes en produisant des pages HTML.
+La société Prologue :

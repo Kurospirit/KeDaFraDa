@@ -1,0 +1,52 @@
+Modula-2
+
+Modula est un langage de programmation créé en 1977 par Niklaus Wirth à l'École polytechnique fédérale de Zurich. Sa syntaxe est une amélioration de celle du langage Pascal dont il reprend bon nombre de principes.
+Modula est un langage de programmation compilé, procédural, fortement typé, modulaire, facile à lire et à apprendre. Il est conçu pour enseigner la programmation et faciliter le développement des projets de grande ampleur. 
+Par rapport à Pascal, il ajoute :
+En résumé, Modula 2 est plus puissant et plus complet que Pascal. La modularité étant mieux conçue et traitée qu'en C, Modula 2 s'avère plus fiable dans les grosses applications. 
+Wirth a déclaré que ce langage était "celui qu'il aurait aimé concevoir quand il avait conçu Pascal". 
+Dialectes et langages apparentés.
+Algol W et Pascal (Niklaus Wirth, 1970) sont les ancêtres de Modula.
+Oberon est un descendant direct de Modula. (Niklaus Wirth, 1985)
+Modula a influencé les langages Java et C# 
+dialectes
+Caractéristiques du langage Modula.
+La syntaxe générale de Modula est celle de Pascal. La différence majeure étant l'usage moins fréquent du mot clé "BEGIN", et le remplacement du mot clé "PROGRAM" par "MODULE", "IMPLEMENTATION MODULE" ou "DEFINITION MODULE" selon les cas.
+Contrairement au langage Pascal, qui n'est pas sensible à la casse, les mots réservés et noms des éléments de base (fonctions, types et constantes) en Modula-2 sont obligatoirement écrits en majuscule.
+exemple: Hello World écrit en Modula :
+Typage fort et données brutes.
+Modula est un langage fortement typé, qui interdit toute conversion entre deux types où il y a possibilité de perte d'information tout en permettant la manipulation de "données brutes" et non typées.
+Les types de base sont INTEGER (nombre entier), REAL (nombre à virgule flottante), CHAR (caractère), et BOOLEAN. (booléen)
+Modula offre de nombreuses possibilités de créer des types complexes tels que tableaux "ARRAY", enregistrements "RECORD", pointeurs typés "POINTER", énumérations, intervalles, groupe de flags "SET OF".
+Modula offre la possibilité de créer des "callback" par l'utilisation de types "PROCEDURE".
+En invoquant le module System, Modula offre aussi la possibilité de manipuler des informations "brutes" et non typées, grâce aux types génériques "BYTE" et "WORD" (octet), "ADDRESS" (pointeur non typé + nombre) et "BITSET" (groupe de "flags" non typé). Si un paramètre d'une fonction est de type "ARRAY OF BYTE" (tableau d'octets de taille quelconque), le paramètre pourra contenir en vrac "n'importe quel type d'information". On peut ainsi profiter des avantages de la programmation physique dans les modules où elle est nécessaire, et d'une sécurité maximale partout ailleurs.
+Modules, interfaces, encapsulation et unité de compilation.
+En Modula le mot clé MODULE sert à encapsuler des éléments tels que des variables, des types ou des fonctions, c'est-à-dire à les rendre invisibles de l'extérieur du module, afin de cacher les détails internes de la construction du module. 
+Un module peut contenir d'autres modules. Dans un programme de grande dimension, un seul fichier exécutable peut contenir plusieurs fonctionnalités, le code source de chaque fonctionnalité peut être réparti sur plusieurs fichiers sources. Les fichiers sont alors compilés par petits groupes appelés "unités de compilation".
+La compilation peut se faire en plusieurs étapes, une "unité de compilation" à la fois. 
+Pour un programme ordinaire l'unité de compilation est composée d'un seul fichier source qui commence par "MODULE". 
+Pour une bibliothèque l'unité de compilation est composée de deux fichiers source :
+Pour utiliser dans un module B un élément (fonction, type, variable) provenant d'un module A, on ajoute au début du module B le mot clé "FROM" suivi du nom du module (ici A), puis du mot "IMPORT" et de la liste des éléments importés.
+Primitives et bibliothèques.
+Le langage Modula comporte seulement quelques instructions : INC, DEC, INCL, EXCL, CHR et ORD.
+Dans les programmes écrits en Modula, la majorité des opérations se font par l'utilisation des primitives incluses dans un ensemble de bibliothèques fournies avec le compilateur. les fonctions dans ces bibliothèques peuvent varier selon le système et le compilateur.
+Le langage offre la possibilité de créer des bibliothèques, et toutes les bibliothèques de primitives fournies avec le compilateur sont écrites en Modula, exception faite des bibliothèques SYSTEM et COROUTINES.
+Chaque bibliothèque consiste en un fichier de définition "DEFINITION MODULE" et un fichier d'implémentation "IMPLEMENTATION MODULE". 
+Dans le fichier de définition sont déclarés les éléments qui seront "rendu publics" et dont utilisables par les programmes qui exploiteront ce module. et dans le fichier d'implémentation se trouvent les éléments privés, ainsi que les instructions.
+Programmation concurrente.
+La programmation concurrente en Modula est basée sur les coroutines et les variables de contexte. le contexte étant l'instruction qu'une coroutine était en train d'exécuter à un moment donné (voir commutation de contexte).
+Le type de données contexte s'appelle "PROCESS" en Modula-1 et Modula-2 et "COROUTINE" en Modula-3.
+L'instruction "TRANSFER" permet d'arrêter l'exécution de la coroutine en cours "A", et de relancer l'exécution d'une coroutine quelconque "B". le contexte d'exécution de la coroutine "B" est passé en paramètre. La coroutine "A" sera suspendue - l'exécution de l'instruction TRANSFER est ne se terminera pas - jusqu'à ce qu'une autre coroutine utilise l'instruction "TRANSFER".
+L'instruction "IOTRANSFER" permet d'arrêter l'exécution de la coroutine en cours "A" et de relancer l'exécution d'une coroutine quelconque "B" jusqu'à ce qu'une interruption matérielle survient. La coroutine "A" reste suspendue jusqu'à la venue de l'interruption.
+Une instruction permet de créer un nouveau contexte pour une coroutine.
+Ces trois instruction suffisent à réaliser un noyau multitâche préemptif, des thread légers, ainsi que des mécanismes de synchronisation. Des mécanismes qui sont souvent inclus dans les bibliothèques fournies avec le compilateur Modula.
+Programmation de haut niveau et portabilité.
+Modula est un langage de programmation de haut niveau, c'est-à-dire qu'il permet d'écrire un programme sous une forme proche de la pensée humaine, et cache les détails techniques de la machine sur laquelle le programme va être exécuté.
+Un langage de programmation de haut niveau permet d'écrire des programmes portables. C'est-à-dire qu'un programme écrit pour un système peut, moyennant quelques changements mineurs, être compilé de nouveau sur un autre système.
+Pour faciliter les modifications, les éléments du langage qui peuvent différer d'un système à l'autre sont encapsulés dans les modules SYSTEM et COROUTINE. Il y a notamment les types de données de bas niveau BYTE, ADDRESS, BITSET, PROCESS et COROUTINE. ainsi un module qui risque de demander des changements peut être repéré facilement par le fait qu'il importe des éléments du module SYSTEM ou COROUTINE.
+La majorité des instructions dans un programme écrit en Modula consistent à utiliser des fonctions incluses dans les bibliothèques fournies avec le compilateur. Tout comme dans le langage C, il existe une suite de bibliothèques standard et communes à tous les compilateurs, suite à laquelle se rajoutent diverses bibliothèques, différentes d'un compilateur à l'autre.
+Lilith.
+Lilith est le nom d'une station de travail conçue en 1978 par L'école Polytechnique Fédérale de Zürich, et dont l'environnement logiciel est entièrement écrit en Modula.
+Cet environnement inclut un compilateur, un système d'exploitation, un environnement graphique et divers outils.
+Le développement de la machine était à la fois un exercice grandeur nature pour les élèves des facultés d'électronique et d'informatique de l'université, et une occasion d'évaluer les qualités et les défauts de Modula sur les projets de grande ampleur.
+Le processeur utilisait un M-code, et un bus rapide pour l'affichage graphique.

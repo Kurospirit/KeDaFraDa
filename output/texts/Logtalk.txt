@@ -1,0 +1,3 @@
+Logtalk
+
+Logtalk est un langage de programmation logique, orienté objet, issu de Prolog.

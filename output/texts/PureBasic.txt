@@ -1,0 +1,28 @@
+PureBasic
+
+PureBasic est un langage de programmation de type BASIC compilé. La version actuelle stable est la 5.11.
+Plusieurs points le caractérisent :
+PureBasic possède un jeu de commandes étendues (plus de 1400 commandes internes) auxquelles s'ajoute un accès simplifié à une grande partie de l'API du système d'exploitation. Le programmeur peut appeler les commandes de l'API de Windows, de Linux ou Mac OS directement comme s'il s'agissait des commandes internes à PureBasic, sans avoir à les déclarer au préalable (ainsi que les constantes). Rien de mieux qu'un exemple pratique pour illustrer ceci. Comparons un programme simple en visual basic avec son équivalent en PureBasic : comment obtenir le chemin du répertoire Windows.
+Description.
+Caractéristiques.
+PureBasic gère de nombreux types :
+PureBasic supporte de nombreuses fonctionnalités :
+PureBasic permet de créer :
+Bibliothèques.
+Pour information, voici la liste officielle des bibliothèques PureBasic : 
+Vous pouvez bien sûr créer vos propres bibliothèques en langage C ou en assembleur, ou encore directement en PureBasic grâce à un utilitaire développé par un utilisateur de PureBasic (Tailbite).
+Exemples.
+Cette simple ligne de code PureBasic créera un exécutable autonome minuscule de 4,50 Ko (4 608 octets) pour Windows. 
+Et ce qui suit est un court mais parfait exemple d'un programme fonctionnel avec PureBasic. La somme des nombres saisis par l'utilisateur est affichée automatiquement. Ce programme montre comment créer une fenêtre, des gadgets supplémentaires, ainsi que la gestion des événements et un calcul mathématique simple. Ce code compile dans un exécutable autonome de 14,5 Ko (14 848 octets) qui peut être utilisé sur n'importe quel PC équipé de Windows 95 au serveur 2003 de Windows en passant par Windows XP, Vista ou Windows 7. 
+Outils.
+Moebius.
+Moebius est un outil open source créé par Progi1984 qui permet de créer à partir de code Purebasic une userlib, sous Windows et Linux.
+Lien : http://code.google.com/p/moebius-pb/Lien HS
+Tailbite.
+Tailbite est un outil créé par ElChoni qui permet de créer à partir de code Purebasic une userlib, uniquement sous Windows.
+Lien : http://www.tailbite.com
+Visual designer.
+L'éditeur visuel de PureBasic (concepteur d'interfaces graphiques utilisateur) a été créé pour le langage de programmation PureBasic et est bien sûr développé en PureBasic.
+MADLib.
+MADLib est une bibliothèque (UserLib) de fonctions, pour PureBasic. Elle a été compilé par l'utilitaire Tailbite. Développé par MAD.
+Lien : http://sourceforge.net/projects/madlibforpb/

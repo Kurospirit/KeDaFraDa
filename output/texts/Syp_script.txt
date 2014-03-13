@@ -1,0 +1,10 @@
+Syp script
+
+Syp Script (Simple Yet Powerful Scripting Language, soit en français langage de script simple pourtant puissant) est un nouveau langage de programmation libre (distribué sous licence GNU/GPL), facile a apprendre, et de haut niveau.
+Vous pouvez créer tout type d'applications, y compris des applications consoles, multimedia et pour le réseau en un minimum de lignes de code.
+L'interpréteur Syp existe pour la plupart des systèmes d'exploitation les plus utilisés (windows, Linux et autres Unix).
+Exemples.
+Un grand classique...
+Récupération d'une page HTML
+Récupération d'un fichier sur Internet
+Exécution d'un script sur Internet (programmation distribuée)

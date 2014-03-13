@@ -1,0 +1,7 @@
+C++14
+
+C++14 est le nom de la prochaine norme du langage C++. Elle est annoncée comme une mise à jour mineure du langage, faisant suite à la norme de 2011 connue sous le nom de C++11.
+Une mise à jour plus importante est aussi déjà annoncée sous le nom de C++17.
+Améliorations possibles.
+Les propositions d'améliorations suivantes ont été faites :
+L'ajout de deux "headers" à la bibliothèque standard, codice_11 et codice_12, ont dans un premier temps été espérés pour C++14, mais quelques jours après la conférence de Bristol (avril 2013), suivant les sources, il est possible que ces nouveautés soient repoussées pour C++17. Ces API ainsi que d'autres pourraient sortir sous la forme de "Technical Specifications" d'ici là.

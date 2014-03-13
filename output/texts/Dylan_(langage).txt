@@ -1,0 +1,12 @@
+Dylan (langage)
+
+Dylan est un langage de programmation dynamique, réflexif, orienté objet et fonctionnel. Il propose un modèle de programmation axé vers une génération efficace de code machine. Il a été créé au début des années 1990 par un groupe conduit par Apple pour son PDA, l'Apple Newton.
+Syntaxe et exemples.
+À l'origine, Dylan utilisait une syntaxe préfixée, similaire à Scheme ou LISP, basée sur les S-expressions :
+codice_1
+Avant que la conception du langage ne soit terminée, elle fut remplacée par une syntaxe proche de l'Algol, conçue par Michael Kahl, dans l'espoir qu'elle serait familière au plus grand nombre de développeurs :
+codice_2
+Comme dans d'autres langages fonctionnels, le résultat d'une fonction est sa dernière expression évaluée (l'instruction "return" est donc inutile). L'exemple suivant montre l'implémentation récursive de la fonction factorielle
+codice_3
+Applications.
+Outre son utilisation pour le PDA Newton d'Apple, Dylan est employé pour :

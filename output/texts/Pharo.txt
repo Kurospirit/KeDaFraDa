@@ -1,0 +1,45 @@
+Pharo
+
+Pharo est un langage de programmation dynamique, épuré et sous licence MIT, créé en 2009.
+Introduction.
+Pharo est un langage de programmation largement inspiré de Smalltalk. Il est basé sur une machine virtuelle, écrite en large partie en Pharo lui-même, ce qui lui permet d'être multiplateforme (Mac OS X, Windows, Linux, iOS, Android). 
+La politique de Pharo oblige ses contributeurs à accepter de publier leur code sous licence MIT.
+Pharo possède les principales caractéristiques de Smalltalk : 
+Tout est objet, au sens de la programmation orientée objet,
+Le système est réflexif : un programme peut modifier sa structure et son comportement lors de l’exécution,
+Le typage est un typage dynamique : contrairement à certains langages à typage statique, qui forcent le développeur à indiquer de quel type est chaque variable (entier, chaîne de caractères…), les variables peuvent prendre n'importe quelle valeur,
+L'héritage est simple,
+La gestion de la mémoire est automatique : Pharo utilise un ramasse-miettes ("garbage collector"), comme d'autres langages comme Lisp ou Java. 
+La syntaxe de Smalltalk est minimaliste : elle tient sur une carte postale.
+Un des intérêts principaux de Pharo est qu'il n'est pas nécessaire de recompiler tout le code pour dans le cas de la modification d'une méthode. Il est par exemple tout à fait possible de modifier ou de créer une méthode au sein du debugger et de reprendre le flot d'exécution juste avant la modification. Certains appellent cela la méthode 'edit and continue' an lieu de la traditionnelle méthode 'edit compile and run'.
+Communauté.
+La communauté de Pharo est assez vaste : 600 personnes sur la Pharo mailing list, téléchargements de la version one-click depuis sa création.
+Tous les 6 mois, de nombreux membres de la communauté se retrouvent durant une journée pour améliorer Pharo au cours d'un sprint.
+Chaque année une conférence Pharo a lieu. Les utilisateurs de Pharo se réunissent au cours de cette conférence pour partager à la fois leurs projets de recherche et professionnels. En 2010, elle s'est déroulée à Annecy (France). En 2011 et 2012, elle a eu lieu à Lille en France. Enfin, en 2013, la conférence Pharo s'est déroulée à Berne en Suisse.
+Régulièrement, des vidéos de programmation avec Pharo sont postés sur PharoCast ou sur la chaine youtube de Pharo.
+Plus d'une vingtaine d'entreprises utilisent aujourd'hui Pharo pour leurs développements logiciels.
+Les principales applications développées sont d'une part liés au développement d'application web (en utilisant par exemple le framework Seaside_(framework)) et d'autres
+part à l'analyse et à la visualisation de système logiciel (en utilisant le framework MOOSE).
+La communauté Pharo s'organise autour d'un consortium rassemblant des industriels, des partenaires académiques utilisant la plateforme.
+Pharo dispose également d'une association à but non lucratif.
+Historique.
+Pharo est un fork de Squeak, un Smalltalk open-source développé par des membres de l'équipe originelle de Smalltalk-80 (Dan Ingals et Alan Kay). 
+Se démarquant de l'aspect plus ludique de Squeak, les concepteurs de Pharo (chercheurs à l'INRIA) souhaitent développer un Smalltalk moderne tourné vers les besoins des entreprises et de la recherche en génie logiciel. Pharo est devenu l'implémentation de référence de Seaside, framework web pour développer des applications web en Smalltalk. Aujourd'hui, Pharo est soutenu par un consortium regroupant les utilisateurs industriels et une association pour les particuliers.
+Fork en 2008.
+La version 1.0 de Pharo est sortie le 15 avril 2010. 
+La version 1.1 de Pharo est sortie le 26 juillet 2010.
+La version 1.2 de Pharo est sortie le 29 mars 2011.
+La version 1.3 de Pharo est sortie en août 2011.
+La version 1.4 de Pharo est sortie en avril 2012.
+La dernière version de Pharo, Pharo 2.0 est sortie le 18 mars 2013.
+Le planning actuel prévoit une nouvelle version par an : Pharo 3.0 est donc prévu pour mars 2014. De plus, des versions de stabilisation (Pharo 2.1, 2.2) sont prévues tous les 4 mois.
+Enseignement et Recherche.
+Enseignement.
+Avec sa communauté active, sa licence MIT, son noyau stable et son fonctionnement multiplateforme, Pharo est un environnement idéal pour apprendre le langage Smalltalk. 
+Un livre en français, "Pharo par l'exemple", est disponible en ligne. Il est gratuit et permet d'apprendre les bases de Pharo. Un second volume est en préparation. Il est dors et déjà possible d'accéder à certains chapitres de la version anglaise sur ce site : http://rmod.lille.inria.fr/pbe2/.
+Pharo est de plus en plus utilisé dans le cadre de l'enseignement. Smalltalk est enseigné sous la forme de Pharo notamment à : 
+Recherche.
+De nombreuses équipes de recherche travaillent avec Pharo, notamment les équipes :
+La Pharo association a été récemment créée et regroupe tous les indépendants souhaitant soutenir le projet.
+Performance et machine virtuelle.
+Pharo est basé sur une machine virtuelle écrite en large partie en Smalltalk elle-même. Depuis 2008, une nouvelle machine virtuelle avec un niveau de performance comparable aux dialectes Smalltalk les plus rapides est disponible. Cette machine virtuelle performante fonctionne sur Mac OS X, Windows et Linux. Une version simplifiée et un peu moins rapide fonctionne sur iOS et Android.

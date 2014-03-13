@@ -1,0 +1,7 @@
+Cat (langage)
+
+Cat est un langage de programmation fonctionnel orienté pile, à typage statique, inspiré par Joy. Joy et Cat diffèrent cependant des autres langages fonctionnels de par leur approche de composition de fonctions plutôt que d'application de fonctions (comme en Scheme ou Haskell).
+Cat est un langage polyvalent, plus particulièrement destiné à l'enseignement.
+Exemples.
+Définition de la fonction carré :
+Définition de la fonction factorielle, avec méta-commentaires (description et test unitaire) et signature de type :

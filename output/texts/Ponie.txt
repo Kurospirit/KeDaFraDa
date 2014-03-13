@@ -1,0 +1,4 @@
+Ponie
+
+Ponie, acronyme de "Perl On a New Internal Engine", était un projet démarré par la société Fotango pour porter Perl 5 au-dessus de la machine virtuelle Parrot. Au départ gérée par Arthur Bergman, Ponie a ensuite été développé par Nicholas Clark, actuel pumpking de Perl 5.8, qui en a profité pour effectuer un travail de nettoyage remarquable dans les entrailles de Perl. 
+Le projet Ponie a été interrompu en fin août 2006. Ses effets, le nettoyage de Perl 5, ont été bénéfiques même si le but escompté n'a pas été atteint. D'autres stratégies sont explorées pour l'exécution de code Perl 5 au-dessus de Perl 6.

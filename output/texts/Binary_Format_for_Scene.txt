@@ -1,0 +1,7 @@
+Binary Format for Scene
+
+BInary Format for Scene (BIFS)
+Le langage BIFS est un format binaire pour du contenu multimédia en deux ou trois dimensions.
+Le langage BIFS est basé sur le langage de description d'univers virtuels en 3 dimensions VRML auquel on a ajouté des particularités comme la gestion de la 2D et des notions de timing.
+Dans le cadre d'une compression au format MPEG-4, un fichier texte écrit en langage BIFS est adjoint aux objets médias. Les objets médias et ce fichier sont ensuite encapsulés dans un même fichier dont l'extension est .mp4.
+Ainsi, le langage BIFS permet de gérer les interactions utilisateurs dans le cadre de vidéos au format MPEG-4. Il illustre la partie 11 de MPEG-4.

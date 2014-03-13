@@ -1,0 +1,16 @@
+BCPL
+
+BCPL (Basic Combined Programming Language) est un langage de programmation créé par Martin Richards de l'Université de Cambridge (1966) et une réponse aux difficultés rencontrées avec son prédécesseur le Combined Programming Language (CPL) durant les années 1960. Le premier compilateur fonctionnel fut écrit pendant sa visite du Massachusetts Institute of Technology (MIT) au printemps 1967. Ce langage fut décrit la première fois dans un journal au "1969 Spring Joint Computer Conference". Dennis Ritchie développa plus tard le C à partir du BCPL.
+Histoire.
+BCPL est un langage de programmation propre, puissant et portable. Il rend possible l'écriture de compilateurs petits et simples. C'est notamment un choix populaire pour l'amorçage d'un système. D'après les informations reçues, quelques compilateurs peuvent fonctionner sur 16 ko seulement. Plusieurs logiciels d'exploitation ont été écrits partiellement ou complètement en BCPL (par exemple, TRIPOS ou Amiga Kickstart). 
+Une raison majeure de la portabilité de BCPL s'explique par la structure de ses compilateurs, qui sont scindés en deux parties
+En peu de temps cette pratique devint courante, voir le Pascal ou Java, mais le compilateur BCPL de Martin Richards a été le premier à utiliser une machine virtuelle à cette fin.
+Ce langage n'est pas courant, puisqu'il ne possède qu'un seul type de données : 
+le type "word" comportant un nombre fixe de bits (nombre habituellement choisi pour s'aligner sur le langage machine). L'interprétation de toutes les valeurs est déterminée par l'opérateur utilisé lors du traitement. Pour permettre ce fonctionnement, l'exécution ne réalise pas de contrôle de type.
+La notation hongroise a été développée pour aider les programmeurs à éviter les fautes de type endémiques en BCPL.
+En 1979, BCPL était supporté par au moins 25 architectures ; en 2001 il n'était plus que très peu utilisé. La conception de BCPL influença significativement le langage B, qui lui-même influença le C, qui est à présent le langage de choix 
+pour la programmation système.
+La philosophie du BCPL peut être récapitulée par la citation du livre, "BCPL, the language and its compiler" :
+Hello World.
+C'est d'après les informations reçues le langage originel du fameux Hello world.
+Le premier MUD[http://www.mudconnect.com/mud_intro.html] fut aussi écrit en BCPL .

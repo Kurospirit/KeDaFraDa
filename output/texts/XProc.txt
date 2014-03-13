@@ -1,0 +1,7 @@
+XProc
+
+XProc est une recommandation du W3C qui vise à définir un langage de transformation XML permettant de construire des pipelines XML.
+Implémentations.
+Il existe déjà des implémentations de la norme :
+Ouvrage.
+Un livre disponible librement est en cours d'écriture en anglais sur le site http://xprocbook.com/

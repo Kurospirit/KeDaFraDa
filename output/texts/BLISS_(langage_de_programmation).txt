@@ -1,0 +1,6 @@
+BLISS (langage de programmation)
+
+BLISS est un langage de bas niveau développé dans les années 1970 à l'université Carnegie-Mellon par William Wul, D. B. Russell et Nico Habermann. Très populaire jusqu'à l'avènement du C, certains hackers des Laboratoires Bell le comparaient encore avec ce dernier pour certains de leurs projets.
+Exemple de code.
+Cet exemple est un extrait du manuel "Bliss Language Manual":
+codice_1

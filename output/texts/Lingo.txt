@@ -1,0 +1,114 @@
+Lingo
+
+Lingo est le langage de script qui accompagne le logiciel Macromedia Director. 
+L'auteur du Lingo est le développeur John Henry Thompson. La lingo a été enrichi par de nombreuses sociétés ayant développé des xtras, dont intel, ageia, havok...
+Origine du nom.
+Le mot Lingo signifie en anglais argot, au sens de "langage vernaculaire", langue spécialisée appartenant à un groupe précis (ex. l'argot des typographes).
+Contrairement aux langages de niveau 4 les plus répandus (basic, javascript...), le script lingo ne reproduit pas les concepts de la programmation à l'identique mais les remanie à sa façon en vue d'une application efficace et simple. Afin de marquer la distinction il utilise des termes différents, par exemple le "tableau" est renommé "list", une classe est appelée "parent script"...
+Caractéristiques du langage.
+Lingo utilise actuellement la syntaxe Basic.
+Lingo avait au départ une syntaxe verbose dérivé du langage HyperTalk utilisé dans le logiciel auteur HyperCard distribué sur les MacIntosh à partir de 1986. Il a été prévu au départ pour être le plus lisible possible pour les anglophones.
+Syntaxe.
+Voici un exemple de fonction :
+Les fonctions commencent en effet toutes par on de fonction[(arguments)] et se terminent par end de fonction. Lingo est un langage très laxiste, on est par exemple autorisé à ne pas mettre les parenthèses après le nom de la fonction (on multiplie a, b).
+À noter, les variables sont typées dynamiquement et il n'existe pas de différenciation entre le "=" d'affectation et le "=" de comparaison.
+Après des années d'évolution syntaxique, Lingo est devenu un langage "pointé" assez classique, et donc très lisible.
+Director est un logiciel dédié à l'interactivité. Par conséquent, Lingo permet l'interception facile d'un grand nombre d'évènements tels que : preparemovie (avant l'affichage), startmovie (au moment de l'affichage), mousedown (clic enfoncé), mouseup (clic relâché), etc. Certains scripts intercepteurs évènements concernent l'ensemble du programme, d'autres peuvent ne s'appliquer qu'à des objets précis, comme les "sprites" (occurrence d'un objet - par exemple graphique - sur la "scène").
+Variables.
+Les variables numériques en lingo sont simplifiées. Les variables globales ou d'objet ne se déclarent qu'en dehors des fonctions. Les variables locales sont déclarées implicitement.
+Le typage est implicite, ainsi:
+Il n'existe pas de variables booléennes, lingo utilise les entiers 0 et 1, qui pour des raisons de lisibilité peuvent toutefois s'écrire true et false.
+Les chaînes de caractères peuvent être lus comme des tableaux à l'aide de la variable globale "the itemDelimiter" et la prioriété .item des strings, ou bien les propriétés .line et .word des string.
+les noms des variables peuvent contenir des lettres, des chiffres, ou le signe underscore. Elles ne peuvent pas commencer par un chiffre.
+Symboles.
+On peut créer des "symboles" avec le signe dièse (#). Un symbole n'est pas une variable mais un nom de variable ou fonction.
+Par exemple, dans "maCouleur = #rouge", le mot "#rouge" ne signifie rien pour Lingo ; en revanche, maCouleur = couleurs[#rouge] permet de retrouver la propriété rouge de l'objet couleurs, la fonction call(#rouge, obj, arguments...) permet d'appeler la méthode rouge de l'objet obj.
+Classes de base.
+Lingo possède une liste de classe correspondant aux structures de données classiques, avec d'importantes automatisations.
+Classes de gestion des tableaux.
+Classe List.
+La classe list contient un tableau à mémoire dynamique. Ces tableaux sont "one-based", le premier index est égal à 1. Cela permet d'utiliser le zéro comme identifiant nul lorsque l'on référence les indexes.
+Y écrire ou y lire le contenu d'une cellule est une opération aussi lourde que la syntaxe pointée (plus lente sur des grosses listes que des petites). Pour optimiser les opérations sur les tableaux il faut utiliser le plus possible l'algèbre des tableaux, qui évite de nombreuses lectures de cellule.
+Les listes se créent ainsi :
+Les tableaux peuvent contenir n'importe quel types de données:
+Algèbre des tableaux.
+Les tableaux peuvent utiliser tous les types d'opérateurs compatibles avec le contenu des cellules. Cela permet une considérable accélération des boucles de calcul puisque celles-ci sont alors gérées en natif.
+Exemples avec les entier et les décimaux:
+Pour les exemples avec des tableaux de vecteurs et matrices, voir les classes vector et transform.
+Classe propList.
+Contient un tableau associatif. Les identifiants peuvent être soit:
+L'algèbre est identique à celui des listes linéaires.
+Classe matrix.
+Encode un tableau à deux dimensions. Ajouté à la v11 pour les terrains du moteur physx.
+Classes de géométrie 2d.
+Classe point.
+Encode un vecteur 2d. Ses coordonnées se nomment "locH" et "locV". Elles peuvent être entières ou décimales.
+Les données se lisent par les propriétés locV / locH ou comme un tableau:
+L'algèbre des vecteurs 2d se comporte exactement comme l'algèbre des tableaux et peut se combiner avec:
+Classe rect.
+Encode un rectangle. Les valeurs peuvent être entières ou décimales.
+Quelques méthodes:
+L'algèbre des rectangles est identique à celui des points 2d.
+Classe quad.
+Encode un quadrilatère. Utile surtout pour les manipulations d'images.
+Classes de géométrie 3d.
+Classe vector.
+Encode un vecteur 3d. Nombres décimaux uniquement.
+Ses coordonnées sont accessibles de deux manières: soit avec les propriétés x, y, z, soit avec l'index de dimension:
+Quelques méthodes:
+L'algèbre des vecteurs 3d diffère de celle des listes et des vecteurs 2d:
+L'algèbre des vecteurs peut se combiner avec celui des tableaux.
+Classe transform.
+Encode une matrice de transformation 3d composée de 16 décimales.
+Les 3 premiers groupes de 4 nombres encodent les 3 vecteurs du repère. Le dernier groupe encode l'origine. (le nombre de ces groupes sert aux calculs internes).
+Exemple: choisir le vecteur (0,0,1) pour l'axe X:
+Quelques méthodes:
+Algèbre des matrices:
+L'algèbre des matrices se combine également avec les tableaux:
+Classes du moteur 3d.
+Classe Scene.
+Sous-classe de "member" qui s'affiche comme un sprite et permet de rendre une scene 3d avec directx ou opengl
+Suit un pattern de type "fabrique": tous les éléments de la scene 3d sont instanciés et détruits à l'aide de méthodes de la classe scene. En voici quelques-uns:
+Classe modelresource.
+Stocke des vertexbuffers ("meshes") et référence des shaders par défaut.
+Note: ses méthodes de construction ne suivent pas la structure des vertexbuffer, chaque triangle est renseigné indépendamment. Une fois appelée la méthode build() les vecteurs sont triés par groupe utilisant le même shader, les vertexBuffer obtenus sont accessibles via le modificateur #meshDeform des models utilisant la ressource.
+Classe model.
+Référence une matrice, une liste de shaders et un modelresource. Génère automatiquement une boundingSphere. La classe model permet d'afficher le modelResource. Son modificateur #meshDeform permet d'accéder aux vertexBuffer du modelResource.
+Classe physx.
+Permet de contrôler une scene 3d avec le moteur physx de nvidia. Sous-classe d'xtra member, se contrôle comme un script xtra classique.
+Suit le pattern fabrique qui permet de créer divers objets physiques: corps convexe, concave, cloth, personnage, etc. Requiert le modificateur #meshDeform pour lire les structures polygonales.
+Types de scripts.
+Il existe 4 types de scripts en Lingo, deux de type procédural, deux de type objet:
+Les scripts procéduraux.
+Utilisent uniquement des variables et fonctions globales. Leur utilisation doit rester limitée car les variables globales sont consommatrices de cpu et ram: elles sont dupliquées dans l'interprétateur javascript.
+On utilise autant que possible les script objets, les script procéduraux uniquement quand c'est nécessaire.
+"movie script".
+Ce sont les scripts utilisés pour le code procédural.
+Ces scripts reçoivent quelques fonctions-événements prédéfinis qui correspondent à l'ouverture de l'application, sa fermeture, le rafraichissement d'image.
+Evenements d'ouverture et clôture:
+Evenements de rafraichissement d'image:
+Evenement indépendant:
+Evenements souris:
+Les scripts dits d'acteur.
+Ce sont des scripts qui se trouvent directement à l'intérieur d'un acteur. Leur type n'est pas défini mais ils fonctionnent comme les "movie script".
+Ils reçoivent les évènements de souris et de rafraichissement lorsqu'une instance de l'acteur est visible.
+Les scripts objet.
+Les scripts dits "parents".
+Permettent de simuler des classes d'objet. La syntaxe des méthodes reste procédurale : il faut faire passer une référence à l'objet "me" en premier argument.
+classe instanciable.
+Si ce script se nomme "nombre", on l'instanciera par exemple de cette manière :
+et on invoquera sa fonction "incremente" de cette manière :
+classe statique.
+Un script parent peut servir de classe statique.
+On accède à sa référence comme ceci:
+héritage.
+L'héritage en lingo ne fonctionne pas comme dans les langages objet classiques, il se base sur la propriété "ancestor" des scripts parents, qui correspond à une instance de la classe-mère. Il ne s'agit donc pas d'héritage mais d'une surcharge.
+Director remonte automatiquement aux propriétés de l'objet ancestor depuis la référence fille ce qui permet de retrouver l'effet d'une classe héritée. Attention donc à la valeur de l'argument "me": il doit toujours correspondre à l'instance de dernière génération.
+Cela ne marche pas pour toutes les propriétés et méthodes des classes natives de director (auquel cas il faut pointer l'ancestor).
+Les scripts d'application ou "behaviors".
+Ce sont des objets complexes dont le script n'est pas directement accessible. Ils contiennent de nombreux événements permettant d'interagir avec les sprites, la souris, le clavier, par exemple pour créer des boutons ou des éditeurs de texte.
+Les scripts de comportement sont souvent développés pour être réutilisés par des graphistes ou intégrateurs. Par un simple drag and drop ces scripts se rattachent à des objets de la scène: image, sprite, acteur, frame... Ces scripts ont des fonctions prédéfinies qui permettent de paramétrer manuellement les instances de même que les composants flash.
+Implémentations.
+Le Lingo est un langage propriétaire, il n'en existe donc qu'une seule implémentation.
+Commandes lingo et syntaxe javascript.
+Depuis sa version MX2004, le logiciel Director accepte l'usage de deux langages différents : le Lingo, et une implémentation de JavaScript/ECMAScript qui exécute une grosse partie des opérations lingo.

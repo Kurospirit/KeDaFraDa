@@ -1,0 +1,4 @@
+TRAC (langage de programmation)
+
+TRAC (en anglais « "Text Reckoning And Compiling" ») est un langage de programmation conçu au début des années 60 par Calvin Mooers. 
+L. Peter Deutsch implémente TRAC sur machines PDP-1 en 1964 après avoir été recruté par Mooers au sein de la société Bolt, Beranek and Newman pour l'aider dans ses développements.

@@ -1,0 +1,9 @@
+Rubinius
+
+Rubinius est une implémentation de l'interpréteur du langage de programmation Ruby, conçue par Evan Phoenix et implémentée principalement dans le langage Ruby lui-même. Basé largement sur les concepts du "Blue Book" de Smalltalk-80, Rubinius vise à fournir un "environnement de développement riche et de haute performance pour exécuter du code Ruby".
+Il s'agit d'un projet libre sous licence BSD.
+Objectifs.
+Le projet Rubinius perpétue la tradition de Lisp et Smalltalk en tentant d'implémenter autant que possible un interpréteur Ruby en Ruby ; du C++ est actuellement employé lorsque l'utilisation de Ruby n'est pas possible.
+Il vise également à être "thread-safe" afin de pouvoir embarquer plus d'un interpréteur dans une même application.
+Sponsor.
+La société Engine Yard (spécialisée en gestion et déploiement d'application Ruby on Rails) emploie deux ingénieurs à temps plein pour travailler exclusivement sur le développement de Rubinius.

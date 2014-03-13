@@ -1,0 +1,9 @@
+MUMPS
+
+MUMPS (Massachusetts General Hospital Utility Multi-Programming System), est un langage de programmation développé par Neil Pappalardo dans le laboratoire vétérinaire du Octo Barnett à l'hôpital général du Massachusetts de Boston entre 1966 et 1967 afin de produire des applications de gestion de bases des données multi-utilisateur. Il fut beaucoup utilisé dans le domaine de la santé mais également dans les systèmes d'informations du monde de la finance entre 1970 et 1980.
+Caractéristiques du langage.
+MUMPS est un langage conçu pour le développement l'application utilisatrice de base de données, , MUMPS est un langage interprété, .
+Dans MUMPS, il n'y a qui est ensuite interprété en chaine de caractères, en entier ou en flottant selon le contexte. Il ne s'agit pas d'un langage faiblement typé mais bien d'un langage non-typé ou plutôt mono-typé. Ainsi, MUMPS n'associe pas les types de données. De cette façon, un nombre peut-être traité comme une chaîne de caractères et une chaîne de caractères peut être traitée comme un nombre avec les opérateurs numériques.
+Le typage est dynamique. Les variables ne sont pas déclarées, elles sont créées lors de leur première référence dans le code.
+Les commandes et fonctions principales ne sont pas sensibles à la casse. Par contre, les nom des variables et les labels le sont.
+Détails important, dans MUMPS, il n'y a pas de mot réservé: Le code est interprété selon le contexte.

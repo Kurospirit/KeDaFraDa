@@ -1,0 +1,25 @@
+CoffeeScript
+
+CoffeeScript est un langage de programmation, qui se compile en JavaScript. Le langage ajoute du sucre syntaxique inspiré par Python, Ruby et Haskell afin d'améliorer la brièveté et la lisibilité du JavaScript, tout en ajoutant des fonctionnalités comme le filtrage par motif ou les listes en compréhension.
+Le résultat est compilé de façon prévisible en JavaScript, et les programmes peuvent être écrits avec moins de code (typiquement un tiers de lignes en moins) sans effet sur la vitesse d'exécution. Depuis le , CoffeeScript est dans la liste des projets les plus populaires de GitHub.
+Le langage a une popularité relativement importante dans la communauté de Ruby. Le support de CoffeeScript est inclus dans la version 3.1 de Ruby on Rails. De plus, Brendan Eich a cité CoffeeScript comme une influence sur son idée du futur du JavaScript.
+Histoire.
+Le , Jeremy Ashkenas a effectué le premier commit Git de CoffeeScript avec le commentaire : « "" » (« premier commit du langage mystère »). Le compilateur était écrit en Ruby. Le , il a publié la première version numérotée et documentée, la 0.1.0. Le , le version 0.5 a été publiée, remplaçant le compilateur Ruby par un compilateur écrit en pur CoffeeScript. 
+Le , Ashkenas a annoncé la publication de la version stable 1.0.0 sur Hacker News, le site où le projet a été annoncé pour la première fois.
+Exemples.
+Tests et compréhensions.
+Pour calculer l'IMC de Barry, joueur de basket amateur, on fait d'habitude quelque chose comme ceci (ici en JavaScript):
+CoffeeScript permet de combiner les deux tests en un seul:
+ou, plus naturellement pour qui est habitué à la langue anglaise,
+Boucles et compréhensions.
+En général, l'implémentation de l'algorithme d'Euclide utilise une boucle "tant que" (ici, en Python):
+C'est également possible en CoffeeScript; mais celui-ci possède également une boucle "jusqu'à":
+Une boucle "for" peut souvent être remplacée par une liste en compréhension. Par exemple, pour calculer les carrés des premiers nombres impairs (c'est-à-dire dont le reste modulo 2 vaut 1), on peut utiliser l'une des propositions suivantes:
+fonctions et jQuery.
+Le code JavaScript permettant d'initialiser la bibliothèque jQuery est :
+Ou, plus simplement :
+En CoffeeScript, le mot-clé codice_1 est remplacé par le symbole codice_2, et l'indentation est utilisée à la place des accolades, comme en Python ou en Haskell. Les parenthèses peuvent généralement être omises. Ainsi, le snippet ci-dessus peut être écrit, en CoffeeScript :
+Ou bien :
+Compilation.
+Le compilateur CoffeeScript est écrit en CoffeeScript depuis la version 0.5 et est disponible en tant qu'utilitaire Node.js ; cependant, la base du compilateur ne nécessite pas Node.js et peut être utilisée dans n'importe quel environnement JavaScript. Une des alternatives à l'utilitaire Node.js est Coffee Maven Plugin, un plugin pour le moteur de production Apache Maven. Ce plugin utilise Mozilla Rhino, un moteur JavaScript écrit en Java.
+Le site officiel, CoffeeScript.org, dispose d'un bouton « Essayer CoffeeScript » dans la barre de navigation ; cliquer dessus ouvre une fenêtre modale qui permet d'entrer du code CoffeeScript, de voir le résultat en JavaScript, et de l'essayer directement dans le navigateur. Le site jscoffee propose une traduction bidirectionnelle.

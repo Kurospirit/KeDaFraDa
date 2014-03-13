@@ -1,0 +1,9 @@
+GNU Awk
+
+GNU Awk (ou "gawk") est l'implémentation du langage de programmation awk par le projet GNU. C'est un logiciel libre distribué sous licence GNU GPL.
+GNU Awk est l'implémentation awk par défaut des distributions GNU/Linux actuelles.
+GNU Awk est aujourd'hui maintenu par Aharon Robbins, un hacker travaillant pour Intel.
+Histoire de awk et gawk.
+Le nom "awk" provient des initiales des concepteurs du langage: Alfred V. Aho, Peter J. Weinberger et Brian W. Kernighan. La version originelle d’awk a été écrite en 1977 dans les laboratoires Bell d'AT et T. En 1985, plusieurs nouveautés sont introduites dans une nouvelle version, parmi lesquelles, les . Cette nouvelle version est largement distribuée par les systèmes SVR3. La version pour SVR4 ajoute d'autres nouveautés et, selon la documentation GNU, est l'occasion de nettoyer le comportement du langage, très peu ou pas du tout documenté. Les spécifications du standard POSIX adopté vont clarifier le langage. Les concepteurs de gawk, comme leurs prédécesseurs des laboratoires Bell pour la conception d’awk, fournissent leur retour d'expérience pour la spécification POSIX.
+Paul Rubin écrit gawk, l'implémentation du langage par le projet GNU, en 1986. Jay Fenlason l'a complété selon les conseils de Richard Stallman. Un certain John Woods a également contribué à certaines parties du code. En 1988 et 1989, David Trueman refaçonna soigneusement gawk avec l'aide d'Arnold Robbins pour le rendre compatible avec la nouvelle version d’awk. Selon Arnold Robbins, qui travaille sur le projet depuis 1988 et est l’actuel mainteneur depuis 1994, David Trueman mérite une mention spéciale pour son travail inestimable sur l'évolution de gawk, de sorte qu'il fonctionne bien et sans bugs. Bien qu'il ne participe plus à gawk, travailler avec Trueman a été pour Robbins un plaisir considérable.
+Depuis 1995, Arnold Robbins est le principal mainteneur du projet.

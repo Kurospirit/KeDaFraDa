@@ -1,0 +1,5 @@
+Information Processing Language
+
+IPL ("", c'est-à-dire « Langage de traitement de l'information ») est un langage de programmation développé par Allen Newell, Shaw Cliff et Herbert Simon à la RAND Corporation et le Carnegie Institute of Technology à partir de 1956. Newell avait le rôle de spécificateur-application programmeur, Shaw était le programmeur système et Simon a pris le rôle de programmeur-utilisateur.
+Le langage comprend des fonctionnalités destinées à la résolution générale de problèmes, y compris des listes, des associations, des schémas (frames), l'allocation dynamique de mémoire, les types de données, la récursivité, la récupération associative, des fonctions comme arguments, les générateurs (flux), et le multitâche coopératif. 
+IPL a lancé le concept de traitement de listes, mais dans un style en langage assembleur. Certains aspects d'IPL ont d'ailleurs influencé le LISP.

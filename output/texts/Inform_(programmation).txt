@@ -1,0 +1,8 @@
+Inform (programmation)
+
+Inform est un langage de programmation optimisé pour la création de jeux en fiction interactive, créé en 1993 par Graham Nelson.
+Vue d'ensemble.
+Le système Inform est composé d'une part d'un compilateur qui génère des fichiers lisibles par les machines virtuelles "zmachines" ou "glulx", et d'autre part de bibliothèques qui aident à la modélisation d'aventures textuelles. Les manuels disponibles pour l'apprentissage d'Inform sont uniquement en anglais, bien qu'il soit tout à fait possible de réaliser des jeux en français grâce aux traductions de certaines bibliothèques du système. Quelques jeux existent déjà en français (voir les liens externes).
+Le langage inform 6 est à la fois procédural et orienté objet.
+Inform 7.
+Le 30 avril 2006, Graham Nelson a annoncé la version beta Inform 7 sur la liste de diffusion rec.arts.int-fiction . Cette nouvelle version, qui a pris à lui et son équipe 3 ans de développement dans le plus grand secret, est décrite comme une "réinvention radicale". Inform 7 est en effet un programme complet tournant sur MacOSX, Windows et Linux, et la nouvelle syntaxe utilise dorénavant du code source en langue naturelle, sous forme de règles déclaratives, permettant à un auteur d'écrire avec plus de liberté. Inform 6 est toujours utilisé en traitement sous-jacent du code transcrit par l'interface d'Inform 7.

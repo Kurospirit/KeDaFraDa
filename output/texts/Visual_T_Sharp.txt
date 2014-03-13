@@ -1,0 +1,143 @@
+Visual T Sharp
+
+Visual T# (prononcé []) est un environnement de développement gratuit de tests unitaires intégré à Visual Studio™, mais peut s'utiliser indépendamment. Il comprend :
+Avantages.
+T# est un langage de programmation pour Microsoft .NET, compatible avec C# v2 (sauf en ce qui concerne le code non "managed"), et offre les avantages suivants par rapport aux solutions NUnit ou Visual Studio Team Test :
+Le langage.
+Voici un exemple d'un test minimal, écrit en T# :
+Bonnes pratiques pour les tests unitaires.
+T# est complètement orienté bonnes pratiques.
+Structure d'un test.
+Un test unitaire est toujours composé de trois parties :
+La partie la plus importante étant Exécution, c'est pour elle que vous écrivez le test.
+T# identifie clairement la partie Exécution en faisant commencer l'instruction par le mot clé codice_2.
+La préparation est donc naturellement tout ce qui se trouve avant runtest, et la vérification après runtest.
+Vérifications.
+La partie vérification s'assure que tous les effets (par exemple : retour de fonction, changements des paramètres, modification d'instance, de déclarations statiques, de fichiers, bases de données...) escompté lors de l'utilisation de la déclaration se sont bien effectués comme prévu.
+T# n'offre qu'un seul mot-clé pour cela : codice_1.
+Le message est automatiquement généré à partir du code source.
+Ainsi, si le test précédent échoue (si la fonction codice_4 est mal codée en retournant toujours codice_5), le test échouera avec le message d'erreur suivant : "Expected: somme == 3 but was: 0 == 3".
+Il est ainsi très rapide de déterminer que la somme vaut 0, mais que l'on s'attendait à 3. Cette façon de générer le message d'erreur le rend plus proche du code source (donc plus facile de faire le lien avec le code quand l'erreur apparait) et décompose les différentes valeurs impliquées (si plusieurs variables étaient impliquées, on saurait alors la valeur de chacune des variables et non pas de l'expression finale), rendant le déboguage beaucoup plus facile.
+De plus, les conversions naturelles du langage de programmation sont utilisées (somme est un codice_6, 3 est un entier). Ainsi, pas de problème pour comparer les deux contrairement à Visual Studio Team Test pour lequel vous devez écrire : codice_7 pour faire la même vérification!
+4 états pour un test.
+Le test étant du code, il peut lui aussi échouer.
+Contrairement aux concurrents, T# sait exactement l'instruction qui teste réellement (codice_2). Ainsi, il est en mesure de déterminer si l'échec du test s'effectue avant ou après cette instruction :
+T# a donc 4 états pour un test :
+Afin de profiter de cette différence et de rendre le test très clair, utilisez des assert avant l'instruction codice_2 :
+Dans cet exemple, on veut rendre gratuit T#. Le test passe. Le code codice_12 de la propriété codice_13 est donc correct.
+Vraiment?
+Mais si ni le constructeur, ni le codice_12 de la propriété codice_13 ne sont codés... le test passe!
+Un bon test pour le changement du prix est donc :
+Maintenant, ce cas est exclu. Si le constructeur n'initialise pas la propriété codice_13, le premier codice_1 échouerait et, comme il est avant l'instruction codice_2, le test est 'Invalid' et non pas échoué!
+De plus, d'un point de vue logique d'affaires, on voit bien que mettre le prix à 0 le fait passer d'une valeur non nulle à nulle et donc qu'un prix nul est acceptable.
+Quoi tester ?
+T# incite à dire ce qui est testé, non pas par des noms de classes et méthodes les plus appropriés possibles, mais en l'indiquant clairement.
+Ainsi, le test précédent devrait s'écrire :
+Les avantages sont les suivants :
+Contextes.
+Comme pour tout système de test, il y a beaucoup de redondances dans l'écriture des tests. En effet, il est nécessaire d'avoir plusieurs tests pour chaque déclaration d'une classe et, généralement, une classe possède plusieurs déclarations. Dans tous ces tests, il sera nécessaire de créer une instance de la classe à tester.
+Tous les systèmes de test proposent une méthode à appeler avant tout test et une à appeler après tout test.
+T#, lui, ne propose qu'une seule méthode.
+Cela procure ainsi les avantages suivants :
+Contexte de chaque test.
+La forme la plus simple de contexte est le "context" de chaque test. C'est celle utilisée par défaut.
+Les tests sont exécutés, mais pas directement. Le contexte, introduit par une méthode déclarée par le mot clé codice_22, est appelée pour chaque test.
+Le mot clé codice_2 indique l'endroit où le codice_24 doit réellement s'exécuter.
+Ainsi, dans notre exemple, nous voulons créer l'instance avec une seule ligne de code, mais il faut créer une instance pour chaque test :
+Différents niveaux de contexte.
+En T#, le contexte se situe à trois niveaux :
+Dans cet exemple, les tests seront exécutés 2 fois, sans avoir à les écrire 2 fois :
+Quel cas tester ?
+Lors de l'écriture de tests unitaires, le problème le plus classique est : "Quel cas dois-je tester ?".
+En effet, une même déclaration doit-être testée dans différents cas. Un des exemples précédents traitait du prix d'un produit représenté par une propriété. Combien faut-il de tests et quels sont ces tests dans un tel cas?
+Dans les systèmes de tests classiques, c'est encore une fois le nom du test qui dit quel cas est testé (ou un commentaire, comme dans notre exemple précédent). Cela donne des noms souvent très longs et pas nécessairement clairs... ni mis à jour.
+T# introduit un nouveau mot clé pour exprimer le cas testé : codice_28 suivi d'un cas à tester.
+Ainsi, l'exemple des tests du prix d'un produit devrait être :
+Cas manquants.
+En fait, ce qui suit le mot clé codice_28 est un cas parmi plusieurs fonctionnant ensemble, décrits par un critère.
+Dans notre exemple, le critère est codice_30 qui combine 2 cas normaux (codice_31 et codice_32) et 1 cas d'erreur (codice_33).
+Il suffit donc d'identifier qu'un prix de produit a une valeur minimale (0) pour identifier qu'il faut tester selon le critère codice_30. Ce critère définissant 3 cas, il va falloir écrire 3 tests pour tester cette propriété, un pour chaque cas défini dans le critère.
+Pour l'instant, nous n'avons que deux cas définis (les cas normaux). Dès la compilation, T# indique les cas manquants : codice_35.
+Expressions de cas.
+En réalité, après un codice_28, une expression de cas est utilisée. Cette expression peut être un cas simple d'un critère ou une combinaison de critères.
+Les opérateurs suivants existent :
+Enfin, lorsqu'un cas n'a pas de sens, il est possible de demander à ne pas le prendre en compte en déclarant le cas codice_40. Dans ce cas, le test ne doit pas avoir de code, donc pas d'accolades, seulement un point-virgule.
+Critères.
+Il existe déjà beaucoup de critères dans la bibliothèque de T#, mais cela ne peut couvrir tout vos besoins.
+Il est alors très facile de créer les vôtres.
+Un critère est comme un type énuméré, mais défini par le mot clé codice_41 et non pas enum. Les cas d'erreur sont repérés en ajoutant l'attribut codice_42 au cas en question.
+La convention veut que :
+Ainsi, la déclaration de codice_43 est la suivante :
+Tester les exceptions.
+Comme nous l'avons vu avec les critères dans le paragraphe précédent, il est nécessaire de non seulement tester les cas normaux, mais aussi les cas d'erreur.
+Généralement, un cas d'erreur est rapporté par une exception.
+Il faut donc pouvoir tester les exceptions.
+Tester qu'une exception est lancée.
+T# vérifie les exceptions comme toute autre vérification :
+Les avantages sont les suivants :
+Ainsi, dans l'exemple précédent, il est nécessaire de tester le cas où le prix affecté au produit est négatif.
+Comme cela n'a pas de sens, la propriété devrait générer une exception codice_45.
+Testez-le ainsi :
+Tester complètement une exception.
+En fait, cela va simplement vérifier que l'exception est bien générée dans l'instruction runtest. Ce qui est déjà bien.
+Cependant, il serait bon de pouvoir valider le message d'erreur par exemple.
+L'instruction codice_46 peut aussi être suivi d'un nom de variable, comme dans une instruction codice_47, et d'un bloc de code pour faire autant de vérifications voulues lorsque l'exception est déclenchée. Accédez alors normalement à cette variable pour vérifier tout ce que vous voulez.
+Vérifier les changements.
+Le problème d'utiliser des contextes est que celui-ci peut se trouver physiquement loin du test que l'on travaille, et lorsqu'il est changé, peut avoir des conséquences sur l'ensemble des tests.
+Ainsi, dans l'exemple précédent, si le produit créé a maintenant un prix de 100 au lieu de 123, l'instruction codice_48 échoue car le prix sera de 100!
+L'idéal serait de faire des tests relatifs : conserver la valeur initiale de codice_49 dans une variable locale, puis l'utiliser dans la vérification.
+Le problème est que cela fait plus de code à écrire.
+T# offre la possibilité d'écrire des vérifications relatives en une seule ligne de code.
+Vérifier la constance d'une expression.
+La forme la plus simple de vérification relative est celle de la constance d'une expression.
+T# offre une nouvelle forme de l'instruction codice_1 : codice_51
+L'expression sera évalué avant l'instruction codice_2, et sa valeur conservée, pour être de comparée par égalité au moment du codice_1 en question.
+Ainsi, dans notre exemple, plutôt que de vérifier que le prix du produit est bien 123, il serait préférable de vérifier que le prix n'a pas changé :
+Vérifier la constance d'un objet.
+La forme la plus sophistiquée de vérification relative est celle de la constance d'un objet. En effet, qui dit que notre code d'affaires n'a pas modifié l'objet avant que de lancer l'exception?
+Dans l'instruction codice_51, l'expression peut référencer un objet et se terminer par :
+Note : l'opérateur codice_57 est semblable à l'opérateur codice_58 si ce n'est qu'il accède à n'importe quelle déclaration, privée ou non.
+Ainsi, dans notre exemple, plutôt que de vérifier que le prix du produit n'a pas changé, il serait préférable de vérifier que l'objet codice_59 n'a pas changé :
+Vérifier un changement.
+Sur le même principe, vérifiez qu'un changement a été apporté par une assertion relative.
+Une assertion relative de changement s'effectue avec l'instruction codice_60.
+L'affectation se présente sous 3 formes :
+La partie de droite est évaluée avant l'instruction runtest, et conservée, pour être comparée par égalité à la partie de gauche sur le codice_1 correspondant.
+Ainsi, codice_71 n'incrémente pas élément, mais vérifie que la valeur d'élément ajoutée de 1 avant l'instruction codice_2 est égale à la valeur d'élément après l'instruction codice_2. Ou tout simplement, que l'instruction runtest à bien fait augmenter de 1 la valeur d'élément.
+Ainsi, c'est l'expression équivalente à une affectation comme précisé, mais seulement des accès en lecture sont effectués. Il est donc possible de l'utiliser avec des propriétés en lecture seule.
+Si nous reprenons notre exemple avec notre classe codice_74, on pourrait ajouter une classe codice_75 (une collection de codice_74)qui aurait donc une méthode codice_77 et une propriété codice_78.
+Le test de cette méthode serait :
+Tester les événements.
+En dehors des exceptions, les événements non plus ne sont pas faciles à tester correctement.
+Il n'existe aucune facilité fournie par les système de tests existants.
+T# offre une nouvelle fois l'instruction codice_1 mais avec le mot clé codice_80.
+Par exemple, une classe implémentant codice_81 doit déclencher l'événement codice_82 si une propriété est changée. Mais, elle ne devrait pas déclencher l'événement si la valeur affectée est la même que celle actuelle!
+Note : Ce cas étant classique, nous T# fournit déjà le critère codice_83 avec 3 cas :
+Vérifier le non-déclenchement d'un événement.
+La forme la plus simple est la vérification du non déclenchement d'un événement.
+En T#, la vérification du non-déclenchement d'un événement s'effectue comme toujours en une ligne de code : codice_84
+Le compilateur T# génère une variable d'instance et une méthode compatible avec la signature de l'événement.
+Dans le test, la variable est initialisée à faux, le méthode est enregistrée (codice_85) auprès de l'événement avant l'instruction codice_2 et désenregistrée (codice_87) après l'instruction codice_2.
+La méthode générée va réinitialiser la variable à vrai.
+L'instruction codice_89 va vérifier que la variable est toujours à faux.
+En supposant que notre classe codice_74 supporte l'interface codice_81, nous devrions avoir le test suivant :
+Vérifier le déclenchement d'un événement.
+La forme la plus simple de vérification du déclenchement d'un événement vérifie seulement que l'événement est déclenché.
+Comme toujours, T# le vérifie en une seule ligne de code : codice_92
+Le compilateur T# génère exactement les mêmes choses que pour codice_93, mais vérifie que la variable est à vrai.
+Ainsi, dans notre exemple, nous devrions avoir :
+Vérifier complètement un événement.
+L'inconvénient de procéder comme dans le chapitre précédent, c'est que cela prouve simplement que l'événement s'est déclenché, pas que :
+Une forme beaucoup plus sophistiquée de test des événement existe : codice_95
+Où :
+Ainsi, le même tests que dans le chapitre précédent, mais complet serait :
+Tester avec les 'Code Snippets'.
+Visual Studio offre la possibilité d'utiliser des 'Code Snippets' dans les langages de Microsoft. Nous avons aussi ajouté des 'Code Snippets' pour Visual T# (25 dans la version 1.0).
+Ainsi, rien de plus facile pour générer vos tests :
+Dans notre exemple, nous voulons tester le prix d'un produit.
+Nous avons déjà établi que les critères à utiliser sont :
+Comme par hasard, il existe le 'Code Snippet' codice_99 qui va générer d'un seul coup le code.
+Il ne reste plus qu'à indiquer les informations suivantes :
+Et voici le code généré :
+Liens externes.
+Visual T# est téléchargeable gratuitement sur : Forum Visual T#
