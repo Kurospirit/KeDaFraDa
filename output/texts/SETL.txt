@@ -1,8 +1,0 @@
-SETL
-
-SETL fournit deux types de données de base : Les "ensembles non ordonnés" et les "suites" (appelées également "tuples"). Les éléments des ensembles et des tuples peuvent être de n'importe quel type arbitraire, y compris les ensembles et les tuples eux-mêmes. Le "fonctions" sont fournis en tant qu'ensembles de "paires" (c.-à-d., tuples de longueur 2) et peuvent avoir des domaines et de codomaines de types arbitraires. Les opérations primitives dans SETL incluent, entre d'autres, l'appartenance ensembliste, l'union, l'intersection et la puissance d'ensembles. SETL permet d'exprimer des expressions booléennes quantifiées construites en utilisant le calcul des prédicats du premier ordre, les quantificateurs universels et quantificateurs existentiels. SETL fournit aussi plusieurs itérateurs pour produire diverses boucles sur des structures de données. 
-Échantillon de code.
-Retourner tous les nombres premiers inférieurs à n : 
-La notation est semblable à la compréhension de liste.
-Historique.
-ABC, le précurseur de Python, a été inspiré par SETL à , qui a passé une année avec le groupe de SETL à NYU avant de proposer la version finale d'ABC.

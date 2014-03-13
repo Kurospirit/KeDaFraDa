@@ -1,3 +1,0 @@
-Pôle Langage de programmation de l'ACM
-
-Le Pôle Langage de programmation de l'ACM (de l'anglais SIGPLAN) est le pôle d'intérêt commun de l'ACM dans le domaine de la programmation informatique.

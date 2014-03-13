@@ -1,3 +1,0 @@
-LCM (langage)
-
-LCM (Logic Control Modeler) est un langage de programmation de type synchrone. Il est développé par la société Dassault Systèmes.

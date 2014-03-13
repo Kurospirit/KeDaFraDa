@@ -1,6 +1,0 @@
-ATLAS Transformation Language
-
-ATLAS Transformation Language (ATL) est un langage de transformation de modèles plus ou moins inspiré par le standard QVT de l'OMG. Il est disponible en tant que plugin dans le projet Eclipse . On peut trouver plus d'informations sur le langage ATL, sur son environnement de développement ainsi que sur les bibliothèques de transformations sur le site de l'université de Nantes.
-ATL est un prototype académique de composant de transformation de modèles du projet Eclipse Modeling. Sont également annoncés deux autres composant, l'un en provenance de Compuware, l'autre de Borland. Des ponts entre ces trois composants sont prévus.
-Pour toute information sur la transformation de modèles à modèles, on consultera le groupe de news suivant: M2M newsgroup qui donne les dernières informations sur l'évolution de la pratique dans ce domaine. Rappelons que la fondation Eclipse est désormais (janvier 2007) membre de l'OMG.
-Les plugins Eclipse sont distribués sous la licence libre EPL.

@@ -1,3 +1,0 @@
-Airelle (langage)
-
-Airelle est un langage de programmation objet écrit au-dessus du langage Lisp.

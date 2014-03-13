@@ -1,7 +1,0 @@
-A-0 System
-
-A-0 System est le premier compilateur développé pour un ordinateur. Il a été écrit par Grace Hopper en 1951 et 1952 pour l'UNIVAC I (celle-ci fut plus tard à l'origine de COBOL).
-Description.
-A-0 était plus un « chargeur de programme » ou un éditeur de liens que ce que l'on appelle aujourd'hui un compilateur. Il permettait de décrire un programme comme une séquence de sous-programmes ayant des paramètres. Les sous-programmes étaient identifiés par un code numérique et leurs paramètres étaient écrits directement après le code de chaque sous-programme. Le « système A-0 » convertissait cette description en code machine exécutable sur l'ordinateur cible.
-Évolution.
-A-0 fut suivi de A-1, A-2, A-3 (ARITH-MATIC), AT-3 (MATH-MATIC) et B-0 (FLOW-MATIC).

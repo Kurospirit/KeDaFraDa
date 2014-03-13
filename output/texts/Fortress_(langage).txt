@@ -1,5 +1,0 @@
-Fortress (langage)
-
-Fortress est un langage de programmation conçu et développé par Sun Microsystems, visant à remplacer le langage Fortran dans le domaine du calcul scientifique. La spécification a été élaborée dans le cadre d'un projet financé par le DARPA. Une implémentation partielle basée sur la machine virtuelle Java (JVM) est sortie en avril 2008.
-Le langage ne ressemble pas à Fortran. Sa syntaxe est proche de Scala, ML et Haskell. Elle est largement basée sur la notation mathématique traditionnelle. Il est possible d'utiliser les caractères Unicode. Il est possible d'effectuer un rendu du code source à l'aide de diverses feuilles de style, par exemple en ASCII, en Unicode, ou bien en utilisant la notation mathématique via LaTeX.
-Fortress est conçu pour être extrêmement parallèle. Par exemple, la boucle « for » est parallèle par défaut : elle n'agit pas toujours de manière linéaire, en fonction du logiciel et du matériel utilisé. Fortress propose également des bibliothèques standards riches en fonctionnalités.

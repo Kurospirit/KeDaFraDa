@@ -1,9 +1,0 @@
-Vala (langage de programmation)
-
-Vala est un langage de programmation compilé, dont l'objectif est de fournir les bénéfices des langages de programmation modernes (comme la POO) aux développeurs de la plateforme GNOME qui utilisent GLib et son système GObject.
-Sa syntaxe est basée sur celle de C# mais il ne nécessite pas d'environnement d'exécution. Vala est transformé en code C, lui-même compilé en code machine natif. Les avantages d'une telle chaîne de compilation sont de produire des logiciels qui requièrent moins de mémoire vive et qui s'exécutent plus rapidement.
-De plus, ce passage par l'étape C rend possible l'utilisation des bibliothèques C au moyen d'interfaces définies dans les fichiers Vapi. Des fichiers Vapi sont fournis avec Vala pour une grande partie de la plateforme GNOME, ainsi que pour d'autres bibliothèques.
-Par exemple, le logiciel Shotwell ou le greffon Arte+7 pour Totem sont écrits en Vala.
-Exemple de code.
-Le programme « Hello World » :
-Le programme « Hello World » programmation orientée objet :

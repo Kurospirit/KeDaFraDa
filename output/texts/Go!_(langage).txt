@@ -1,9 +1,0 @@
-Go! (langage)
-
-Go! est un langage de programmation concurrent, originellement conçu par Keith Clark et Francis McCabe en 2003. Il est orienté vers le besoin de programmer des agents d'applications surs, de qualité de production. Il est multi-thread, fortement typé et d'un niveau élevé (au sens de la programmation fonctionnelle). Il a des définitions de relation, de fonctions et de procédures d'action. Les threads exécutent les procédures d'action, les appels de fonctions et les "querying relations" au besoin. Les threads des différents agents communiquent et se coordonnent en utilisant des messages asynchrones. Les threads à l'intérieur d'un même agent peuvent également utiliser des relations dynamiques partagées agissant comme des registres mémoires.
-Sa nature comme langage de programmation multi-paradigme, intégrant des styles de la programmation logique, fonctionnelle et orientée objet, est particulièrement mise en œuvre dans les modèles basés sur une ontologie, tel qu'employés par le web sémantique en permettant un système type où les classes OWL peuvent être représentées dans le système type. La conception de Go!, d'après Bordini et al.'s survey.
-Depuis le lancement du langage de programmation de Google, Go! et Go sont devenus le sujet d'une polémique sur le nom du langage qui n'est pas résolue au 12 novembre 2009.
-Modèle de Communication.
-Les threads à l'intérieur d'un même processus Go!, et donc dans le même agent, peuvent aussi communiquer en manipulant des objets à relation dynamiques, comparable aux registres de tuple de Linda, utilisés pour coordonner leurs activités.
-Exemple.
-L'exemple suivant montre le style de type et de déclarations 'ontology-oriented' de Go!.

@@ -1,4 +1,0 @@
-ESRI-Avenue
-
-ESRI-Avenue était un langage de programmation du logiciel ArcView de la société ESRI jusqu'à sa version 3.3. Ce langage servait à personnaliser le logiciel ou développer de nouvelles fonctionnalités.
-Il est remplacé aujourd'hui par le VBA.

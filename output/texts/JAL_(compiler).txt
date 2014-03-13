@@ -1,5 +1,0 @@
-JAL (compiler)
-
-JAL (Just Another Language) est un langage de programmation semblable au Pascal et possède un compilateur qui génère le code exécutable pour les microcontrôleurs PIC. C'est un langage au format libre pour programmer les microcontrôleurs PIC et le compilateur fonctionne sous Linux, Mac OS X, et MS-Windows. JAL est le seul langage de ce type libre de droits et a des utilisateurs actifs dans différents pays. C'est un langage configurable qui peut être enrichi par des bibliothèques et peut être combiné avec de l'assembleur.
-Historique.
-Créé par Wouter van Ooijen, il a été publié comme logiciel libre de droits (Licence publique générale GNU) en 2003. En 2006, Stef Mientki entreprit le développement d'une nouvelle version : JAL V2. Kyle York est le programmeur de cette nouvelle version. Un groupe international d'utilisateurs constitua l'équipe du bêta test (par ordre alphabétique : Bert van Dam, Sunish Issac, Dave Lagzdin, Javier Martinez, Stef Mientki, Wouter van Ooijen, Michael Reynolds, André Steenveld, Joep Suijs, Vasile Surducan, and Michael Watterson).

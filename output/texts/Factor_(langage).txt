@@ -1,6 +1,0 @@
-Factor (langage)
-
-Factor est un langage de programmation dynamique concaténatif, dont la conception et l'implémentation sont coordonnées par . Les principales influences de Factor sont Joy, Forth, Lisp et Self.
-Comme les autres langages concaténatifs, Factor utilise une syntaxe postfixée, ce qui signifie que vous écrivez les arguments d'une fonction avant son nom. À titre d'exemple, afficher « hello world » se fait ainsi :
-Définition d'une fonction calculant la factorielle d'un entier 
-calcul de la factorielle de 10

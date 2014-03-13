@@ -1,4 +1,0 @@
-Averest
-
-Averest est un langage de programmation synchrone conçu par un groupe de l'université technique de Kaiserslautern qui permet de spécifier, vérifier et implémenter des systèmes dit réactifs.
-Averest contient aussi des outils qui permettent la vérification automatique de systèmes dynamiques ainsi qu'un compilateur.

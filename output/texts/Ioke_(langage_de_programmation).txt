@@ -1,4 +1,0 @@
-Ioke (langage de programmation)
-
-Ioke est un langage de programmation conçu pour la JVM par Ola Bini, l'un des développeurs de JRuby. C'est un langage de programmation orientée prototype inspiré par Io, Smalltalk, Lisp et Ruby.
-Ola Bini utilise GNU Emacs pour ses développements.

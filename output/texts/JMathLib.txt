@@ -1,3 +1,0 @@
-JMathLib
-
-JMathLib est un environnement de calcul informatisé et un langage de programmation, sous forme d'un logiciel libre, relativement compatible au niveau des sources avec MATLAB et GNU Octave et FreeMat. Il supporte nombre des fonctions de MATLAB et quelques fonctionnalités d'IDL. Et il possède quelques capacités de rendu volumique et de visualisation 3D.

@@ -1,4 +1,0 @@
-Bistro (langage de programmation)
-
-Bistro est un langage de programmation orienté-objet, dynamiquement typé et réflectif. Il a été conçu par Nikolas S. Boyd en 1999. Son langage reprend des concepts présents dans Smalltalk et Java. Bistro se présente ainsi sous la forme d'une variante de Smalltalk s'exécutant grâce à une machine virtuelle Java. Cette dernière doit être en conformité avec les spécifications de Sun Microsystems. 
-Selon le concepteur de Bistro, Smalltalk offre une modélisation plus expressive que Java. Le fait que le bytecode issu de Bistro se présente sous la forme de classe Java assure la portabilité des applications et la possibilité d'intégrer le code au sein d'applications Java. Bistro permet aussi de convertir à moindre frais une application en Smalltalk vers un environnement Java.

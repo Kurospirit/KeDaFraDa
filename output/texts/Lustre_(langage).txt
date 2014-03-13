@@ -1,7 +1,0 @@
-Lustre (langage)
-
-Lustre est un langage de programmation synchrone, déclaratif, et par flots. Il possède une définition formelle, et est utilisé pour la programmation des systèmes réactifs. Son développement a commencé au début des années 1980, dans le cadre d'un projet de recherche. Il est entré dans le monde industriel en 1993, lorsque la société Esterel Technologies a publié l'environnement commercial SCADE, dont il constitue le cœur. Lustre est désormais utilisé pour la conception de logiciel critique dans l'aéronautique (Airbus, Eurocopter, Dassault, Pratt  et  Whitney), le ferroviaire (Eurostar) et les centrales nucléaires (Schneider Electric).
-SCADE.
-SCADE est un environnement de développement intégré diffusé par Esterel Technologies, dont le nom signifie "Safety Critical Application Development Environment". Il est destiné à la conception de systèmes critiques.
-Il est basé sur le langage Lustre, et permet de générer du code en langage C ou Ada.
-Il peut être qualifié DO-178B niveau A par ses utilisateurs, ce qui explique sa popularité en aéronautique.

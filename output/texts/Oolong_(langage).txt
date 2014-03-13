@@ -1,4 +1,0 @@
-Oolong (langage)
-
-Oolong est un langage d'assemblage d'instructions de la machine virtuelle Java, ou de façon plus concise, un assembleur de Bytecode Java, créé par Joshua Engel.
-Le nom d'"Oolong" fait référence au thé Oolong, clin d'œil au jeu de mots sur le sens argotique de Java : café.

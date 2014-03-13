@@ -1,7 +1,0 @@
-Dependency Constraint Language
-
-En informatique, le langage DCL (Dependency Constraint Language) permet de localiser dans le code source d'un logiciel des décisions d'implémentation qui représentent des violations à l'architecture décrite au départ.
-Il permet de contrôler deux types de violations :
-Utilisation.
-Le langage DCL spécifie quatre primitives pour définir les contraintes :
-Il se complète par d’autres primitives pour des besoins spécifiques : access, declare, create, extend, implement, throw, annotate.

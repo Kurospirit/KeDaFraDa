@@ -1,6 +1,0 @@
-Concurrent C
-
-Le concurrent C est une extension du langage de programmation C développée aux laboratoires Bell d'AT et T en 1984. Elle a pour but de faciliter l'implémentation d'algorithmes parallèles en C, qui ne supporte la programmation concurrente que par le biais d'extensions (même si certaines, comme les Threads POSIX, sont très répandues).
-Description.
-Le concurrent C est compatible avec le C (la plupart des programmes écrits en C sont valables en concurrent C). S'inspirant de l'Ada, le concurrent C permet la communication inter-processus entre les threads par échange de données synchrone : l'émetteur est bloqué par les fonctions de communication inter-processus tant que le récepteur n'a pas lu les données transférées.
-Il était implémenté par AT et T sous la forme d'un préprocesseur, qui produisait du code en C ensuite compilé normalement.

@@ -1,6 +1,0 @@
-Jasmin (langage)
-
-Jasmin est un langage d'assemblage d'instructions de la machine virtuelle Java, ou de façon plus concise, un assembleur de Bytecode Java.
-Jasmin a été créé par Jon Meyer et Troy Downing pour accompagner leur ouvrage "JAVA Virtual Machine". 
-Cet ouvrage est aussi connu sous le nom informel du "livre au bocal à poisson rouge" (en anglais "goldfish bowl book") - en référence au classique sur la compilation, le "livre au dragon rouge" (en anglais "Red Dragon Book") de Alfred V. Aho "et al."
-Le nom de "Jasmin" fait quant à lui référence au thé au jasmin, clin d'œil au jeu de mot sur le sens argotique de Java : café.

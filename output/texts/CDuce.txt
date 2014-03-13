@@ -1,5 +1,0 @@
-CDuce
-
-CDuce est un langage de programmation fonctionnel, d'ordre supérieur, fortement typé, adapté à la manipulation sûre et efficace de documents XML.
-Une opération de filtrage par motifs permet d'exprimer de manière concise des extractions de données complexes, et le système de type garantit que tous les documents valides en entrée seront traités de manière exhaustive, et qu'aucun document invalide en sortie ne pourra être produit.
-Le projet OCamlDuce vise à intégrer CDuce dans le langage généraliste OCaml.

@@ -1,7 +1,0 @@
-Programme assembleur
-
-Un assembleur est un programme d'ordinateur qui traduit un programme écrit en langage assembleur — essentiellement, une représentation mnémonique du langage machine — en code objet.
-En plus de traduire les mnémoniques d'instructions en code binaire, les assembleurs sont capables de gérer des noms symboliques pour les emplacements mémoire (pour stocker des données ou référencer des points du programme) et un langage macro pour effectuer des substitutions textuelles - typiquement utilisé pour coder des séquences courtes d'instructions fréquemment utilisées qui seront insérées dans le code plutôt que d'écrire des procédures.
-Historiquement, les assembleurs sont apparus comme le premier outil permettant au programmeur de prendre du recul par rapport au code objet et de se consacrer à la programmation proprement dite.
-Les programmes assembleurs sont plus simples à écrire que les compilateurs pour les langages de haut-niveau. Ils sont disponibles depuis les années 1950.
-Les programmes assembleur donnent un accès plus direct au microprocesseur que l'on souhaite programmer. Toutefois les architectures RISC comme le PowerPC, le MIPS, SPARC et HP Precision demandent pour optimiser leur fonctionnement des réarrangements d'instructions difficilement compatibles avec l'usage lisible de l'assembleur. Le recours à un compilateur devient alors inévitable pour tirer le maximum de l'architecture sous-jacente, en particulier les pipelines dont disposent les processeurs RISC.

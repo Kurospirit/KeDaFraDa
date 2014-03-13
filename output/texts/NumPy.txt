@@ -1,7 +1,0 @@
-NumPy
-
-NumPy est une extension du langage de programmation Python, destinée à
-manipuler des matrices ou tableaux multidimensionnels ainsi que des fonctions mathématiques opérant sur ces tableaux.
-Une bibliothèque très puissante, permettant de manipuler les tableaux, de multiples fonctions permettant notamment de créer directement un tableau depuis un fichier ou au contraire de sauvegarder un tableau dans un fichier.
-Permet la manipulations des vecteurs, matrices et polynômes.
-Utilisé de concert avec Matplotlib (gestion des graphiques) devient un outil scientifique parfait pour python.

@@ -1,5 +1,0 @@
-Fortran 95
-
-Fortran 95 est une version du langage de programmation Fortran, qui est très utilisé dans le domaine du calcul scientifique en raison du très grand nombre de programmes-source disponibles dans ce langage. Toutefois, ses utilisateurs ont voulu y ajouter au fil du temps les idées intéressantes utilisées dans d'autres langages. Cela a donné les versions Fortran 90, puis Fortran 95.
-Fortran 95 reprend les extensions déjà définies dans Fortran 90 et y ajoute :
-Les rapports ISO définissant le Fortran 95 sont le TR 15580 et le TR 15581

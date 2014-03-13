@@ -1,6 +1,0 @@
-GNU Data Language
-
-GNU Data Language est un clone libre d'Interactive Data Language (IDL) sous licence GNU GPL. IDL est un langage vectoriel de traitement de données et de visualisation très répandu dans l'industrie et la recherche, en particulier en astronomie, géophysique, télédétection et médecine.
-GNU Data Language est en cours de développement depuis 2004 ; à ce jour, il respecte la syntaxe d'IDL version 7.1, ainsi qu'une partie des fonctionnalités de la version 8.0. Il met en œuvre la plupart des procédures et fonctions intrinsèques et un certain nombre des programmes de la bibliothèque fournie à côté du code compilé.
-Sous réserve de bien préparer le code en syntaxe IDL, GDL permet de faire tourner de larges codes utilisant certaines librairies tierces
-comme l'AstroLib.

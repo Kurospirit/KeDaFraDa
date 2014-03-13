@@ -1,4 +1,0 @@
-Frame representation language
-
-FRL, pour Frame representation language, est un langage de programmation inventé par Marvin Minsky.
-Il repose sur la structure de donnée bénéficiant d'une structure globale standardisée appelée "frame", modèle conçu pour représenter les connaissances et permettant la réalisation de systèmes règles-faits intimement liés, selon un principe similaire aux systèmes experts, mais aussi selon le principe opposé (les données déclenchant alors les règles).

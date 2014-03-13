@@ -1,5 +1,0 @@
-Boo (langage)
-
-Boo est un langage de programmation objet, avec typage statique dont le développement a commencé en 2003, cherchant à faire usage de la gestion de l'Unicode, de l'internationalisation et des applications web de la Common Language Infrastructure, tout en utilisant une syntaxe inspirée de Python et en ayant une insistance sur l'extensibilité du langage et du compilateur. Parmi les caractéristiques du langage figurent l'inférence de types, les générateurs, les multiméthodes, le "duck typing" optionnel, les macro-définitions, les vraies fermetures, la curryfication et les fonctions de première classe.
-Boo est sous une licence libre à la MIT/BSD.
-Boo peut être utilisé avec Microsoft .NET et Mono.

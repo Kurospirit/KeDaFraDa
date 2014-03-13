@@ -1,3 +1,0 @@
-Iota (langage)
-
-Le langage Iota est un langage de programmation Turing-complet conçu par Chris Barker. Il possède seulement deux symboles.

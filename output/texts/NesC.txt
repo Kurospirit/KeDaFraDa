@@ -1,3 +1,0 @@
-NesC
-
-NesC est un langage de programmation dérivé du langage C, fait pour minimiser l’utilisation de mémoire et de puissance de calcul par les capteurs, qui très souvent disposent de ressources très limitées (batterie de faible puissance et non changeable, mémoire réduite...).

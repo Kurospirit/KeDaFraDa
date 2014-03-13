@@ -1,6 +1,0 @@
-QBasic
-
-QBasic est un environnement de développement intégré pour une variante du langage de programmation BASIC, basé sur Quick Basic.
-Il s'agit en réalité d'une version bridée de QuickBasic 4.5, dans le sens où elle ne permet que d'exécuter des programmes interprétés, la compilation étant rendue impossible.
-D'autres différences mineures subsistent cependant au niveau du langage, notamment la disparition de certaines commandes. À l'inverse, les instructions permettant l'utilisation du langage machine (telles que codice_1) ont été intégrées à l'environnement, car il n'était plus possible de les lier au moment de la compilation.
-L'exécutable de QBasic contient également les fonctionnalités de la commande "EDIT" de MSDOS, accessibles en tapant codice_2 dans la ligne de commande.

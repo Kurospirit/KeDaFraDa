@@ -1,4 +1,0 @@
-ΛProlog
-
-λProlog ou lambda prolog est un langage de programmation logique dérivé de prolog. λProlog est une double extension de prolog, dans un premier temps, en rajoutant les λtermes et dans un second temps avec l'ajout de nouveaux connecteurs tels que l'implication et le quantificateur universel.
-Il est à noter que lambda prolog introduit egalement la notion de type simple.

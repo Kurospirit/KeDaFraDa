@@ -1,7 +1,0 @@
-Unified Parallel C
-
-Unified Parallel C (UPC) est une extension du langage de programmation C conçue pour les calculs hautes-performances sur des supercalculateurs parallèles, y compris les architectures à espace d'adressage global (SMP et NUMA) et celles à mémoire distribuée (clusters). Le langage définit un espace d'adressage partagé et partitionné, où les variables peuvent être directement lues et écrites par n'importe quel thread, mais chaque variable est physiquement associée avec un simple processeur. UPC utilise un modèle de calcul de type SPMD (Single Program Multiple Data) dans lequel la quantité de thread est fixée à la compilation, typiquement avec un seul thread d'exécution par processeur.
-Pour implémenter le parallélisme, UPC étend la norme C ISO 99 avec les concepts suivants:
-Le langage UPC est issu des expériences avec trois autres langages antérieurs qui proposaient des extensions parallèles au C ISO 99 (AC, Split-C, and Parallel C Preprocessor (PCP)). UPC n'est pas un simple agrégat de ces trois langages, mais plutôt une tentative de synthèse des meilleures caractéristiques de chacun. UPC combine les avantages du paradigme de la programmation à mémoire partagée, du contrôle de la disposition des données et des performances du paradigme de programmation par échange de messages.
-Support par les compilateurs.
-UPC a été implémenté dans certains compilateurs commerciaux et de recherche, dont :

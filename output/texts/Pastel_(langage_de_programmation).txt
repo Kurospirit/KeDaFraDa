@@ -1,5 +1,0 @@
-Pastel (langage de programmation)
-
-Pastel est un dialecte du langage de programmation Pascal et un compilateur développé au laboratoire national de Lawrence Livermore.
-Pastel et le projet GNU.
-Le compilateur GCC fut initialement écrit avec le langage de programmation Pastel avant d'être entièrement réécrit en C.

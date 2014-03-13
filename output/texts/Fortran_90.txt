@@ -1,5 +1,0 @@
-Fortran 90
-
-Fortran 90 est une version du langage de programmation Fortran, qui est très utilisé dans le domaine du calcul scientifique en raison du très grand nombre de programmes-source disponibles dans ce langage. Toutefois, ses utilisateurs ont voulu y ajouter au fil du temps les idées intéressantes utilisées dans d'autres langages. Cela a donné les versions Fortran 90, puis Fortran 95.
-Le Fortran 90 introduisit dans FORTRAN les ajouts suivants :
-"GNU Compiler Collection" (GCC) permet de compiler du Fortran 90 à partir de la version 4.0.

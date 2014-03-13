@@ -1,3 +1,0 @@
-PILOT
-
-PILOT (acronyme de "Programmed Instruction, Learning, Or Teaching") est un langage de programmation précurseur de l'apprentissage en ligne ("E-learning").

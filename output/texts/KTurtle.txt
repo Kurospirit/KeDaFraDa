@@ -1,4 +1,0 @@
-KTurtle
-
-KTurtle est un environnement de programmation éducatif utilisant le dessin vectoriel. Il est sous Licence publique générale GNU (GPL) et fait partie de l'environnement de travail KDE. KTurtle comporte un langage de programmation basé sur le Logo. Il s'agit d'un des rares langages de programmation traduisible ; les instructions d'un programme peuvent être traduites dans la langue du développeur.
-KTurtle est disponible en paquet pour la plupart des distributions de Linux/BSD, dont Red Hat Linux, Suse, Kubuntu, Mandrake, i Debian. KTurtle est disponible pour Windows comme paquet de Kdeedu de la distribution KDE 4 pour Windows.

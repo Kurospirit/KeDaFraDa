@@ -1,4 +1,0 @@
-High Performance Fortran
-
-High Performance Fortran est un langage de programmation pour les machines parallèles.
-Ce langage, est basé sur Fortran 90 avec l’ajout de directives de placement des données (align, distribute), de boucles parallèles (directive independent, construction forall) et quelques autres extensions.

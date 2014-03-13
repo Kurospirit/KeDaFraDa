@@ -1,7 +1,0 @@
-DialogOS
-
-DialogOS est une plateforme de développement pour système informatique capable de parler avec l’utilisateur. DialogOS utilise un organigramme de programmation, il est donc possible d'utiliser DialogOS sans avoir de profondes connaissances informatiques. Le programme comprend aussi une extension pour commander les robots de type Lego Mindstorm NXT avec la voix. Actuellement l'anglais et l'allemand sont directement supporté par DialogOS.
-DialogOS est principalement utilisé dans les cours informatiques des écoles ou dans des universités, pour apprendre la programmation ainsi que les principes de la création d'un dialogue électronique.
-Lego Mindstorm NXT.
-DialogOS supporte directement les robots de la gamme Lego Mindstorm NXT. Les capteurs suivants fonctionnent directement avec le système:
-Il est également possible « d'émuler » d'autre capteurs, comme le capteur de couleurs, en les utilisant par exemple en tant que capteur ultrasonique.

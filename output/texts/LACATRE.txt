@@ -1,3 +1,0 @@
-LACATRE
-
-LACATRE est l'abréviation de Langage d'Aide à la Conception d'Applications Temps-REel. C'est un langage graphique utilisé pour la conception de programmes informatiques multitâches et temps-réels. Ce langage est très utile pour représenter les interactions d'une tâche avec les différents moyens de communication (IPC) de façon simple permettant une première ébauche en conception tout en se rapprochant énormément du code final. Il existe d'ailleurs des applications permettant de traduire le formalisme LACATRE en code C (notamment pour VxWorks).

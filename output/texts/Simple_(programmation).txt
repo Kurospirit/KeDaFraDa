@@ -1,4 +1,0 @@
-Simple (programmation)
-
-Simple est un langage de programmation de Google pour Android.
-Il est inspiré du BASIC.

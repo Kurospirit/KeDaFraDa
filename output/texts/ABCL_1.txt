@@ -1,4 +1,0 @@
-ABCL/1
-
-ABCL/1 (Actor-Based Concurrent Language) est un langage à prototype et concurrent créé en 1986 par Akinori Yonezawa, of the "Department of Information Science" de l'Université de Tokyo.
-ABCL/1 utilise des envois de messages asynchrone entre les objets afin d'implémenter la concurrence. Il nécessite Common Lisp.

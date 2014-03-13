@@ -1,8 +1,0 @@
-Pro*C
-
-Le Pro*C est un outil permettant d'inclure des commandes SQL dans un programme C. Il s'agit en fait d'un précompilateur : le code source Pro*C est traduit en source C avec des appels aux bibliothèques ORACLE.
-La compilation complète se fait donc en plusieurs étapes:
-Un point important : lors de la première phase (précompilateur Pro*c), une connexion au serveur ORACLE est effectuée afin de valider les requêtes SQL du code Pro*C.
-Exemple.
-Exemple de syntaxe Pro*C :
-codice_1

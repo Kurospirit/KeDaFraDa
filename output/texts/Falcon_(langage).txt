@@ -1,3 +1,0 @@
-Falcon (langage)
-
-Falcon est un langage de programmation de scripts créée par Giancarlo Niccolai. Il supporte différents paradigmes.

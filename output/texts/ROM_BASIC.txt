@@ -1,3 +1,0 @@
-ROM BASIC
-
-ROM BASIC est un langage informatique contenu dans le BIOS des ordinateurs (celui qui est conservé en ROM), et qui permettait de programmer certaines fonctions de l'ordinateur au niveau du boot ou des entrées sorties physiques.

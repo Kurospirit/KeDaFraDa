@@ -1,5 +1,0 @@
-Algol W
-
-Algol W est une version du langage Algol due à Niklaus Wirth, proposée au comité Algol 68 pour succéder à Algol 60. Bien qu'antérieure au Pascal, elle était plus puissante à certains points de vue. En particulier toute expression ou tout bloc ramenait un résultat, ce qui permettait l'écriture d'expressions particulièrement élégantes.
-Algol-W est visiblement une étape transitoire entre Algol 60 et Pascal. Il représente une modification relativement légère d'Algol 60, auquel N. Wirth a ajouté les types de données « string », « bitstring », les nombres complexes et les références à des enregistrements (structures), ainsi que le passage de paramètres par valeur, sans changer grand-chose d'autre.
-Comme tous les autres langages de Wirth (Pascal, Modula-2, Oberon, etc.), Algol-W est un petit langage à typage statique qui diffère beaucoup moins d'Algol 60 que d'Algol 68, langage nettement plus « gros » et plus complexe.

@@ -1,7 +1,0 @@
-Oberon (langage)
-
-Oberon (alias Oberon-1) est un langage de programmation développé par Niklaus Wirth et Jürg Gutknecht de 1985 à 1987.
-Quoique le langage soit basé sur Modula-2 — dont Wirth est l'auteur —, plusieurs propriétés ont été éliminées et l'extension de type, en outre, fut introduite.
-Sa syntaxe ressemble au Pascal.
-Oberon élimine également le mécanisme explicite de désallocation de mémoire et intègre un ramasse-miettes.
-En 1991, Niklaus Wirth, Jürg Gutknecht et Hanspeter Mössenbock conçoivent Oberon-2, une extension d'Oberon qui inclut les procédures liées au type (méthodes), la polymorphie des objets, les tableaux dynamiques et l'exportation de variables en lecture seulement.

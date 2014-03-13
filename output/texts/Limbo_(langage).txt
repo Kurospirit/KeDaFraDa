@@ -1,6 +1,0 @@
-Limbo (langage)
-
-Le langage de programmation Limbo a été créé vers 1995 par Rob Pike, Sean Dorward, Phil Winterbottom avec l'aide de Dennis Ritchie pour le système d'exploitation Inferno.
-C'est un langage hybride empruntant des fonctionnalités au C, au Pascal, au Alef de Winterbottom, au CSP de Tony Hoare et au Newsqueak de Robert Pike.
-Le Limbo est un langage qui a été initialement conçu pour Inferno. Le compilateur Limbo génère des objets qui sont interprétés par la machine virtuelle Dis. Ces objets sont exécutables sur n'importe quelle plateforme disposant de Dis. À l'exception de la machine virtuelle, Inferno est intégralement écrit en Limbo.
-Le Limbo est cité dans le livre de Dan Brown "Forteresse Digitale". Dans l'intrigue, il sert à écrire un pisteur pour retrouver l'adresse d'un compte de messagerie électronique.

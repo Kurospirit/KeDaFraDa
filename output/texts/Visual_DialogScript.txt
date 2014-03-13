@@ -1,9 +1,0 @@
-Visual DialogScript
-
-, souvent abrégé VDS est un langage de programmation simplifié de type script ou batch.
-Fonctionnalités.
-Il permet de programmer de manière rapide un utilitaire basique pouvant automatiser certaines tâches rapides ou ne nécessitant pas l'intervention d'un langage de programmation plus complexe.
-Fonctionnement.
-Un exécutable compilé d'environ 10-15 ko représente le programme écrit. Une fois le programme lancé, le langage est interprété par une dll équivalente à la version du logiciel par exemple "VDSRUN30.dll" pour "Visual DialogScript 3", ou "VDSRUN40.DLL" pour "Visual DialogScript 4"
-Améliorations.
-Depuis la version 5, Visual DialogScript est capable entre autres de :

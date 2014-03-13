@@ -1,6 +1,0 @@
-BBj Language
-
-BBj, sigle de Business Basic on Java, est un langage de programmation édité par Basis international
-C'est un langage issu de la famille Business Basic. Il est écrit en Java pour assurer un maximum de portabilité sur différentes plateformes (Windows, Unix/Linux, Solaris, Mac, etc.) et assure une compatibilité ascendante avec les versions précédentes de Business Basic (BBx, Pro5, OpenBasic).
-Sa syntaxe permet de mélanger la syntaxe Business Basic traditionnelle, la programmation orientée objet et du code Java. Cette double syntaxe le rend accessible aux développeurs de Business Basic, tout en ouvrant la possibilité aux développeurs formés à Java de l'appréhender.
-Son système de données est basé sur un système natif de fichiers ou sur une base de données (ex. MySQL) via des pilotes ODBC et JDBC. De plus, on peut accéder à ce système de données depuis des applications tierces par un syntaxe SQL.

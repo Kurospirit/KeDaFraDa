@@ -1,8 +1,0 @@
-Xlogo
-
-XLogo est un interpréteur Logo écrit en Java. C'est un logiciel libre distribué selon les termes de la licence GNU GPL.
-XLogo supporte actuellement dix langues : le français, l'anglais, l'espagnol, le portugais, l'allemand, l'arabe, l'espéranto, le galicien, le grec et l'italien.
-Le langage Logo.
-Le principe majeur du langage Logo consiste à déplacer sur l'écran un objet généralement sous la forme d'une tortue, à l'aide de commandes élémentaires telles que :
-À chaque fois que la tortue se déplace, elle laisse un trait derrière elle et on peut ainsi très vite réaliser de très jolis dessins.
-XLogo est un langage de programmation capable non seulement de dessiner des formes, mais aussi de manipuler les mots, les fichiers, etc.

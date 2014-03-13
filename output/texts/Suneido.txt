@@ -1,7 +1,0 @@
-Suneido
-
-Suneido est un langage de programmation interprété et interactif pour Windows de Microsoft . 
-Il a un typage dynamique et gère la mémoire automatiquement à l'aide d'un ramasse-miettes ; il est ainsi semblable à Python, TCL, Perl, Scheme et Ruby. Suneido est un logiciel libre (Open Source Software) et gratuit. Suneido est une plateforme d’application qui comprend un langage de programmation orientée objet, une base de données relationnelle intégrée client-serveur, et un environnement de développement intégré (EDI).
-Exemple Hello World.
-Le programme Hello world s'écrit en Suneido:
-codice_1

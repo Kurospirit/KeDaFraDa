@@ -1,6 +1,0 @@
-Fonction de McCarthy n°91
-
-Définition.
-La fonction de McCarthy est une fonction récursive définie pour formula_1 par
-formula_2.
-Elle est en fait constante égale à 91 pour formula_3.

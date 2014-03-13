@@ -1,8 +1,0 @@
-Run-time type information
-
-En informatique, est utilisé pour signaler la capacité d'un langage de programmation à déterminer le type d'une variable pendant l'exécution d'un programme.
-Bien que disponible dans la plupart des langages de programmation, le terme RTTI est souvent utilisé en référence au C++ qui par défaut, détermine le type à la compilation. Ce typage dynamique explicite en C++ – déclaré par l'utilisation de l'opération codice_1 – diffère de celui automatique de l'Objective-C pour lequel le typage et l'édition de liens sont réalisés lors de l'exécution.
-Exemple.
-Voici un exemple d'utilisation de la RTTI en C++ :
-Comme on peut le voir, le but de la dernière fonction est de trouver le point d'intersection de deux traits dont les types (arc ou segment) ne seront connus qu'à l'exécution du programme (c'est tout l'intérêt de l'héritage : avoir des pointeurs de la classe mère sur des instances de classes filles). Le polymorphisme règle le problème pour la première variable (codice_2) puisque codice_3 appellera codice_4 ou codice_5 suivant le type de codice_2. Il reste cependant le problème du type de l'argument codice_7 puisqu'un simple appel à codice_8 génère une erreur du compilateur ne sachant quelle fonction utiliser à l'édition de lien.
-Si le typage échoue (ce qui est forcément le cas dans cet exemple, soit pour codice_9, soit pour codice_10), le programme peut générer une exception codice_11.

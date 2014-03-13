@@ -1,5 +1,0 @@
-Charity (langage)
-
-Charity est un langage de programmation expérimental purement fonctionnel, développé à l'Université de Calgary. Il ressort des idées de Hagino Tatsuya, et il est complètement fondé sur la théorie des catégories. 
-Nonobstant les interactions entrées-sorties, tous les programmes programmés en Charity sont garantis de terminer. Cela signifie que ce langage n'est pas Turing-complet. Cependant, il est capable d'exprimer la fonction d'Ackermann et la rend plus expressive qu'une récursion primitive. 
-Le langage autorise les types récursifs ordinaires, tels qu'ils se trouvent en ML, et qui doivent être finis, et également les types de données corécursifs, qui sont autorisés d'être potentiellement infinis. La structure de contrôle pour les opérations sur les types récursifs est une récursion primitive ou catamorphisme, et celle pour les types de données corécursifs est une co-récursion primitive ou anamorphisme. Les structures de contrôle ne peuvent pas sinon opérer sur d'autres types de données. Tous les catamorphismes terminent et tous les anamorphismes sont productifs.

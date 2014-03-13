@@ -1,6 +1,0 @@
-PL/M
-
-Le PL/M (sigle de "Programming Language for Microcomputers") est un langage de programmation développé par Gary Kildall en 1972 pour Intel pour ses microprocesseurs.
-Le langage incorpore des idées empruntées aux langages PL/I, ALGOL et XPL, et possède un préprocesseur de macros intégré. Contrairement aux langages évolués contemporains tels que Pascal, C ou C++, il ne possède pas de routines d'entrées-sorties standard. Par contre, étant spécialement conçu pour certains processeurs, il est nettement plus efficace que d'autres langages pour certaines opérations de bas niveau.
-Le système opérationnel CP/M ainsi que le "firmware" pour le "Service Processor Component" de l'AS/400 ont été écrits en PL/M. On a écrit des compilateurs PL/M pour les contrôleurs/processeurs suivants : Intel 4004, 8008, 8080, 8085, 8051, 80196, 8086/8088, 80186/80188, 286, et 386.
-Quoique PL/M ne soit plus supporté par Intel, il existe toujours, du fait la longévité de certains systèmes informatiques l’utilisant encore, des compilateurs et des outils de traduction PL/M vers C.

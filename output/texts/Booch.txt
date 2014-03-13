@@ -1,5 +1,0 @@
-Booch
-
-La méthode Booch est, avec OMT et OOSE, l'une des méthodes d'analyse et de conception orientées objet à l'origine d'UML. Son nom vient de celui de son concepteur, Grady Booch, qui sera aussi l'un des pères du langage UML (avec Ivar Jacobson, fondateur de la méthode OOSE et James Rumbaugh, fondateur de la méthode OMT).
-Cette méthode permet de faciliter l'implémentation de programmes dans des langages de programmation orientée objet, ainsi que de représenter les différentes phases du développement d'un projet. Pour les programmeurs, l'avantage est d'obtenir une modélisation d'une solution qui soit indépendante de son implémentation dans un langage particulier (par exemple Java, C++, PHP...).
-Ses concepts fondamentaux sont l'objet, la classe, la méthode et l'attribut.

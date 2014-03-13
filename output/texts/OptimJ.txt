@@ -1,5 +1,0 @@
-OptimJ
-
-OptimJ est un langage de modélisation mathématique orientée-objet destiné à faciliter l'intégration de modèles d'optimisation avec le monde Java.
-OptimJ est conçu sous la forme d'une extension au langage Java avec support sous Eclipse. OptimJ possède toutes les fonctionnalités des langages de modélisation actuels et peut supporter tout moteur d'optimisation. OptimJ est disponible gratuitement avec les moteurs open source lp_solve et GLPK
-Les modèles OptimJ travaillent directement sur les données de l'application, sans création d'objets intermédiaires. Ils peuvent être déployés directement sous forme compilée sur toutes les plateformes pour lesquelles un Java Runtime Environment est disponible.

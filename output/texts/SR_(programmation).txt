@@ -1,3 +1,0 @@
-SR (programmation)
-
-SR (abriéviation de Synchronizing Resources) est un langage de programmation dédié à la programmation concurrente.

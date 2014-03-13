@@ -1,6 +1,0 @@
-Sather
-
-Sather est un langage de programmation orienté objet. Il est né aux alentours de 1990 à l’ à l'Université de Berkeley, développé par une équipe internationale menée par Steve Omohundro. Il supporte le ramasse-miettes et la généricité par sous-typage.
-Il vaut probablement mieux le voir comme un langage orienté objet, avec de nombreuses idées empruntées au langage Eiffel. Même le nom est inspiré d'Eiffel, la Tour Sather se situe à Berkeley. Sather s'inspire également d'autres langages de programmation et paradigmes : itérateurs, programmation par contrat, classes abstraites, héritage multiple, fonctions anonymes, surcharge d'opérateur, contrevariance. Certaines de ces caractéristiques ne sont normalement présentes que dans les langages de programmation fonctionnelle.
-L'implémentation originelle de Berkeley est maintenant maintenue par de nombreuses personnes, pas toutes de Berkeley, et a été adoptée par la . Il existe au moins deux autres implémentations : Sather-K de l'université de Karlsruhe, et Sather-W de l’.
-Sather est implémenté par un compilateur vers le langage C, c'est-à-dire que le compilateur ne sort pas du code objet ni du code machine, mais des fichiers source C en tant que langage intermédiaire.

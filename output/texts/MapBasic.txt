@@ -1,4 +1,0 @@
-MapBasic
-
-MapBasic est un langage de programmation utilisé pour la création d'outils et de fonctionnalités pour la suite logicielle (SIG) MapInfo. MapBasic est basé sur la famille de langages de programmation BASIC.
-MapBasic est intégrable dans des programmes développés dans des langages tels que Visual Basic, C ou encore C++.

@@ -1,3 +1,0 @@
-CLU (langage)
-
-CLU est un langage de programmation créé au Massachusetts Institute of Technology (MIT) par Barbara Liskov et ses étudiants entre 1974 et 1975.

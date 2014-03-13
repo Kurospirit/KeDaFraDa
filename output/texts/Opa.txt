@@ -1,9 +1,0 @@
-Opa
-
-Opa est un langage de programmation d'applications et services web utilisable sous licence Affero GPL ou sous licence privée.
-Philosophie.
-Opa est une technologie de développement d’applications Web distribuées. C’est un nouveau langage de programmation fortement couplé à une bibliothèque Web standard qui remplit toutes les fonctions : de serveur d’applications Web, à serveur de base de données.
-En un mot, Opa ne dépend pas des piles serveurs actuelles, comme par exemple Apache plus PHP plus MySQL plus Symfony. Un code source Opa est compilé en un binaire autonome du service, qui se contente d’une distribution GNU/Linux nue (même MiniLinux) pour l’exécution.
-Opa est spécialement conçu pour le Web et spécifie l’ensemble des aspects de l’application :
-Exemple de code.
-L'exemple ci-dessous est le code complet d'un webchat minimal en Opa.

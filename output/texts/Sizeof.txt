@@ -1,4 +1,0 @@
-Sizeof
-
-Dans les langages de programmation C et C++, l'opérateur unaire sizeof sert à calculer la taille de n'importe quel type de données, mesurée en nombre d'octets nécessaires pour stocker le type. Un octet dans ce contexte est de même taille qu'un « unsigned char », et peut faire plus de 8 bits, bien que ce soit rare.
-Le résultat de sizeof est la taille du type de l'expression de son opérande (qui peut également être un nom de variable ou un spécificateur de type), et est de type entier non signé (généralement « size_t »). L'opérateur sizeof peut être appliqué à tout type de données (y compris les types primitifs comme les entiers ou les types à virgule flottante), des types de pointeurs ou des types de données composés (unions, structures ou classes C++).

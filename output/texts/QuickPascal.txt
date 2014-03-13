@@ -1,3 +1,0 @@
-QuickPascal
-
-QuickPascal était un compilateur de Pascal pour MS-DOS, compatible avec Turbo Pascal et commercialisé par Microsoft en 1989.

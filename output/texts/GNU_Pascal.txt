@@ -1,4 +1,0 @@
-GNU Pascal
-
-GNU Pascal est l'implémentation du langage de programmation Pascal par le projet GNU. C'est un logiciel libre distribué sous licence GNU GPL.
-Il comprend un compilateur connu sous l'appellation GPC (en anglais « "GNU Pascal Compiler" »), compatible avec plusieurs dialectes du langage Pascal, et utilisant GCC comme "back-end" jusqu'à la version 3.4.

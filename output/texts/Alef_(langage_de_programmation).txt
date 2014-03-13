@@ -1,4 +1,0 @@
-Alef (langage de programmation)
-
-Le langage de programmation Alef a été conçu par Phil Winterbottom des Bell Labs dans le cadre du système d'exploitation Plan 9.
-Lors une présentation en février 2000, Rob Pike déclara : .

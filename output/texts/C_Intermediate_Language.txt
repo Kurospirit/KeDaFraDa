@@ -1,5 +1,0 @@
-C Intermediate Language
-
-C Intermediate Language (CIL) est un langage intermédiaire, sous-ensemble simplifié du langage de programmation C.
-C'est également un ensemble d'outils libres publiés sous licence BSD pour:
-CIL est utilisé par CCured, un compilateur qui compile un programme écrit en C en un code offrant un typage sûr en analysant l'utilisation des pointeurs et en insérant des vérifications à l'exécution là où le typage ne peut pas être déterminé statiquement.

@@ -1,9 +1,0 @@
-AspectJ
-
-AspectJ est une extension orientée aspect, créée à Xerox PARC, pour le langage de programmation Java. Cette extension est disponible dans les projets open-source Eclipse, de manière autonome ou sous forme d'extension pour l'environnement de développement Eclipse. AspectJ est devenu le standard, du fait de son utilisation répandue, pour la Programmation orientée aspect en mettant l'accent sur la simplicité et la facilité de mise en œuvre pour les utilisateurs finaux. AspectJ se base sur la syntaxe du langage Java et s'intègre aux IDE pour afficher sa structure transversale depuis sa première publication en 2001.
-Le tissage des aspects est réalisé sur les classes compilées. Ce tissage peut être établi au moment de la compilation du code source ou lors de l'exécution, lors du chargement des classes par la machine virtuelle.
-Langage de description simple.
-Tout programme Java est compatible AspectJ. Toutefois, AspectJ permet également aux programmeurs de définir des constructions spéciales nommées ""aspects"". Les "aspects" peuvent contenir plusieurs entités inutilisables par des classes standard.
-On trouve :
-Par exemple, ce "pointcut" fait correspondre l'exécution de n'importe quelle méthode d'instance d'un objet de type codice_2 dont le nom commence par codice_9 :
-AspectJ supporte également des formes statiques limitées de vérification et réutilisation d'aspect basées sur les "pointcuts" (par héritage).

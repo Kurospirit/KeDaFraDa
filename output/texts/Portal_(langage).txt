@@ -1,6 +1,0 @@
-Portal (langage)
-
-Portal est un langage de programmation créé par R.Schild et H.Lienard du Laboratoire de recherche de LGZ Landis  et  Gyr à Zoug en 1978, spécialisé pour la programmation temps réel et la programmation concurrente.
-Dérivé de Pascal, il adopte en matière d'entrée/sortie la politique suivie par le PDP11, certains processeurs Motorola et le langage APL : les entrées-sorties se ramènent à des affectations, dès qu'on a associé à chaque port nécessaire une variable de même adresse. 
-Définir une procédure la crée comme type, dont les instanciations seront des tâches. 
-Enfin, Portal permet de définir facilement des moniteurs.

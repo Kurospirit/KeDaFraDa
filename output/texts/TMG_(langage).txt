@@ -1,4 +1,0 @@
-TMG (langage)
-
-Le TMG est un compilateur de compilateur créé par Robert M. McClure et présenté à l'Association for Computing Machinery en 1968, implémenté par Douglas McIlroy. TMG fonctionnait en particulier sur OS/360 et les premiers systèmes UNIX, et fut utilisé pour créer l'EPL, une version primitive du langage PL/I.
-En 1970, Ken Thomson voulut écrire un compilateur de fortran en TMG sur un PDP-7, mais créa à la place le langage B, précurseur du langage C fortement influencé par le BCPL.
